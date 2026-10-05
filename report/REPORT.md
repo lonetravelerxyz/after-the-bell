@@ -1,6 +1,6 @@
 # After the Bell — an LLM news agent on Bitget stock perps
 
-Generated 2026-10-05T13:16:39+00:00 by `uv run python -m sentiment.report` from `out/`. Every number below is a value in `report/metrics.json`. Replay numbers are **estimated (replay)**: simulated fills at the next 1h open ± quoted half-spread, taker fee, realised funding. Live numbers are labelled by broker mode: only Bitget Demo fills are **observed**; a shadow ledger (live-venue quotes, simulated fills) is **estimated**.
+Generated 2026-10-05T13:58:49+00:00 by `uv run python -m sentiment.report` from `out/`. Every number below is a value in `report/metrics.json`. Replay numbers are **estimated (replay)**: simulated fills at the next 1h open ± quoted half-spread, taker fee, realised funding. Live numbers are labelled by broker mode: only Bitget Demo fills are **observed**; a shadow ledger (live-venue quotes, simulated fills) is **estimated**.
 
 ## Summary
 
@@ -716,7 +716,7 @@ Each entry was checked against Crossref (DataCite for the arXiv paper).
 
 ## 11. Reproduce
 
-The replay is a function of the snapshot, the code and the LLM cache (run_id is the run name, no wall-clock values), so an offline rerun (`SENTIMENT_OFFLINE=1`, no `.env` needed) reproduces its log hashes on the platform that wrote them, macOS on Apple silicon (CI checks it there); a cache miss stops the run instead of calling the model. On Linux x86_64 the risk v1 runs differ from their first record: the 60-day beta (pandas mean, variance and covariance) rounds differently in its last bits, and the weights and fills follow it; the v0 runs, which have no beta, match on both. Runs are checked against the current data rules by their cited evidence items. Git HEAD `0bf15b8`; PREREG frozen at `62286d9`.
+The replay is a function of the snapshot, the code and the LLM cache (run_id is the run name, no wall-clock values), so an offline rerun (`SENTIMENT_OFFLINE=1`, no `.env` needed) reproduces its log hashes on the platform that wrote them, macOS on Apple silicon (CI checks it there); a cache miss stops the run instead of calling the model. On Linux x86_64 the risk v1 runs differ from their first record: the 60-day beta (pandas mean, variance and covariance) rounds differently in its last bits, and the weights and fills follow it; the v0 runs, which have no beta, match on both. Runs are checked against the current data rules by their cited evidence items. Git HEAD `6f56ce3`; PREREG frozen at `62286d9`.
 
 LLM cache `cache/llm`: 2638 responses (decide:b5 6, decide:blinded 258, decide:llm 806, decide:nonews 258, decide:shuffled 258, evidence 1052), 8,901,638 prompt + 929,515 completion tokens.
 

@@ -1,11 +1,11 @@
-"""B5 multi-year check of the vol rule on daily stock closes (pre-declared in b5/trials.log, entry 1).
+"""B5 multi-year check of the vol rule on daily stock closes (pre-declared in studies/b5/trials.log, entry 1).
 
 w_i(d) = (1/N_d) * min(1, median(sd10_i over the trailing 60 trading days) / sd10_i(d)), sd10 = stdev of the
 last 10 daily returns, N_d = names listed on d; held close(d) -> close(d+1); 13 bp per unit turnover.
 Benchmarks: equal weight 1/N_d (daily rebalanced) and a constant fraction of it equal to the rule's mean
 gross (exposure-matched). Data: split-adjusted closes from yfinance, cached in data/raw/b5/daily.parquet.
 
-Run: uv run --with yfinance python -m b5.daily_check     -> out/b5/daily_check.json
+Run: uv run --with yfinance python -m studies.b5.daily_check     -> out/b5/daily_check.json
 """
 from __future__ import annotations
 
@@ -14,7 +14,7 @@ import json
 import numpy as np
 import pandas as pd
 
-from b5.run import B5_OUT
+from studies.b5.run import B5_OUT
 from sentiment.config import UNIVERSE, data_dir
 
 RAW = data_dir() / "raw" / "b5"

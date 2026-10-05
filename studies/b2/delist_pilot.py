@@ -5,7 +5,7 @@ the announcement's releaseDate (ms) is the exact event time. Prices: Bitget spot
 1-hour candles [t-1d, t+31d]. Measured from the close at the announcement minute: returns to +5m/+30m/+1h/+6h/
 +24h/+72h/+7d/+30d, the return to the delisting date, the 30-day low, BTC-adjusted.
 
-Run: uv run python -m b2.delist_pilot -> out/b2/delistings.json, delistings.md
+Run: uv run python -m studies.b2.delist_pilot -> out/b2/delistings.json, delistings.md
 """
 from __future__ import annotations
 
@@ -18,8 +18,8 @@ import numpy as np
 import pandas as pd
 import requests
 
-from b2 import config as C
-from b2.incident_pilot import candles
+from studies.b2 import config as C
+from studies.b2.incident_pilot import candles
 
 CMS = "https://www.binance.com/bapi/composite/v1/public/cms/article/list/query"
 TITLE = re.compile(r"^Binance Will Delist (.+?) on (\d{4}-\d{2}-\d{2})", re.I)

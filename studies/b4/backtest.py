@@ -5,7 +5,7 @@ close(d) -> close(d+1). Benchmarks (fixed in trials.log before the run): buy & h
 weight equal to the rule's mean weight, the same weight function on the rank of BTC's 30d return
 (the momentum F&G is partly built from), and MSTR above its 200d MA.
 
-Run: uv run python -m b4.backtest      -> out/b4/history.json, prints the tables
+Run: uv run python -m studies.b4.backtest      -> out/b4/history.json, prints the tables
 """
 from __future__ import annotations
 
@@ -14,7 +14,7 @@ import json
 import numpy as np
 import pandas as pd
 
-from b4.config import FEE, FG_FLAT, FG_FULL, HALF_SPREAD, HIST_START, OUT, RAW
+from studies.b4.config import FEE, FG_FLAT, FG_FULL, HALF_SPREAD, HIST_START, OUT, RAW
 
 COST = FEE + HALF_SPREAD
 END = "2026-10-01"

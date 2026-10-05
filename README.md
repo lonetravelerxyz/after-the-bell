@@ -106,7 +106,7 @@ median fill gap 0.2 bp.
 
 After the test window we tested 5 other ideas, each against criteria written in its own `trials.log`
 before it ran. None cleared them (0 claimed), so the submission stays the pre-registered agent.
-Section 7 of the report has the tables; the code is in `b2/`, `b4/` and `b5/`.
+Section 7 of the report has the tables; the code is in `studies/b2/`, `studies/b4/` and `studies/b5/`.
 
 | Idea | Result | Verdict |
 |:--|:--|:--|
@@ -208,7 +208,7 @@ data warning. `uv run python -m sentiment.ledger out/*/log.jsonl` verifies every
 | `report/` | `REPORT.md`, `metrics.json`, figures, all generated |
 | `docs/` | `PREREG.md` (frozen), `CONTRACT.md`, `DIAGNOSIS-dev.md`, the planning spec |
 | `trials.log` | every variant, check and deviation, dated |
-| `b2/`, `b4/`, `b5/` | the other strategies of section 6, each with its `trials.log`; their outputs in `out/b2/`, `out/b4/`, `out/b5/` |
+| `studies/b2/`, `studies/b4/`, `studies/b5/` | the other strategies of section 6, each with its `trials.log`; their outputs in `out/b2/`, `out/b4/`, `out/b5/` |
 | `site/` | the static export of the demo site, published by Pages |
 
 </details>

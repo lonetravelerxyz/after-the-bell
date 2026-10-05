@@ -3,7 +3,7 @@ from pathlib import Path
 
 from sentiment.config import data_dir, OUT as _OUT
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]   # studies/b2/config.py -> project root
 RAW = data_dir() / "raw" / "b2"                  # gitignored raw pulls
 OUT = _OUT / "b2"                                # run outputs (gitignored; final run force-added)
 SYMBOL = "BTCUSDT"

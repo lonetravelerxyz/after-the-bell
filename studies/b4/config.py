@@ -7,7 +7,7 @@ from pathlib import Path
 
 from sentiment.config import data_dir, OUT as _OUT
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]   # studies/b4/config.py -> project root
 RAW = data_dir() / "raw" / "b4"                  # gitignored raw pulls
 OUT = _OUT / "b4"                                # run outputs (gitignored)
 

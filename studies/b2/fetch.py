@@ -5,7 +5,7 @@
   stables.parquet   DefiLlama daily stablecoin prices (peggedUSD assets in config.STABLES)
   augmento.parquet  Augmento 24H topic counts for bitcoin, twitter + reddit, 2017-01-01 -> (free: ~31d delay)
 
-Run: uv run python -m b2.fetch [perp|fng|stables|augmento ...]
+Run: uv run python -m studies.b2.fetch [perp|fng|stables|augmento ...]
 """
 from __future__ import annotations
 
@@ -15,7 +15,7 @@ import time
 import pandas as pd
 import requests
 
-from b2.config import AUGMENTO_SOURCES, RAW, STABLES, START, SYMBOL
+from studies.b2.config import AUGMENTO_SOURCES, RAW, STABLES, START, SYMBOL
 
 BITGET = "https://api.bitget.com"
 COLS = ["ts", "open", "high", "low", "close", "base_vol", "quote_vol"]

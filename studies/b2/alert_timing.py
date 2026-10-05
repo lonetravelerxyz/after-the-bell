@@ -12,8 +12,8 @@ used 5 pages per query and fetched 2,378 tweets; the defaults below are tighter 
 Inputs: out/b2/incidents.json (hack events with a price alert) and out/b2/delistings.json (Binance
 announcements). Output: out/b2/alert_timing.json and alert_timing.md.
 
-Run: infisical run --env dev --path /general -- uv run python -m b2.alert_timing [--dry-run]
-     uv run python -m b2.alert_timing --from-json      # rebuild alert_timing.md and the summary from the saved json, no API
+Run: infisical run --env dev --path /general -- uv run python -m studies.b2.alert_timing [--dry-run]
+     uv run python -m studies.b2.alert_timing --from-json      # rebuild alert_timing.md and the summary from the saved json, no API
 """
 from __future__ import annotations
 
@@ -26,7 +26,7 @@ from datetime import datetime, timezone
 import pandas as pd
 import requests
 
-from b2 import config as C
+from studies.b2 import config as C
 
 API = "https://api.twitterapi.io/twitter/tweet/advanced_search"
 T1 = ["PeckShieldAlert", "CertiKAlert", "SlowMist_Team", "BlockSecTeam", "CyversAlerts", "zachxbt", "lookonchain",

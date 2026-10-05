@@ -1,6 +1,6 @@
 """B4 step 0: crypto F&G as a contrarian signal on BTC and four crypto stocks, 2018-02 -> 2026-10.
 
-Pre-declared before the first run (2026-10-02, b4/trials.log entry 0): F&G(d) (stamp 00:00 UTC d) is held by a
+Pre-declared before the first run (2026-10-02, studies/b4/trials.log entry 0): F&G(d) (stamp 00:00 UTC d) is held by a
 stock over close(d) -> close(d+1) and by BTC over day d+1. Rules, no grid: (a) long-only w = clip((75-FG)/50, 0, 1);
 (b) long/short w = clip((50-FG)/50, -1, 1). Benchmarks: buy & hold; the same weight functions on the rank of BTC's
 30d return within its trailing 365 days (the momentum F&G is partly built from); the asset's own 200d MA.
@@ -10,7 +10,7 @@ with a block-bootstrap CI excluding 0 in both periods AND beat the momentum twin
 
 This file is the committed form of the scratch run of the same day; the only change is the bootstrap
 annualisation (365 days for BTC, 252 for stocks; the scratch run used 252 for both, so its BTC intervals were
-~17% too narrow). Run: uv run --with yfinance --with statsmodels python -m b4.cross_asset -> out/b4/cross_asset.json
+~17% too narrow). Run: uv run --with yfinance --with statsmodels python -m studies.b4.cross_asset -> out/b4/cross_asset.json
 """
 from __future__ import annotations
 
@@ -19,7 +19,7 @@ import json
 import numpy as np
 import pandas as pd
 
-from b4.config import OUT, RAW
+from studies.b4.config import OUT, RAW
 
 ASSETS = ("BTC-USD", "MSTR", "COIN", "MARA", "RIOT")
 PERIODS = {"P1": ("2018-02-01", "2022-12-31"), "P2": ("2023-01-01", "2026-10-01")}

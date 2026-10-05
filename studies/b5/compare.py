@@ -1,6 +1,6 @@
 """B5 comparison: per window, every variant's metrics and block-bootstrap CIs of Sharpe differences.
 
-Run: uv run python -m b5.compare     -> out/b5/summary.json, prints the table
+Run: uv run python -m studies.b5.compare     -> out/b5/summary.json, prints the table
 """
 from __future__ import annotations
 
@@ -9,7 +9,7 @@ import json
 import numpy as np
 import pandas as pd
 
-from b5.run import B5_OUT
+from studies.b5.run import B5_OUT
 from sentiment import metrics
 
 WINDOWS = {"dev": ("2026-06-22", "2026-08-10"), "test": ("2026-08-11", "2026-09-22"),

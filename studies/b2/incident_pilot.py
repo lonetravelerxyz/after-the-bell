@@ -7,7 +7,7 @@ trailing 60-minute return is <= ALERT_DROP: the moment a price-only watcher woul
 token's return from the close at t_a to +1h/+6h/+24h/+72h/+7d/+30d and the 30-day low, and BTC over the
 same windows (market-adjusted = token - BTC). Also the part that cannot be avoided: day0 00:00 -> t_a.
 
-Run: uv run python -m b2.incident_pilot  -> out/b2/incidents.json, incidents.md
+Run: uv run python -m studies.b2.incident_pilot  -> out/b2/incidents.json, incidents.md
 """
 from __future__ import annotations
 
@@ -19,7 +19,7 @@ import numpy as np
 import pandas as pd
 import requests
 
-from b2 import config as C
+from studies.b2 import config as C
 
 MIN_USD = 20e6
 START = pd.Timestamp("2021-01-01", tz="UTC")

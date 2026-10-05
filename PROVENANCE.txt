@@ -1,5 +1,5 @@
-source repo commit: 3a8b49ea6fb4bf52aef20909740f125ad0b5b39a
+source repo commit: 3564bda81fa3e5adc097bdc1e4fbed2360adbfe2
 PREREG.md frozen at: 62286d958e19bac1d18ffa822dda3f65fd1ff65b 2026-09-23T21:32:47+08:00
 PREREG.md sha256: 3ce087ba64edd64ea2fa29470c52edafe525ec5d254a63721897d098b6c06683
-exported: 2026-10-05T13:16:36Z
+exported: 2026-10-05T13:57:45Z
 run directories: llm_v1_2026-08-11_2026-09-22 baseline_v1_2026-08-11_2026-09-22 nonews_v1_2026-08-11_2026-09-22 shuffled_v1_2026-08-11_2026-09-22 blinded_v1_2026-08-11_2026-09-22 llm_2026-06-22_2026-08-10 baseline_2026-06-22_2026-08-10 llm_v1_2026-06-22_2026-07-15 baseline_v1_2026-06-22_2026-07-15 live

@@ -1,8 +1,8 @@
 """The other strategies we tested after the v1 test window, read from their committed outputs (report section 7).
 
 Each entry: id, title, question, design (what was fixed before the run), window, numbers, verdict, status and the
-files the numbers come from. Nothing is recomputed here: the numbers are the ones the modules wrote (b2/ -> out/b2/,
-b4/ -> out/b4/, b5/ -> out/b5/), each run once against criteria written in its trials.log before the run. A missing
+files the numbers come from. Nothing is recomputed here: the numbers are the ones the modules wrote (studies/b2/ -> out/b2/,
+studies/b4/ -> out/b4/, studies/b5/ -> out/b5/), each run once against criteria written in its trials.log before the run. A missing
 file gives status "not shipped" instead of failing the report.
 """
 from __future__ import annotations
@@ -35,7 +35,7 @@ def fg_cross_asset() -> dict:
                        "buy & hold with a block-bootstrap CI excluding 0 in both periods and beat the same rule on BTC "
                        "30-day momentum"),
             "window": ["2018-02-01", "2026-10-01"], "status": "estimated (daily closes, simulated)",
-            "sources": ["b4/cross_asset.py", "out/b4/cross_asset.json", "b4/trials.log"]}
+            "sources": ["studies/b4/cross_asset.py", "out/b4/cross_asset.json", "studies/b4/trials.log"]}
     if x is None:
         return {**base, "status": "not shipped"}
     s, st = x["summary"], x["strategies"]
@@ -60,7 +60,7 @@ def fg_mstr() -> dict:
                        "a 95% block-bootstrap CI excluding 0. Paper log: the same rule on Bitget's RMSTRUSDT rToken, "
                        "1h bars since its listing, hash-chained"),
             "window": [None, None], "status": "estimated (daily closes and rToken bars, simulated fills)",
-            "sources": ["b4/backtest.py", "b4/paper.py", "out/b4/history.json", "out/b4/paper/", "b4/trials.log"]}
+            "sources": ["studies/b4/backtest.py", "studies/b4/paper.py", "out/b4/history.json", "out/b4/paper/", "studies/b4/trials.log"]}
     if h is None or p is None:
         return {**base, "status": "not shipped"}
     r = h["rules"]
@@ -91,8 +91,8 @@ def vol_managed() -> dict:
                        "simulator and costs; pass = Sharpe above a constant weight with the same mean exposure, CI "
                        "excluding 0, in the test window AND on 11 months of perp bars AND on 2021-26 daily stock closes"),
             "window": ["2021-01-04", "2026-10-01"], "status": "estimated (replay and daily closes, simulated fills)",
-            "sources": ["b5/run.py", "b5/compare.py", "b5/daily_check.py", "out/b5/summary.json",
-                        "out/b5/daily_check.json", "b5/trials.log"]}
+            "sources": ["studies/b5/run.py", "studies/b5/compare.py", "studies/b5/daily_check.py", "out/b5/summary.json",
+                        "out/b5/daily_check.json", "studies/b5/trials.log"]}
     if s is None or d is None:
         return {**base, "status": "not shipped"}
     win = {}
@@ -121,8 +121,8 @@ def crisis_derisk() -> dict:
                        "2019-08..2022-12, the chosen one run once on 2023-01..2026-09; pass = beat buy & hold and the "
                        "200-day MA on drawdown and Calmar, with false alarms costing less than the drawdown avoided"),
             "window": ["2019-08-01", "2026-09-26"], "status": "estimated (Bitget BTCUSDT 1h bars, simulated fills)",
-            "sources": ["b2/backtest.py", "b2/v1.py", "out/b2/metrics.json", "out/b2/v1_holdout.json", "out/b2/REPORT.md",
-                        "b2/trials.log"]}
+            "sources": ["studies/b2/backtest.py", "studies/b2/v1.py", "out/b2/metrics.json", "out/b2/v1_holdout.json", "out/b2/REPORT.md",
+                        "studies/b2/trials.log"]}
     if m is None or h is None:
         return {**base, "status": "not shipped"}
     mm = m["metrics"]
@@ -148,7 +148,7 @@ def incident_exit() -> dict:
                        "drop as the alert; Binance delisting announcements; then the first post of security and "
                        "news accounts on X against the price alert"),
             "window": ["2021-01-01", "2026-09-26"], "status": "observed (event studies on exchange candles; survivorship understates the falls)",
-            "sources": ["b2/incident_pilot.py", "b2/delist_pilot.py", "b2/alert_timing.py", "out/b2/incidents.json",
+            "sources": ["studies/b2/incident_pilot.py", "studies/b2/delist_pilot.py", "studies/b2/alert_timing.py", "out/b2/incidents.json",
                         "out/b2/delistings.json", "out/b2/alert_timing_summary.json"]}
     if inc is None or dl is None or at is None:
         return {**base, "status": "not shipped"}

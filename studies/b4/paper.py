@@ -5,7 +5,7 @@ or after that time executes the rebalance at its open (+/- half spread, plus the
 |target - current weight| >= BAND. One hash-chained ledger record per new F&G value; hourly marks
 at bar close go to equity.csv. Status: estimated (replayed fills, no orders sent).
 
-Run: uv run python -m b4.paper [--lag-h 1]   -> out/b4/paper[_lagNh]/{log.jsonl,equity.csv,metrics.json}
+Run: uv run python -m studies.b4.paper [--lag-h 1]   -> out/b4/paper[_lagNh]/{log.jsonl,equity.csv,metrics.json}
 """
 from __future__ import annotations
 
@@ -15,8 +15,8 @@ import json
 import numpy as np
 import pandas as pd
 
-from b4.backtest import weight
-from b4.config import BAND, FEE, FNG_LAG_H, HALF_SPREAD, OUT, PAPER_START, RAW, START_EQUITY, SYMBOL
+from studies.b4.backtest import weight
+from studies.b4.config import BAND, FEE, FNG_LAG_H, HALF_SPREAD, OUT, PAPER_START, RAW, START_EQUITY, SYMBOL
 from sentiment.ledger import Ledger, verify
 
 

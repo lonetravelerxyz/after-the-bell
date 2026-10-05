@@ -1,5 +1,5 @@
 {
-  "source_commit": "3a8b49ea6fb4bf52aef20909740f125ad0b5b39a",
+  "source_commit": "3564bda81fa3e5adc097bdc1e4fbed2360adbfe2",
   "source_dirty": false,
   "source_dirty_paths": [],
   "prereg_freeze_commit": "62286d9",
@@ -86,5 +86,5 @@
     "baseline_v1_2026-06-22_2026-07-15",
     "live"
   ],
-  "exported": "2026-10-05T13:16:36Z"
+  "exported": "2026-10-05T13:57:45Z"
 }

@@ -1,6 +1,6 @@
-"""B5 vol-managed long book: replay of the 10 v1 names with volatility caps (spec: b5/trials.log, entry 1).
+"""B5 vol-managed long book: replay of the 10 v1 names with volatility caps (spec: studies/b5/trials.log, entry 1).
 
-  uv run python -m b5.run --variant rule --start 2026-06-22 --end 2026-08-10 [--raw] [--const-w 0.08] [--offline]
+  uv run python -m studies.b5.run --variant rule --start 2026-06-22 --end 2026-08-10 [--raw] [--const-w 0.08] [--offline]
   -> out/b5/{variant}_{start}_{end}/log.jsonl, equity.csv, metrics.json
 
 cap_i(t) = FULL_W * min(1, vt_i / vol7_i): vol7 = the v1 market state's vol_7d at t; vt_i = median of vol7_i

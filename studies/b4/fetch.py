@@ -3,9 +3,9 @@
   fng.parquet      Alternative.me crypto fear & greed, daily (date = 00:00 UTC stamp), 2018-02-01 ->
   rtoken.parquet   Bitget spot RMSTRUSDT 1h bars from config.PAPER_START (ts ms = bar open)
   daily.parquet    split-adjusted daily closes of config.HIST_TICKERS (yfinance; run with
-                   `uv run --with yfinance python -m b4.fetch daily`)
+                   `uv run --with yfinance python -m studies.b4.fetch daily`)
 
-Run: uv run python -m b4.fetch [fng|rtoken|daily ...]
+Run: uv run python -m studies.b4.fetch [fng|rtoken|daily ...]
 """
 from __future__ import annotations
 
@@ -15,7 +15,7 @@ import time
 import pandas as pd
 import requests
 
-from b4.config import HIST_START, HIST_TICKERS, PAPER_START, RAW, SYMBOL
+from studies.b4.config import HIST_START, HIST_TICKERS, PAPER_START, RAW, SYMBOL
 
 BITGET = "https://api.bitget.com"
 COLS = ["ts", "open", "high", "low", "close", "base_vol", "quote_vol"]

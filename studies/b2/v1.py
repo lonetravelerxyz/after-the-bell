@@ -1,5 +1,5 @@
 """v1 trials of the crisis-derisk module: a small pre-declared grid evaluated on the DEV period only, the chosen
-configuration then run ONCE on the holdout period. Records go to b2/trials.log by hand.
+configuration then run ONCE on the holdout period. Records go to studies/b2/trials.log by hand.
 
 Dev = 2019-08-01 .. 2022-12-31 (events E1-E5), holdout = 2023-01-01 .. now (E6-E9).
 
@@ -11,7 +11,7 @@ Grid (16 configurations; C1 and C3 kept at v0):
 Selection on dev: Calmar of the module over its own base, minus the base's Calmar (the module must add to
 what it gates), tie-break by fewer false alarms.
 
-Run: uv run python -m b2.v1  -> out/b2/v1_grid.json, v1_holdout.json, and metrics for the chosen config.
+Run: uv run python -m studies.b2.v1  -> out/b2/v1_grid.json, v1_holdout.json, and metrics for the chosen config.
 """
 from __future__ import annotations
 
@@ -21,8 +21,8 @@ import json
 import numpy as np
 import pandas as pd
 
-from b2 import backtest as B
-from b2 import config as C
+from studies.b2 import backtest as B
+from studies.b2 import config as C
 
 DEV_END = pd.Timestamp("2022-12-31 23:00", tz="UTC")
 HOLD_START = pd.Timestamp("2023-01-01 00:00", tz="UTC")

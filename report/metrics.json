@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-05T13:16:39+00:00",
+  "generated_at": "2026-10-05T13:58:49+00:00",
   "out_dir": "out",
   "windows": {
     "test": {
@@ -16,7 +16,7 @@
     }
   },
   "git": {
-    "head": "0bf15b8",
+    "head": "6f56ce3",
     "prereg_sha256": "3ce087ba64edd64ea2fa29470c52edafe525ec5d254a63721897d098b6c06683",
     "prereg_deviations_now": "- 2026-09-23 14:20 UTC, **timestamps**: the \"FROZEN ~14:45 UTC\" in the Status line was written ahead\n  of time and is wrong. The freeze is commit `62286d9` at 13:32:47 UTC, and git is authoritative.\n  The baseline test run started at 13:32:53 UTC, after the freeze.\n- 2026-09-23 14:20 UTC, **code after freeze**: `sentiment/replay.py` (a `code_stamp` field) and\n  `sentiment/metrics.py` (daily statistics on complete UTC days, counts of bootstrap paths) were\n  edited at about 13:38 UTC, before the llm/nonews/shuffled test runs started on that tree. Neither\n  edit touches decisions, risk actions or fills. Proof: every test run is rerun offline from a clean\n  checkout of `62286d9`, and the log hashes are compared in `sentiment/out/freeze_rerun.json`.\n- 2026-09-23 14:20 UTC, **signal test (c)**: the event direction now comes only from cards known at\n  the entry bar. The previous version used every card of the ticker-day, which looks ahead. Forward\n  windows must end before the window end. This was fixed before any test-window signal test was\n  run; the dev before/after values are in `trials.log`.",
     "source": "PROVENANCE.json (exported repo; the research repo's git history is not shipped)",
@@ -4423,9 +4423,9 @@
         ],
         "status": "estimated (daily closes, simulated)",
         "sources": [
-          "b4/cross_asset.py",
+          "studies/b4/cross_asset.py",
           "out/b4/cross_asset.json",
-          "b4/trials.log"
+          "studies/b4/trials.log"
         ],
         "numbers": {
           "n_asset_periods": 10,
@@ -4555,11 +4555,11 @@
         ],
         "status": "estimated (daily closes and rToken bars, simulated fills)",
         "sources": [
-          "b4/backtest.py",
-          "b4/paper.py",
+          "studies/b4/backtest.py",
+          "studies/b4/paper.py",
           "out/b4/history.json",
           "out/b4/paper/",
-          "b4/trials.log"
+          "studies/b4/trials.log"
         ],
         "numbers": {
           "history": {
@@ -4663,12 +4663,12 @@
         ],
         "status": "estimated (replay and daily closes, simulated fills)",
         "sources": [
-          "b5/run.py",
-          "b5/compare.py",
-          "b5/daily_check.py",
+          "studies/b5/run.py",
+          "studies/b5/compare.py",
+          "studies/b5/daily_check.py",
           "out/b5/summary.json",
           "out/b5/daily_check.json",
-          "b5/trials.log"
+          "studies/b5/trials.log"
         ],
         "numbers": {
           "replay": {
@@ -4859,12 +4859,12 @@
         ],
         "status": "estimated (Bitget BTCUSDT 1h bars, simulated fills)",
         "sources": [
-          "b2/backtest.py",
-          "b2/v1.py",
+          "studies/b2/backtest.py",
+          "studies/b2/v1.py",
           "out/b2/metrics.json",
           "out/b2/v1_holdout.json",
           "out/b2/REPORT.md",
-          "b2/trials.log"
+          "studies/b2/trials.log"
         ],
         "numbers": {
           "v0": {
@@ -4956,9 +4956,9 @@
         ],
         "status": "observed (event studies on exchange candles; survivorship understates the falls)",
         "sources": [
-          "b2/incident_pilot.py",
-          "b2/delist_pilot.py",
-          "b2/alert_timing.py",
+          "studies/b2/incident_pilot.py",
+          "studies/b2/delist_pilot.py",
+          "studies/b2/alert_timing.py",
           "out/b2/incidents.json",
           "out/b2/delistings.json",
           "out/b2/alert_timing_summary.json"

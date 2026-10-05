@@ -4,7 +4,7 @@ Clock: a signal is computed on the close of hourly bar i and acted on at the OPE
 held in fractions of equity; equity marks at every bar open. Daily inputs (stablecoin prices, Augmento
 counts, F&G) for date d become visible at d+1 00:00 UTC.
 
-Run: uv run python -m b2.backtest   -> out/b2/{signals.parquet, equity.csv, metrics.json, events.json}
+Run: uv run python -m studies.b2.backtest   -> out/b2/{signals.parquet, equity.csv, metrics.json, events.json}
 """
 from __future__ import annotations
 
@@ -13,7 +13,7 @@ import json
 import numpy as np
 import pandas as pd
 
-from b2 import config as C
+from studies.b2 import config as C
 
 H = pd.Timedelta(hours=1)
 EVENTS = [  # (id, name, start UTC, type, split)
