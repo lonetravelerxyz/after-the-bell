@@ -1,0 +1,29 @@
+{
+ "key": "7c9ae7b3cf8df01e529ba498c0a4398d2b896a741f127fd6eb75813da77eb3b8",
+ "model": "qwen3.8-max",
+ "purpose": "decide:llm",
+ "request": {
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are the portfolio manager of a small market-sentiment book that trades USDT perpetual futures on US stocks. Every 4 hours you receive the market state, the evidence cards extracted from news, analyst actions and insider filings of the last 72 hours, and the current book. You decide the target weight of every name.\n\nYou must base the decision only on the information in the message. Do not use outside knowledge of prices, events or anything that happened after the evidence shown. You cannot see the future; nobody can.\n\nUNIVERSE (the only tradable tickers):\nNVDA, AAPL, GOOGL, META, AMZN, TSLA, MSTR, COIN, HOOD, CRCL\n\nHOW TO READ THE INPUT\n- Returns are in percent, measured to the last closed hourly bar. vol_1d is the daily volatility (stdev of hourly log returns scaled to one day) in percent.\n- funding is the perp funding rate per settlement in basis points; positive means longs pay shorts. |funding| >= 10 bp blocks new exposure on the paying side.\n- premium is the tokenised-stock (rToken) spot price against the perp, in basis points.\n- Evidence cards: stance -2..+2 (direction of the information for the subject), strength 0..1 (how material and specific), horizon_h (how long it should matter), age_h (hours since it became available), novelty:\n  - new: first report of a development;\n  - recap: roundup, preview or opinion of already known facts; weaker;\n  - post_hoc: explains a price move that ALREADY happened. It is flagged so you know the move is probably in the price already. Never trade a post_hoc card as fresh news.\n- scope name = about one company; sector = about an industry or theme (ai_semis, megacap_tech, crypto, fintech, ev_auto, other); market = about the overall US market or risk appetite.\n\nRULES\n- Weight = fraction of equity, positive long, negative short, each between -0.15 and +0.15. Sum of |weights| <= 1; |sum of weights| <= 0.3. Outside the US regular session new exposure is capped at half the per-name limit.\n- A deterministic risk layer enforces these limits after you; weights outside them are cut and the cut is logged against you.\n- Every trade costs about 0.1% round trip in fees and spread. Do not trade on weak or stale evidence; holding the current weight is free. Flat (0) is the right answer when there is no fresh, material evidence for a name.\n- Size with the evidence: stronger, newer, more specific and more consistent cards justify larger weights. Conflicting cards cancel. Old cards (age near or past their horizon) matter little.\n- List every ticker in \"targets\" (0 for flat). A ticker you leave out is closed.\n- Each non-zero weight needs a one-sentence reason and the ids of the cards it relies on. A weight with no card (e.g. a pure price or funding view) must say so in its reason and should be small.\n\nOUTPUT\nReply with one JSON object and nothing else:\n{\"targets\": {\"TICKER\": 0.0, ...}, \"reasons\": {\"TICKER\": \"one sentence\"}, \"evidence\": {\"TICKER\": [\"card id\", ...]}, \"confidence\": 0.0}\nconfidence is 0..1: how confident you are that this book beats a flat book over the next 4-24 hours after costs."
+   },
+   {
+    "role": "user",
+    "content": "NOW: 2026-06-22 00:00 UTC (Monday)\nUS regular session: closed\nMARKET: crypto fear&greed 23 (extreme_fear); SP500 perp 24h -0.57%; NDX100 perp 24h -0.76%\n\nNAMES (ret/vol in %, funding/premium in bp, book = current weight)\nticker ret_4h ret_24h ret_7d vol_1d funding funding_7d premium book\nNVDA -0.62 -0.59 -0.85 1.22 +0.00 +0.00 -50.9 +0.000\nAAPL -0.47 -0.55 +0.52 1.06 +0.00 +0.00 +181.1 +0.000\nGOOGL -0.79 -0.89 -1.44 1.57 +0.00 +0.00 +250.7 +0.000\nMETA -1.08 -1.06 -1.08 2.03 +0.00 +0.00 +58.4 +0.000\nAMZN -0.71 -0.83 +0.40 1.61 +0.00 +0.00 +294.4 +0.000\nTSLA -0.88 -0.81 -3.08 1.76 +0.00 +0.00 +58.7 +0.000\nMSTR -2.11 -3.64 -13.17 4.40 +0.00 +0.00 na +0.000\nCOIN -1.46 -1.74 -1.65 3.59 +0.00 +0.00 na +0.000\nHOOD -0.99 -1.20 +12.96 4.67 +0.00 +0.00 na +0.000\nCRCL -1.29 +0.30 -1.05 4.73 +0.00 +0.00 na +0.000\n\nEVIDENCE (last 72h): none.\n\nCURRENT BOOK: flat\n\nReturn the JSON decision for every ticker."
+   }
+  ]
+ },
+ "response": "{\"targets\": {\"NVDA\": 0.0, \"AAPL\": 0.0, \"GOOGL\": 0.0, \"META\": 0.0, \"AMZN\": 0.0, \"TSLA\": 0.0, \"MSTR\": 0.0, \"COIN\": 0.0, \"HOOD\": 0.0, \"CRCL\": 0.0}, \"reasons\": {}, \"evidence\": {}, \"confidence\": 0.0}",
+ "usage": {
+  "completion_tokens": 112,
+  "prompt_tokens": 1372,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "text_tokens": 1372
+  },
+  "total_tokens": 1484
+ },
+ "latency_s": 3.47,
+ "created_at": "2026-09-23T11:00:21Z"
+}

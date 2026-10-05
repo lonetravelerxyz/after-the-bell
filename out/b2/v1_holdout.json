@@ -1,0 +1,498 @@
+{
+ "chosen": {
+  "c2": null,
+  "c4": null,
+  "c5": null,
+  "reentry": "recover",
+  "base": "one"
+ },
+ "dev": {
+  "module": {
+   "total_return": 0.603807182741577,
+   "cagr": 0.14826340961990492,
+   "ann_vol": 0.45176738817864853,
+   "sharpe": 0.5215030613286393,
+   "max_dd": -0.5651648487508634,
+   "calmar": 0.2623365730328048,
+   "time_in_market": 0.412663464104617,
+   "position_changes": 28,
+   "cost_paid_frac": 0.0224,
+   "years": 3.4168377823408624
+  },
+  "base": {
+   "total_return": 0.6445145930869469,
+   "cagr": 0.1567177208990982,
+   "ann_vol": 0.7522697994644122,
+   "sharpe": 0.5761665694599233,
+   "max_dd": -0.7723232808507869,
+   "calmar": 0.2029172560051004,
+   "time_in_market": 0.9999666399786495,
+   "position_changes": 1,
+   "cost_paid_frac": 0.0007999999999999999,
+   "years": 3.4168377823408624
+  },
+  "episodes": 14,
+  "false_alarms": 9,
+  "calmar_increment": 0.059419317027704366,
+  "dd_increment": 0.20715843209992357,
+  "events": [
+   {
+    "id": "E1",
+    "name": "COVID crash",
+    "start": "2020-03-12 00:00",
+    "type": "macro+liquidation",
+    "split": "dev",
+    "covered": true,
+    "btc_start_to_trough": -0.479485725089809,
+    "trough": "2020-03-13 02:00:00+00:00",
+    "triggered": true,
+    "first_trigger": "2020-03-09 04:00:00+00:00",
+    "hours_after_start": -68.0,
+    "rules": [
+     "C1",
+     "C4"
+    ],
+    "btc_trigger_to_trough": -0.4740160489109667,
+    "reentry": "2020-04-29 12:00:00+00:00",
+    "btc_trigger_to_reentry": 0.03515475735575091
+   },
+   {
+    "id": "E2",
+    "name": "May-19 deleveraging",
+    "start": "2021-05-19 00:00",
+    "type": "liquidation",
+    "split": "dev",
+    "covered": true,
+    "btc_start_to_trough": -0.2606855050322461,
+    "trough": "2021-06-08 16:00:00+00:00",
+    "triggered": true,
+    "first_trigger": "2021-05-17 03:00:00+00:00",
+    "hours_after_start": -45.0,
+    "rules": [
+     "C1",
+     "C2",
+     "C4",
+     "C5"
+    ],
+    "btc_trigger_to_trough": -0.2618476514287045,
+    "reentry": "2021-10-06 15:00:00+00:00",
+    "btc_trigger_to_reentry": 0.2698120677208262
+   },
+   {
+    "id": "E3",
+    "name": "Terra/UST",
+    "start": "2022-05-09 00:00",
+    "type": "structural",
+    "split": "dev",
+    "covered": true,
+    "btc_start_to_trough": -0.20491417822713376,
+    "trough": "2022-05-12 07:00:00+00:00",
+    "triggered": true,
+    "first_trigger": "2022-05-09 18:00:00+00:00",
+    "hours_after_start": 18.0,
+    "rules": [
+     "C1",
+     "C5"
+    ],
+    "btc_trigger_to_trough": -0.12110333176302412,
+    "reentry": null,
+    "btc_trigger_to_reentry": null
+   },
+   {
+    "id": "E4",
+    "name": "Celsius/3AC",
+    "start": "2022-06-12 00:00",
+    "type": "structural",
+    "split": "dev",
+    "covered": true,
+    "btc_start_to_trough": -0.3735257877134307,
+    "trough": "2022-06-18 21:00:00+00:00",
+    "triggered": true,
+    "first_trigger": "2022-06-13 07:00:00+00:00",
+    "hours_after_start": 31.0,
+    "rules": [
+     "C1",
+     "C4"
+    ],
+    "btc_trigger_to_trough": -0.28183707649777023,
+    "reentry": null,
+    "btc_trigger_to_reentry": null
+   },
+   {
+    "id": "E5",
+    "name": "FTX",
+    "start": "2022-11-08 00:00",
+    "type": "structural",
+    "split": "dev",
+    "covered": true,
+    "btc_start_to_trough": -0.23993973561430793,
+    "trough": "2022-11-21 22:00:00+00:00",
+    "triggered": true,
+    "first_trigger": "2022-11-08 18:00:00+00:00",
+    "hours_after_start": 18.0,
+    "rules": [
+     "C1",
+     "C2",
+     "C4"
+    ],
+    "btc_trigger_to_trough": -0.1585828423856025,
+    "reentry": null,
+    "btc_trigger_to_reentry": null
+   }
+  ],
+  "events_hit": 5,
+  "events_n": 5
+ },
+ "holdout": {
+  "module": {
+   "total_return": 0.27227140417003315,
+   "cagr": 0.06660649151162046,
+   "ann_vol": 0.37545459869350956,
+   "sharpe": 0.35833065842393674,
+   "max_dd": -0.5941090688218837,
+   "calmar": 0.11211155494343977,
+   "time_in_market": 0.6717361429225835,
+   "position_changes": 9,
+   "cost_paid_frac": 0.0072,
+   "years": 3.7344284736481863
+  },
+  "base": {
+   "total_return": 4.078379790847997,
+   "cagr": 0.5451764998232353,
+   "ann_vol": 0.46620871822384585,
+   "sharpe": 1.1644668692706315,
+   "max_dd": -0.5375495451727333,
+   "calmar": 1.014188375227908,
+   "time_in_market": 1.0,
+   "position_changes": 0,
+   "cost_paid_frac": 0.0007999999999999999,
+   "years": 3.7344284736481863
+  },
+  "episodes": 4,
+  "false_alarms": 4,
+  "calmar_increment": -0.9020768202844682,
+  "dd_increment": -0.0565595236491504,
+  "events": [
+   {
+    "id": "E6",
+    "name": "SVB/USDC depeg",
+    "start": "2023-03-10 00:00",
+    "type": "structural",
+    "split": "holdout",
+    "covered": true,
+    "btc_start_to_trough": -0.036266247327944146,
+    "trough": "2023-03-10 11:00:00+00:00",
+    "triggered": true,
+    "first_trigger": "2023-03-13 00:00:00+00:00",
+    "hours_after_start": 72.0,
+    "rules": [
+     "C3"
+    ],
+    "btc_trigger_to_trough": -0.021316879761215324,
+    "reentry": "2024-02-15 02:00:00+00:00",
+    "btc_trigger_to_reentry": 1.3126564797077558
+   },
+   {
+    "id": "E7",
+    "name": "Yen carry unwind",
+    "start": "2024-08-05 00:00",
+    "type": "macro",
+    "split": "holdout",
+    "covered": true,
+    "btc_start_to_trough": -0.14357975582563698,
+    "trough": "2024-08-05 13:00:00+00:00",
+    "triggered": true,
+    "first_trigger": "2024-08-05 01:00:00+00:00",
+    "hours_after_start": 1.0,
+    "rules": [
+     "C1",
+     "C2",
+     "C4"
+    ],
+    "btc_trigger_to_trough": -0.08456902623782314,
+    "reentry": "2024-08-12 14:00:00+00:00",
+    "btc_trigger_to_reentry": 0.06862440391571978
+   },
+   {
+    "id": "E8",
+    "name": "Tariff drawdown",
+    "start": "2025-02-24 00:00",
+    "type": "macro-trend",
+    "split": "holdout",
+    "covered": true,
+    "btc_start_to_trough": -0.19328547687913844,
+    "trough": "2025-03-10 19:00:00+00:00",
+    "triggered": true,
+    "first_trigger": "2025-03-04 01:00:00+00:00",
+    "hours_after_start": 193.0,
+    "rules": [
+     "C1",
+     "C2"
+    ],
+    "btc_trigger_to_trough": -0.06871774075504933,
+    "reentry": "2025-03-20 00:00:00+00:00",
+    "btc_trigger_to_reentry": 0.04140341363100841
+   },
+   {
+    "id": "E9",
+    "name": "10/11 liquidation",
+    "start": "2025-10-10 20:00",
+    "type": "macro+liquidation",
+    "split": "holdout",
+    "covered": true,
+    "btc_start_to_trough": -0.145810768279516,
+    "trough": "2025-11-07 13:00:00+00:00",
+    "triggered": false
+   }
+  ],
+  "events_hit": 3,
+  "events_n": 4
+ },
+ "holdout_refs": {
+  "buy_hold": {
+   "total_return": 4.078379790847997,
+   "cagr": 0.5451764998232353,
+   "ann_vol": 0.46620871822384585,
+   "sharpe": 1.1644668692706315,
+   "max_dd": -0.5375495451727333,
+   "calmar": 1.014188375227908,
+   "time_in_market": 1.0,
+   "position_changes": 0,
+   "cost_paid_frac": 0.0007999999999999999,
+   "years": 3.7344284736481863
+  },
+  "ma200": {
+   "total_return": 2.5692127236421674,
+   "cagr": 0.40594090989273646,
+   "ann_vol": 0.37818530103692977,
+   "sharpe": 1.0876210054162652,
+   "max_dd": -0.34024964729778995,
+   "calmar": 1.1930678345052121,
+   "time_in_market": 0.6533211177278974,
+   "position_changes": 33,
+   "cost_paid_frac": 0.0264,
+   "years": 3.7344284736481863
+  },
+  "voltarget": {
+   "total_return": 3.206546130576637,
+   "cagr": 0.46917636757146575,
+   "ann_vol": 0.3986899168028756,
+   "sharpe": 1.1627751036422962,
+   "max_dd": -0.5285493664810121,
+   "calmar": 0.887668016130941,
+   "time_in_market": 0.8765592611216512,
+   "position_changes": 861,
+   "cost_paid_frac": 0.014125139472016303,
+   "years": 3.7344284736481863
+  }
+ },
+ "full": {
+  "module": {
+   "total_return": 1.0404780164046241,
+   "cagr": 0.10482858945875195,
+   "ann_vol": 0.4135252273082428,
+   "sharpe": 0.44194022849408326,
+   "max_dd": -0.5941090688218829,
+   "calmar": 0.17644670812150173,
+   "time_in_market": 0.5479185599719392,
+   "position_changes": 37,
+   "cost_paid_frac": 0.0296,
+   "years": 7.15400410677618
+  },
+  "base": {
+   "total_return": 7.36852643490362,
+   "cagr": 0.3457661248992463,
+   "ann_vol": 0.6193570313015013,
+   "sharpe": 0.7910758944729094,
+   "max_dd": -0.7723232808507869,
+   "calmar": 0.4476961053386249,
+   "time_in_market": 0.9999840563766521,
+   "position_changes": 1,
+   "cost_paid_frac": 0.0007999999999999999,
+   "years": 7.15400410677618
+  },
+  "episodes": 18,
+  "false_alarms": 13,
+  "calmar_increment": -0.27124939721712316,
+  "dd_increment": 0.17821421202890408,
+  "events": [
+   {
+    "id": "E1",
+    "name": "COVID crash",
+    "start": "2020-03-12 00:00",
+    "type": "macro+liquidation",
+    "split": "dev",
+    "covered": true,
+    "btc_start_to_trough": -0.479485725089809,
+    "trough": "2020-03-13 02:00:00+00:00",
+    "triggered": true,
+    "first_trigger": "2020-03-09 04:00:00+00:00",
+    "hours_after_start": -68.0,
+    "rules": [
+     "C1",
+     "C4"
+    ],
+    "btc_trigger_to_trough": -0.4740160489109667,
+    "reentry": "2020-04-29 12:00:00+00:00",
+    "btc_trigger_to_reentry": 0.03515475735575091
+   },
+   {
+    "id": "E2",
+    "name": "May-19 deleveraging",
+    "start": "2021-05-19 00:00",
+    "type": "liquidation",
+    "split": "dev",
+    "covered": true,
+    "btc_start_to_trough": -0.2606855050322461,
+    "trough": "2021-06-08 16:00:00+00:00",
+    "triggered": true,
+    "first_trigger": "2021-05-17 03:00:00+00:00",
+    "hours_after_start": -45.0,
+    "rules": [
+     "C1",
+     "C2",
+     "C4",
+     "C5"
+    ],
+    "btc_trigger_to_trough": -0.2618476514287045,
+    "reentry": "2021-10-06 15:00:00+00:00",
+    "btc_trigger_to_reentry": 0.2698120677208262
+   },
+   {
+    "id": "E3",
+    "name": "Terra/UST",
+    "start": "2022-05-09 00:00",
+    "type": "structural",
+    "split": "dev",
+    "covered": true,
+    "btc_start_to_trough": -0.20491417822713376,
+    "trough": "2022-05-12 07:00:00+00:00",
+    "triggered": true,
+    "first_trigger": "2022-05-09 18:00:00+00:00",
+    "hours_after_start": 18.0,
+    "rules": [
+     "C1",
+     "C5"
+    ],
+    "btc_trigger_to_trough": -0.12110333176302412,
+    "reentry": "2024-02-15 02:00:00+00:00",
+    "btc_trigger_to_reentry": 0.6865836027225913
+   },
+   {
+    "id": "E4",
+    "name": "Celsius/3AC",
+    "start": "2022-06-12 00:00",
+    "type": "structural",
+    "split": "dev",
+    "covered": true,
+    "btc_start_to_trough": -0.3735257877134307,
+    "trough": "2022-06-18 21:00:00+00:00",
+    "triggered": true,
+    "first_trigger": "2022-06-13 07:00:00+00:00",
+    "hours_after_start": 31.0,
+    "rules": [
+     "C1",
+     "C4"
+    ],
+    "btc_trigger_to_trough": -0.28183707649777023,
+    "reentry": "2024-02-15 02:00:00+00:00",
+    "btc_trigger_to_reentry": 1.0950501442783058
+   },
+   {
+    "id": "E5",
+    "name": "FTX",
+    "start": "2022-11-08 00:00",
+    "type": "structural",
+    "split": "dev",
+    "covered": true,
+    "btc_start_to_trough": -0.23993973561430793,
+    "trough": "2022-11-21 22:00:00+00:00",
+    "triggered": true,
+    "first_trigger": "2022-11-08 18:00:00+00:00",
+    "hours_after_start": 18.0,
+    "rules": [
+     "C1",
+     "C2",
+     "C4"
+    ],
+    "btc_trigger_to_trough": -0.1585828423856025,
+    "reentry": "2024-02-15 02:00:00+00:00",
+    "btc_trigger_to_reentry": 1.7930056761628062
+   },
+   {
+    "id": "E6",
+    "name": "SVB/USDC depeg",
+    "start": "2023-03-10 00:00",
+    "type": "structural",
+    "split": "holdout",
+    "covered": true,
+    "btc_start_to_trough": -0.036266247327944146,
+    "trough": "2023-03-10 11:00:00+00:00",
+    "triggered": true,
+    "first_trigger": "2023-03-13 00:00:00+00:00",
+    "hours_after_start": 72.0,
+    "rules": [
+     "C3"
+    ],
+    "btc_trigger_to_trough": -0.021316879761215324,
+    "reentry": "2024-02-15 02:00:00+00:00",
+    "btc_trigger_to_reentry": 1.3126564797077558
+   },
+   {
+    "id": "E7",
+    "name": "Yen carry unwind",
+    "start": "2024-08-05 00:00",
+    "type": "macro",
+    "split": "holdout",
+    "covered": true,
+    "btc_start_to_trough": -0.14357975582563698,
+    "trough": "2024-08-05 13:00:00+00:00",
+    "triggered": true,
+    "first_trigger": "2024-08-05 01:00:00+00:00",
+    "hours_after_start": 1.0,
+    "rules": [
+     "C1",
+     "C2",
+     "C4"
+    ],
+    "btc_trigger_to_trough": -0.08456902623782314,
+    "reentry": "2024-08-12 14:00:00+00:00",
+    "btc_trigger_to_reentry": 0.06862440391571978
+   },
+   {
+    "id": "E8",
+    "name": "Tariff drawdown",
+    "start": "2025-02-24 00:00",
+    "type": "macro-trend",
+    "split": "holdout",
+    "covered": true,
+    "btc_start_to_trough": -0.19328547687913844,
+    "trough": "2025-03-10 19:00:00+00:00",
+    "triggered": true,
+    "first_trigger": "2025-03-04 01:00:00+00:00",
+    "hours_after_start": 193.0,
+    "rules": [
+     "C1",
+     "C2"
+    ],
+    "btc_trigger_to_trough": -0.06871774075504933,
+    "reentry": "2025-03-20 00:00:00+00:00",
+    "btc_trigger_to_reentry": 0.04140341363100841
+   },
+   {
+    "id": "E9",
+    "name": "10/11 liquidation",
+    "start": "2025-10-10 20:00",
+    "type": "macro+liquidation",
+    "split": "holdout",
+    "covered": true,
+    "btc_start_to_trough": -0.145810768279516,
+    "trough": "2025-11-07 13:00:00+00:00",
+    "triggered": false
+   }
+  ],
+  "events_hit": 8,
+  "events_n": 9
+ },
+ "label": "estimated (replay); dev used for selection, holdout run once"
+}

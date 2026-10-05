@@ -1,0 +1,22 @@
+{
+ "hack": {
+  "events": 14,
+  "with_tweet": 11,
+  "excluded_mismatch": [
+   "FTX"
+  ],
+  "earlier_than_ref": 2,
+  "median_lead_min": -72.2,
+  "min_lead_min": -1034.4166666666667,
+  "max_lead_min": 110.03333333333333
+ },
+ "delist": {
+  "events": 32,
+  "with_tweet": 32,
+  "excluded_mismatch": [],
+  "earlier_than_ref": 3,
+  "median_lead_min": -0.043616666666666665,
+  "min_lead_min": -2.4042666666666666,
+  "max_lead_min": 323.2268
+ }
+}

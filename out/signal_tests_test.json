@@ -1,0 +1,130 @@
+{
+  "window": {
+    "start": "2026-08-11",
+    "end": "2026-09-22",
+    "sample": "test",
+    "n_decision_times": 258
+  },
+  "t_bar": 2.6,
+  "n_tests": 5,
+  "definitions": {
+    "a": "mean cross-sectional Spearman IC of baseline.scores (cards available in (t-72h, t]) vs forward perp open-to-open return (demeaned; rank-invariant) at 4/24/72h; Newey-West t, lag = horizon / 4h; forward window must end strictly before the window end",
+    "b": "rating cards with stance != 0, one observation per (ticker, UTC day of available_at): 24h demeaned perp return from the first bar open at/after the first card's available_at, signed by sign(sum of sign(stance)) over the cards known at that entry bar; net-zero events dropped; the exit must lie strictly before the window end; t = mean / (sd/sqrt(n)); card_level_mean_bp and all_day_sign are descriptive only",
+    "c": "as b for news cards with scope name, novelty new, stance != 0; one observation per (ticker, UTC day)",
+    "significant": "|t| > 2.6 (PREREG Bonferroni bar for 5 tests)"
+  },
+  "tests": {
+    "a_ic_4h": {
+      "n": 257,
+      "estimate": -0.006572614448651365,
+      "t": -0.29641609961771964,
+      "significant": false,
+      "horizon_h": 4,
+      "nw_lag": 1,
+      "n_skipped_no_ic": 0,
+      "n_skipped_window_end": 1,
+      "n_skipped_no_price": 0,
+      "ic_positive_share": 0.48249027237354086,
+      "status": "not significant"
+    },
+    "a_ic_24h": {
+      "n": 252,
+      "estimate": -0.03240181217212265,
+      "t": -0.8545372726035049,
+      "significant": false,
+      "horizon_h": 24,
+      "nw_lag": 6,
+      "n_skipped_no_ic": 0,
+      "n_skipped_window_end": 6,
+      "n_skipped_no_price": 0,
+      "ic_positive_share": 0.4642857142857143,
+      "status": "not significant"
+    },
+    "a_ic_72h": {
+      "n": 240,
+      "estimate": -0.0551225923522697,
+      "t": -0.9589160469569774,
+      "significant": false,
+      "horizon_h": 72,
+      "nw_lag": 18,
+      "n_skipped_no_ic": 0,
+      "n_skipped_window_end": 18,
+      "n_skipped_no_price": 0,
+      "ic_positive_share": 0.42916666666666664,
+      "status": "not significant"
+    },
+    "b_rating_24h": {
+      "n": 29,
+      "estimate": 0.000379787766466564,
+      "t": 0.06572025558904374,
+      "significant": false,
+      "estimate_bp": 3.79787766466564,
+      "median_bp": -61.67710842741947,
+      "hit_rate": 0.3448275862068966,
+      "n_ticker_days": 29,
+      "n_dropped_net_zero": 0,
+      "n_later_cards_ignored": 0,
+      "horizon_h": 24,
+      "n_cards": 46,
+      "n_skipped_window_end": 0,
+      "n_skipped_no_price": 0,
+      "card_level_mean_bp": 16.68654792886985,
+      "all_day_sign": {
+        "what": "sign from every card of the ticker-day, including cards available after the entry (look-ahead; descriptive, not used for the bar)",
+        "n": 29,
+        "estimate_bp": 3.79787766466564,
+        "t": 0.06572025558904374,
+        "n_dropped_net_zero": 0
+      },
+      "status": "not significant"
+    },
+    "c_news_new_24h": {
+      "n": 73,
+      "estimate": -0.001947092914757198,
+      "t": -0.549606861391691,
+      "significant": false,
+      "estimate_bp": -19.47092914757198,
+      "median_bp": -9.047963182778673,
+      "hit_rate": 0.4931506849315068,
+      "n_ticker_days": 73,
+      "n_dropped_net_zero": 0,
+      "n_later_cards_ignored": 9,
+      "horizon_h": 24,
+      "n_cards": 95,
+      "n_skipped_window_end": 4,
+      "n_skipped_no_price": 0,
+      "card_level_mean_bp": -26.440144770531365,
+      "all_day_sign": {
+        "what": "sign from every card of the ticker-day, including cards available after the entry (look-ahead; descriptive, not used for the bar)",
+        "n": 72,
+        "estimate_bp": -14.478698872784129,
+        "t": -0.4071159282404848,
+        "n_dropped_net_zero": 1
+      },
+      "status": "not significant"
+    }
+  },
+  "cards": {
+    "cards_file": "cache/cards.parquet",
+    "news_extractor": "news:0abd403cf4",
+    "news_items_in_window": 350,
+    "news_items_with_cards": 233,
+    "cards_from": "out/baseline_v1_2026-08-11_2026-09-22",
+    "cards_from_variant": "baseline",
+    "logged_card_ids": 693,
+    "news_items_dropped_by_pin": 0,
+    "n_cards": 693,
+    "n_cards_by_kind": {
+      "news": 577,
+      "rating": 84,
+      "insider": 32
+    },
+    "logged_cards_rebuilt": 693,
+    "store_source": "snapshot",
+    "baseline_targets_check": {
+      "decisions_compared": 258,
+      "decisions_matching": 258
+    }
+  },
+  "generated_by": "sentiment/signal_tests.py"
+}

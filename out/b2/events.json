@@ -1,0 +1,1258 @@
+{
+  "events": [
+    {
+      "id": "E1",
+      "name": "COVID crash",
+      "start": "2020-03-12 00:00",
+      "type": "macro+liquidation",
+      "split": "dev",
+      "covered": true,
+      "btc_start_to_trough": -0.479485725089809,
+      "trough": "2020-03-13 02:00:00+00:00",
+      "triggered": true,
+      "first_trigger": "2020-03-09 00:00:00+00:00",
+      "hours_after_start": -72.0,
+      "rules": [
+        "C4"
+      ],
+      "btc_trigger_to_trough": -0.4889865115703502,
+      "reentry": "2020-04-11 16:00:00+00:00",
+      "btc_trigger_to_reentry": -0.15480757332013362
+    },
+    {
+      "id": "E2",
+      "name": "May-19 deleveraging",
+      "start": "2021-05-19 00:00",
+      "type": "liquidation",
+      "split": "dev",
+      "covered": true,
+      "btc_start_to_trough": -0.2606855050322461,
+      "trough": "2021-06-08 16:00:00+00:00",
+      "triggered": true,
+      "first_trigger": "2021-05-16 21:00:00+00:00",
+      "hours_after_start": -51.0,
+      "rules": [
+        "C2"
+      ],
+      "btc_trigger_to_trough": -0.2982887250669678,
+      "reentry": "2021-06-05 08:00:00+00:00",
+      "btc_trigger_to_reentry": -0.1679617453676031
+    },
+    {
+      "id": "E3",
+      "name": "Terra/UST",
+      "start": "2022-05-09 00:00",
+      "type": "structural",
+      "split": "dev",
+      "covered": true,
+      "btc_start_to_trough": -0.20491417822713376,
+      "trough": "2022-05-12 07:00:00+00:00",
+      "triggered": true,
+      "first_trigger": "2022-05-09 18:00:00+00:00",
+      "hours_after_start": 18.0,
+      "rules": [
+        "C1"
+      ],
+      "btc_trigger_to_trough": -0.12110333176302412,
+      "reentry": "2022-05-28 06:00:00+00:00",
+      "btc_trigger_to_reentry": -0.06257411588882211
+    },
+    {
+      "id": "E4",
+      "name": "Celsius/3AC",
+      "start": "2022-06-12 00:00",
+      "type": "structural",
+      "split": "dev",
+      "covered": true,
+      "btc_start_to_trough": -0.3735257877134307,
+      "trough": "2022-06-18 21:00:00+00:00",
+      "triggered": true,
+      "first_trigger": "2022-06-13 00:00:00+00:00",
+      "hours_after_start": 24.0,
+      "rules": [
+        "C4"
+      ],
+      "btc_trigger_to_trough": -0.3228948670141928,
+      "reentry": "2022-07-13 22:00:00+00:00",
+      "btc_trigger_to_reentry": -0.24220920056314443
+    },
+    {
+      "id": "E5",
+      "name": "FTX",
+      "start": "2022-11-08 00:00",
+      "type": "structural",
+      "split": "dev",
+      "covered": true,
+      "btc_start_to_trough": -0.23993973561430793,
+      "trough": "2022-11-21 22:00:00+00:00",
+      "triggered": true,
+      "first_trigger": "2022-11-08 00:00:00+00:00",
+      "hours_after_start": 0.0,
+      "rules": [
+        "C4"
+      ],
+      "btc_trigger_to_trough": -0.23727077643386651,
+      "reentry": "2022-12-03 00:00:00+00:00",
+      "btc_trigger_to_reentry": -0.16657725321888417
+    },
+    {
+      "id": "E6",
+      "name": "SVB/USDC depeg",
+      "start": "2023-03-10 00:00",
+      "type": "structural",
+      "split": "holdout",
+      "covered": true,
+      "btc_start_to_trough": -0.036266247327944146,
+      "trough": "2023-03-10 11:00:00+00:00",
+      "triggered": true,
+      "first_trigger": "2023-03-09 20:00:00+00:00",
+      "hours_after_start": -4.0,
+      "rules": [
+        "C2"
+      ],
+      "btc_trigger_to_trough": -0.024521873212464906,
+      "reentry": "2023-03-31 15:00:00+00:00",
+      "btc_trigger_to_reentry": 0.4183143077420477
+    },
+    {
+      "id": "E7",
+      "name": "Yen carry unwind",
+      "start": "2024-08-05 00:00",
+      "type": "macro",
+      "split": "holdout",
+      "covered": true,
+      "btc_start_to_trough": -0.14357975582563698,
+      "trough": "2024-08-05 13:00:00+00:00",
+      "triggered": true,
+      "first_trigger": "2024-08-02 14:00:00+00:00",
+      "hours_after_start": -58.0,
+      "rules": [
+        "C2"
+      ],
+      "btc_trigger_to_trough": -0.2114203153862484,
+      "reentry": "2024-08-20 13:00:00+00:00",
+      "btc_trigger_to_reentry": -0.039198321995608465
+    },
+    {
+      "id": "E8",
+      "name": "Tariff drawdown",
+      "start": "2025-02-24 00:00",
+      "type": "macro-trend",
+      "split": "holdout",
+      "covered": true,
+      "btc_start_to_trough": -0.19328547687913844,
+      "trough": "2025-03-10 19:00:00+00:00",
+      "triggered": true,
+      "first_trigger": "2025-02-28 15:00:00+00:00",
+      "hours_after_start": 111.0,
+      "rules": [
+        "C2"
+      ],
+      "btc_trigger_to_trough": -0.07551702453037834,
+      "reentry": "2025-03-19 06:00:00+00:00",
+      "btc_trigger_to_reentry": -0.009032743695897572
+    },
+    {
+      "id": "E9",
+      "name": "10/11 liquidation",
+      "start": "2025-10-10 20:00",
+      "type": "macro+liquidation",
+      "split": "holdout",
+      "covered": true,
+      "btc_start_to_trough": -0.145810768279516,
+      "trough": "2025-11-07 13:00:00+00:00",
+      "triggered": true,
+      "first_trigger": "2025-10-11 01:00:00+00:00",
+      "hours_after_start": 5.0,
+      "rules": [
+        "C2"
+      ],
+      "btc_trigger_to_trough": -0.102961797522094,
+      "reentry": "2025-12-09 16:00:00+00:00",
+      "btc_trigger_to_reentry": -0.16546872087127473
+    }
+  ],
+  "episodes": [
+    {
+      "exit": "2019-08-11 01:00:00+00:00",
+      "reentry": "2019-09-06 00:00:00+00:00",
+      "rules": [
+        "C4"
+      ],
+      "hours_out": 623,
+      "min_30d_from_exit": -0.17597544936431386,
+      "false_alarm": false,
+      "missed": -0.07391494958351597,
+      "fng_at_exit": 59
+    },
+    {
+      "exit": "2019-09-24 01:00:00+00:00",
+      "reentry": "2019-11-03 02:00:00+00:00",
+      "rules": [
+        "C4"
+      ],
+      "hours_out": 961,
+      "min_30d_from_exit": -0.23890855003333844,
+      "false_alarm": false,
+      "missed": -0.04451966969277321,
+      "fng_at_exit": 41
+    },
+    {
+      "exit": "2019-11-09 01:00:00+00:00",
+      "reentry": "2019-12-12 20:00:00+00:00",
+      "rules": [
+        "C4"
+      ],
+      "hours_out": 811,
+      "min_30d_from_exit": -0.2583829787234042,
+      "false_alarm": false,
+      "missed": -0.182581560283688,
+      "fng_at_exit": 42
+    },
+    {
+      "exit": "2019-12-18 01:00:00+00:00",
+      "reentry": "2019-12-25 21:00:00+00:00",
+      "rules": [
+        "C4"
+      ],
+      "hours_out": 188,
+      "min_30d_from_exit": -0.01697971450037561,
+      "false_alarm": true,
+      "missed": 0.08812922614575514,
+      "fng_at_exit": 23
+    },
+    {
+      "exit": "2020-01-08 20:00:00+00:00",
+      "reentry": "2020-01-16 00:00:00+00:00",
+      "rules": [
+        "C2"
+      ],
+      "hours_out": 172,
+      "min_30d_from_exit": -0.03233502856784076,
+      "false_alarm": true,
+      "missed": 0.10736485213787916,
+      "fng_at_exit": 40
+    },
+    {
+      "exit": "2020-01-19 12:00:00+00:00",
+      "reentry": "2020-01-28 20:00:00+00:00",
+      "rules": [
+        "C2"
+      ],
+      "hours_out": 224,
+      "min_30d_from_exit": -0.04972630365888797,
+      "false_alarm": true,
+      "missed": 0.0384327283203687,
+      "fng_at_exit": 51
+    },
+    {
+      "exit": "2020-02-19 22:00:00+00:00",
+      "reentry": "2020-04-11 16:00:00+00:00",
+      "rules": [
+        "C2"
+      ],
+      "hours_out": 1242,
+      "min_30d_from_exit": -0.5698661528045414,
+      "false_alarm": false,
+      "missed": -0.2885787198583407,
+      "fng_at_exit": 53
+    },
+    {
+      "exit": "2020-04-15 10:00:00+00:00",
+      "reentry": "2020-04-23 00:00:00+00:00",
+      "rules": [
+        "C4"
+      ],
+      "hours_out": 182,
+      "min_30d_from_exit": -0.03874552233350392,
+      "false_alarm": true,
+      "missed": 0.04196213173477603,
+      "fng_at_exit": 15
+    },
+    {
+      "exit": "2020-04-29 01:00:00+00:00",
+      "reentry": "2020-05-08 09:00:00+00:00",
+      "rules": [
+        "C4"
+      ],
+      "hours_out": 224,
+      "min_30d_from_exit": 0.0,
+      "false_alarm": true,
+      "missed": 0.2749676584734799,
+      "fng_at_exit": 26
+    },
+    {
+      "exit": "2020-05-10 01:00:00+00:00",
+      "reentry": "2020-05-19 09:00:00+00:00",
+      "rules": [
+        "C1",
+        "C2"
+      ],
+      "hours_out": 224,
+      "min_30d_from_exit": -0.0507333908541846,
+      "false_alarm": true,
+      "missed": 0.12832901926948526,
+      "fng_at_exit": 56
+    },
+    {
+      "exit": "2020-06-02 16:00:00+00:00",
+      "reentry": "2020-06-15 19:00:00+00:00",
+      "rules": [
+        "C2"
+      ],
+      "hours_out": 315,
+      "min_30d_from_exit": -0.05630678216775831,
+      "false_alarm": true,
+      "missed": -0.005968730192267069,
+      "fng_at_exit": 50
+    },
+    {
+      "exit": "2020-07-08 01:00:00+00:00",
+      "reentry": "2020-07-15 07:00:00+00:00",
+      "rules": [
+        "C4"
+      ],
+      "hours_out": 174,
+      "min_30d_from_exit": -0.018339193941033227,
+      "false_alarm": true,
+      "missed": -0.0011901541790640957,
+      "fng_at_exit": 43
+    },
+    {
+      "exit": "2020-07-16 01:00:00+00:00",
+      "reentry": "2020-07-26 22:00:00+00:00",
+      "rules": [
+        "C4"
+      ],
+      "hours_out": 261,
+      "min_30d_from_exit": -0.015142469470827646,
+      "false_alarm": true,
+      "missed": 0.07370420624151963,
+      "fng_at_exit": 44
+    },
+    {
+      "exit": "2020-07-28 22:00:00+00:00",
+      "reentry": "2020-08-10 04:00:00+00:00",
+      "rules": [
+        "C2"
+      ],
+      "hours_out": 294,
+      "min_30d_from_exit": -0.011764171511627897,
+      "false_alarm": true,
+      "missed": 0.09402252906976738,
+      "fng_at_exit": 58
+    },
+    {
+      "exit": "2020-08-20 01:00:00+00:00",
+      "reentry": "2020-08-27 14:00:00+00:00",
+      "rules": [
+        "C4"
+      ],
+      "hours_out": 181,
+      "min_30d_from_exit": -0.15611617553529789,
+      "false_alarm": false,
+      "missed": -0.03264786940852238,
+      "fng_at_exit": 80
+    },
+    {
+      "exit": "2020-09-03 13:00:00+00:00",
+      "reentry": "2020-09-16 09:00:00+00:00",
+      "rules": [
+        "C2"
+      ],
+      "hours_out": 308,
+      "min_30d_from_exit": -0.08082020967071535,
+      "false_alarm": true,
+      "missed": 0.005911421050200927,
+      "fng_at_exit": 83
+    },
+    {
+      "exit": "2020-09-27 07:00:00+00:00",
+      "reentry": "2020-10-11 00:00:00+00:00",
+      "rules": [
+        "C4"
+      ],
+      "hours_out": 329,
+      "min_30d_from_exit": -0.021346469622331665,
+      "false_alarm": true,
+      "missed": 0.059676284306826144,
+      "fng_at_exit": 45
+    },
+    {
+      "exit": "2020-10-17 01:00:00+00:00",
+      "reentry": "2020-11-03 09:00:00+00:00",
+      "rules": [
+        "C4"
+      ],
+      "hours_out": 416,
+      "min_30d_from_exit": 0.0,
+      "false_alarm": true,
+      "missed": 0.19590047812998046,
+      "fng_at_exit": 52
+    },
+    {
+      "exit": "2020-11-07 00:00:00+00:00",
+      "reentry": "2020-12-09 23:00:00+00:00",
+      "rules": [
+        "C2"
+      ],
+      "hours_out": 791,
+      "min_30d_from_exit": -0.05990827747666849,
+      "false_alarm": true,
+      "missed": 0.18963471344729155,
+      "fng_at_exit": 90
+    },
+    {
+      "exit": "2020-12-21 10:00:00+00:00",
+      "reentry": "2021-01-02 04:00:00+00:00",
+      "rules": [
+        "C2"
+      ],
+      "hours_out": 282,
+      "min_30d_from_exit": -0.0491726473156292,
+      "false_alarm": true,
+      "missed": 0.25069744660008086,
+      "fng_at_exit": 92
+    },
+    {
+      "exit": "2021-01-03 19:00:00+00:00",
+      "reentry": "2021-02-06 14:00:00+00:00",
+      "rules": [
+        "C2"
+      ],
+      "hours_out": 811,
+      "min_30d_from_exit": -0.09987359700287834,
+      "false_alarm": true,
+      "missed": 0.22358101213773351,
+      "fng_at_exit": 94
+    },
+    {
+      "exit": "2021-02-23 06:00:00+00:00",
+      "reentry": "2021-03-05 19:00:00+00:00",
+      "rules": [
+        "C1"
+      ],
+      "hours_out": 253,
+      "min_30d_from_exit": -0.13610633275993123,
+      "false_alarm": false,
+      "missed": -0.03028363403608436,
+      "fng_at_exit": 94
+    },
+    {
+      "exit": "2021-03-16 04:00:00+00:00",
+      "reentry": "2021-03-23 22:00:00+00:00",
+      "rules": [
+        "C1"
+      ],
+      "hours_out": 186,
+      "min_30d_from_exit": -0.0607319139531457,
+      "false_alarm": true,
+      "missed": 0.0073025637247678965,
+      "fng_at_exit": 76
+    },
+    {
+      "exit": "2021-03-25 13:00:00+00:00",
+      "reentry": "2021-04-01 13:00:00+00:00",
+      "rules": [
+        "C1"
+      ],
+      "hours_out": 168,
+      "min_30d_from_exit": -0.061110295915871804,
+      "false_alarm": true,
+      "missed": 0.15046221570066032,
+      "fng_at_exit": 65
+    },
+    {
+      "exit": "2021-04-18 04:00:00+00:00",
+      "reentry": "2021-05-06 00:00:00+00:00",
+      "rules": [
+        "C1"
+      ],
+      "hours_out": 428,
+      "min_30d_from_exit": -0.22132989803749592,
+      "false_alarm": false,
+      "missed": 0.05067061360230962,
+      "fng_at_exit": 76
+    },
+    {
+      "exit": "2021-05-12 16:00:00+00:00",
+      "reentry": "2021-06-05 08:00:00+00:00",
+      "rules": [
+        "C4"
+      ],
+      "hours_out": 568,
+      "min_30d_from_exit": -0.4290834751753888,
+      "false_alarm": false,
+      "missed": -0.323048658579418,
+      "fng_at_exit": 61
+    },
+    {
+      "exit": "2021-06-08 03:00:00+00:00",
+      "reentry": "2021-06-20 23:00:00+00:00",
+      "rules": [
+        "C1"
+      ],
+      "hours_out": 308,
+      "min_30d_from_exit": -0.10380707552944057,
+      "false_alarm": false,
+      "missed": 0.09156567511323299,
+      "fng_at_exit": 15
+    },
+    {
+      "exit": "2021-06-21 02:00:00+00:00",
+      "reentry": "2021-07-06 08:00:00+00:00",
+      "rules": [
+        "C4"
+      ],
+      "hours_out": 366,
+      "min_30d_from_exit": -0.17033091568449688,
+      "false_alarm": false,
+      "missed": -0.012395172257479548,
+      "fng_at_exit": 21
+    },
+    {
+      "exit": "2021-07-07 08:00:00+00:00",
+      "reentry": "2021-07-15 00:00:00+00:00",
+      "rules": [
+        "C4"
+      ],
+      "hours_out": 184,
+      "min_30d_from_exit": -0.15265834089566854,
+      "false_alarm": false,
+      "missed": -0.05498177837316165,
+      "fng_at_exit": 20
+    },
+    {
+      "exit": "2021-07-15 11:00:00+00:00",
+      "reentry": "2021-07-28 03:00:00+00:00",
+      "rules": [
+        "C4"
+      ],
+      "hours_out": 304,
+      "min_30d_from_exit": -0.07673352795304011,
+      "false_alarm": true,
+      "missed": 0.2514518002322881,
+      "fng_at_exit": 21
+    },
+    {
+      "exit": "2021-08-27 01:00:00+00:00",
+      "reentry": "2021-09-03 05:00:00+00:00",
+      "rules": [
+        "C4"
+      ],
+      "hours_out": 172,
+      "min_30d_from_exit": -0.14309137453191445,
+      "false_alarm": false,
+      "missed": 0.0520447669621511,
+      "fng_at_exit": 75
+    },
+    {
+      "exit": "2021-09-07 15:00:00+00:00",
+      "reentry": "2021-10-08 08:00:00+00:00",
+      "rules": [
+        "C2"
+      ],
+      "hours_out": 737,
+      "min_30d_from_exit": -0.14402400752348443,
+      "false_alarm": false,
+      "missed": 0.15861660872597394,
+      "fng_at_exit": 79
+    },
+    {
+      "exit": "2021-10-15 01:00:00+00:00",
+      "reentry": "2021-11-01 08:00:00+00:00",
+      "rules": [
+        "C4"
+      ],
+      "hours_out": 415,
+      "min_30d_from_exit": 0.0,
+      "false_alarm": true,
+      "missed": 0.09060552677937572,
+      "fng_at_exit": 70
+    },
+    {
+      "exit": "2021-11-11 01:00:00+00:00",
+      "reentry": "2021-11-19 17:00:00+00:00",
+      "rules": [
+        "C4"
+      ],
+      "hours_out": 208,
+      "min_30d_from_exit": -0.2845348926675386,
+      "false_alarm": false,
+      "missed": -0.10508578902823729,
+      "fng_at_exit": 75
+    },
+    {
+      "exit": "2021-11-28 03:00:00+00:00",
+      "reentry": "2021-12-14 23:00:00+00:00",
+      "rules": [
+        "C4"
+      ],
+      "hours_out": 404,
+      "min_30d_from_exit": -0.16039367181751285,
+      "false_alarm": false,
+      "missed": -0.11230684326710816,
+      "fng_at_exit": 21
+    },
+    {
+      "exit": "2021-12-15 16:00:00+00:00",
+      "reentry": "2021-12-27 23:00:00+00:00",
+      "rules": [
+        "C4"
+      ],
+      "hours_out": 295,
+      "min_30d_from_exit": -0.1274829465013514,
+      "false_alarm": false,
+      "missed": 0.09435196705135351,
+      "fng_at_exit": 21
+    },
+    {
+      "exit": "2022-01-07 01:00:00+00:00",
+      "reentry": "2022-01-16 15:00:00+00:00",
+      "rules": [
+        "C4"
+      ],
+      "hours_out": 230,
+      "min_30d_from_exit": -0.2264922800004675,
+      "false_alarm": false,
+      "missed": 0.012190703273840864,
+      "fng_at_exit": 15
+    },
+    {
+      "exit": "2022-01-21 01:00:00+00:00",
+      "reentry": "2022-02-01 22:00:00+00:00",
+      "rules": [
+        "C4"
+      ],
+      "hours_out": 285,
+      "min_30d_from_exit": -0.19053035862811296,
+      "false_alarm": false,
+      "missed": -0.050956504721366036,
+      "fng_at_exit": 24
+    },
+    {
+      "exit": "2022-02-09 02:00:00+00:00",
+      "reentry": "2022-03-28 00:00:00+00:00",
+      "rules": [
+        "C4"
+      ],
+      "hours_out": 1126,
+      "min_30d_from_exit": -0.20989089914155756,
+      "false_alarm": false,
+      "missed": 0.06784317749125024,
+      "fng_at_exit": 48
+    },
+    {
+      "exit": "2022-05-09 19:00:00+00:00",
+      "reentry": "2022-05-28 06:00:00+00:00",
+      "rules": [
+        "C1"
+      ],
+      "hours_out": 443,
+      "min_30d_from_exit": -0.12110333176302412,
+      "false_alarm": false,
+      "missed": -0.06257411588882211,
+      "fng_at_exit": 18
+    },
+    {
+      "exit": "2022-06-07 20:00:00+00:00",
+      "reentry": "2022-07-13 22:00:00+00:00",
+      "rules": [
+        "C2"
+      ],
+      "hours_out": 866,
+      "min_30d_from_exit": -0.4267444107982733,
+      "false_alarm": false,
+      "missed": -0.35843373493975905,
+      "fng_at_exit": 13
+    },
+    {
+      "exit": "2022-07-21 02:00:00+00:00",
+      "reentry": "2022-07-30 01:00:00+00:00",
+      "rules": [
+        "C4"
+      ],
+      "hours_out": 215,
+      "min_30d_from_exit": -0.10731738821553893,
+      "false_alarm": false,
+      "missed": 0.029945534003573693,
+      "fng_at_exit": 31
+    },
+    {
+      "exit": "2022-08-19 23:00:00+00:00",
+      "reentry": "2022-09-05 00:00:00+00:00",
+      "rules": [
+        "C1"
+      ],
+      "hours_out": 385,
+      "min_30d_from_exit": -0.11270125223613592,
+      "false_alarm": false,
+      "missed": -0.046296958855098436,
+      "fng_at_exit": 30
+    },
+    {
+      "exit": "2022-09-13 19:00:00+00:00",
+      "reentry": "2022-10-05 17:00:00+00:00",
+      "rules": [
+        "C2"
+      ],
+      "hours_out": 526,
+      "min_30d_from_exit": -0.09296470007405577,
+      "false_alarm": true,
+      "missed": -0.0008886694643297499,
+      "fng_at_exit": 25
+    },
+    {
+      "exit": "2022-11-08 01:00:00+00:00",
+      "reentry": "2022-12-03 00:00:00+00:00",
+      "rules": [
+        "C4"
+      ],
+      "hours_out": 599,
+      "min_30d_from_exit": -0.23727077643386651,
+      "false_alarm": false,
+      "missed": -0.16657725321888417,
+      "fng_at_exit": 33
+    },
+    {
+      "exit": "2023-01-15 01:00:00+00:00",
+      "reentry": "2023-01-22 09:00:00+00:00",
+      "rules": [
+        "C2"
+      ],
+      "hours_out": 176,
+      "min_30d_from_exit": -0.00700327300731618,
+      "false_alarm": true,
+      "missed": 0.10322006160954955,
+      "fng_at_exit": 46
+    },
+    {
+      "exit": "2023-01-24 11:00:00+00:00",
+      "reentry": "2023-02-11 16:00:00+00:00",
+      "rules": [
+        "C4"
+      ],
+      "hours_out": 437,
+      "min_30d_from_exit": -0.06266244403188814,
+      "false_alarm": true,
+      "missed": -0.05099923555749697,
+      "fng_at_exit": 50
+    },
+    {
+      "exit": "2023-02-16 23:00:00+00:00",
+      "reentry": "2023-03-02 20:00:00+00:00",
+      "rules": [
+        "C2"
+      ],
+      "hours_out": 333,
+      "min_30d_from_exit": -0.18321151163032845,
+      "false_alarm": false,
+      "missed": -0.022948293454946755,
+      "fng_at_exit": 53
+    },
+    {
+      "exit": "2023-03-03 02:00:00+00:00",
+      "reentry": "2023-03-31 15:00:00+00:00",
+      "rules": [
+        "C2"
+      ],
+      "hours_out": 685,
+      "min_30d_from_exit": -0.11438506175348284,
+      "false_alarm": false,
+      "missed": 0.2876560771297614,
+      "fng_at_exit": 51
+    },
+    {
+      "exit": "2023-04-27 11:00:00+00:00",
+      "reentry": "2023-05-04 18:00:00+00:00",
+      "rules": [
+        "C2"
+      ],
+      "hours_out": 175,
+      "min_30d_from_exit": -0.099021519664521,
+      "false_alarm": true,
+      "missed": -0.005194401780937774,
+      "fng_at_exit": 56
+    },
+    {
+      "exit": "2023-06-14 21:00:00+00:00",
+      "reentry": "2023-06-22 20:00:00+00:00",
+      "rules": [
+        "C2"
+      ],
+      "hours_out": 191,
+      "min_30d_from_exit": -0.00028096088623086324,
+      "false_alarm": true,
+      "missed": 0.21272752814626017,
+      "fng_at_exit": 45
+    },
+    {
+      "exit": "2023-06-30 17:00:00+00:00",
+      "reentry": "2023-07-14 00:00:00+00:00",
+      "rules": [
+        "C2"
+      ],
+      "hours_out": 319,
+      "min_30d_from_exit": -0.04444517605228071,
+      "false_alarm": true,
+      "missed": 0.035407990254983535,
+      "fng_at_exit": 54
+    },
+    {
+      "exit": "2023-08-17 22:00:00+00:00",
+      "reentry": "2023-09-12 04:00:00+00:00",
+      "rules": [
+        "C2"
+      ],
+      "hours_out": 606,
+      "min_30d_from_exit": -0.04682019216104927,
+      "false_alarm": true,
+      "missed": -0.017080982156474023,
+      "fng_at_exit": 52
+    },
+    {
+      "exit": "2023-09-12 05:00:00+00:00",
+      "reentry": "2023-09-19 09:00:00+00:00",
+      "rules": [
+        "C2"
+      ],
+      "hours_out": 172,
+      "min_30d_from_exit": 0.0,
+      "false_alarm": true,
+      "missed": 0.051094408514440026,
+      "fng_at_exit": 40
+    },
+    {
+      "exit": "2023-09-19 13:00:00+00:00",
+      "reentry": "2023-09-26 15:00:00+00:00",
+      "rules": [
+        "C2"
+      ],
+      "hours_out": 170,
+      "min_30d_from_exit": -0.040284159368010664,
+      "false_alarm": true,
+      "missed": -0.03554571347509372,
+      "fng_at_exit": 46
+    },
+    {
+      "exit": "2023-10-02 23:00:00+00:00",
+      "reentry": "2023-10-20 00:00:00+00:00",
+      "rules": [
+        "C2"
+      ],
+      "hours_out": 409,
+      "min_30d_from_exit": -0.034027356891664806,
+      "false_alarm": true,
+      "missed": 0.04178295220709649,
+      "fng_at_exit": 48
+    },
+    {
+      "exit": "2023-10-25 03:00:00+00:00",
+      "reentry": "2023-11-01 13:00:00+00:00",
+      "rules": [
+        "C2"
+      ],
+      "hours_out": 178,
+      "min_30d_from_exit": -0.011962770728264682,
+      "false_alarm": true,
+      "missed": 0.023222713972739673,
+      "fng_at_exit": 66
+    },
+    {
+      "exit": "2023-11-10 07:00:00+00:00",
+      "reentry": "2023-11-29 15:00:00+00:00",
+      "rules": [
+        "C2"
+      ],
+      "hours_out": 464,
+      "min_30d_from_exit": -0.03795087136838826,
+      "false_alarm": true,
+      "missed": 0.03264594021236089,
+      "fng_at_exit": 69
+    },
+    {
+      "exit": "2023-12-11 04:00:00+00:00",
+      "reentry": "2023-12-20 15:00:00+00:00",
+      "rules": [
+        "C2"
+      ],
+      "hours_out": 227,
+      "min_30d_from_exit": -0.0379013086691653,
+      "false_alarm": true,
+      "missed": 0.03724673777937415,
+      "fng_at_exit": 74
+    },
+    {
+      "exit": "2024-01-03 12:00:00+00:00",
+      "reentry": "2024-01-20 15:00:00+00:00",
+      "rules": [
+        "C2"
+      ],
+      "hours_out": 411,
+      "min_30d_from_exit": -0.11306828711383021,
+      "false_alarm": false,
+      "missed": -0.04987405080522833,
+      "fng_at_exit": 71
+    },
+    {
+      "exit": "2024-01-20 19:00:00+00:00",
+      "reentry": "2024-04-06 05:00:00+00:00",
+      "rules": [
+        "C4"
+      ],
+      "hours_out": 1834,
+      "min_30d_from_exit": -0.06805090776213563,
+      "false_alarm": true,
+      "missed": 0.6281156242787904,
+      "fng_at_exit": 51
+    },
+    {
+      "exit": "2024-04-13 21:00:00+00:00",
+      "reentry": "2024-04-28 01:00:00+00:00",
+      "rules": [
+        "C2"
+      ],
+      "hours_out": 340,
+      "min_30d_from_exit": -0.08008266388746832,
+      "false_alarm": true,
+      "missed": 0.028694467280765856,
+      "fng_at_exit": 79
+    },
+    {
+      "exit": "2024-04-28 23:00:00+00:00",
+      "reentry": "2024-05-27 15:00:00+00:00",
+      "rules": [
+        "C4"
+      ],
+      "hours_out": 688,
+      "min_30d_from_exit": -0.09931137857382788,
+      "false_alarm": true,
+      "missed": 0.1014789674164498,
+      "fng_at_exit": 67
+    },
+    {
+      "exit": "2024-06-08 01:00:00+00:00",
+      "reentry": "2024-07-27 00:00:00+00:00",
+      "rules": [
+        "C4"
+      ],
+      "hours_out": 1175,
+      "min_30d_from_exit": -0.22327443624188148,
+      "false_alarm": false,
+      "missed": -0.02226650069443248,
+      "fng_at_exit": 77
+    },
+    {
+      "exit": "2024-08-02 15:00:00+00:00",
+      "reentry": "2024-08-20 13:00:00+00:00",
+      "rules": [
+        "C2"
+      ],
+      "hours_out": 430,
+      "min_30d_from_exit": -0.2114203153862484,
+      "false_alarm": false,
+      "missed": -0.039198321995608465,
+      "fng_at_exit": 52
+    },
+    {
+      "exit": "2024-08-22 19:00:00+00:00",
+      "reentry": "2024-09-04 23:00:00+00:00",
+      "rules": [
+        "C4"
+      ],
+      "hours_out": 316,
+      "min_30d_from_exit": -0.12346018924724045,
+      "false_alarm": false,
+      "missed": -0.036464509922625954,
+      "fng_at_exit": 26
+    },
+    {
+      "exit": "2024-09-19 01:00:00+00:00",
+      "reentry": "2024-09-27 00:00:00+00:00",
+      "rules": [
+        "C3"
+      ],
+      "hours_out": 191,
+      "min_30d_from_exit": -0.043695619664476104,
+      "false_alarm": true,
+      "missed": 0.047540332500928706,
+      "fng_at_exit": 45
+    },
+    {
+      "exit": "2024-10-15 15:00:00+00:00",
+      "reentry": "2024-10-29 00:00:00+00:00",
+      "rules": [
+        "C2"
+      ],
+      "hours_out": 321,
+      "min_30d_from_exit": 0.0,
+      "false_alarm": true,
+      "missed": 0.07033852528878626,
+      "fng_at_exit": 48
+    },
+    {
+      "exit": "2024-11-13 00:00:00+00:00",
+      "reentry": "2024-11-27 09:00:00+00:00",
+      "rules": [
+        "C2"
+      ],
+      "hours_out": 345,
+      "min_30d_from_exit": -0.016167607494185665,
+      "false_alarm": true,
+      "missed": 0.06272095048208404,
+      "fng_at_exit": 80
+    },
+    {
+      "exit": "2024-12-04 01:00:00+00:00",
+      "reentry": "2024-12-17 00:00:00+00:00",
+      "rules": [
+        "C3"
+      ],
+      "hours_out": 311,
+      "min_30d_from_exit": -0.041554527533787855,
+      "false_alarm": true,
+      "missed": 0.10641799346523229,
+      "fng_at_exit": 76
+    },
+    {
+      "exit": "2024-12-18 01:00:00+00:00",
+      "reentry": "2025-01-11 00:00:00+00:00",
+      "rules": [
+        "C3"
+      ],
+      "hours_out": 575,
+      "min_30d_from_exit": -0.14462345871666038,
+      "false_alarm": false,
+      "missed": -0.10726492865568327,
+      "fng_at_exit": 87
+    },
+    {
+      "exit": "2025-01-11 01:00:00+00:00",
+      "reentry": "2025-01-28 17:00:00+00:00",
+      "rules": [
+        "C3"
+      ],
+      "hours_out": 424,
+      "min_30d_from_exit": -0.04059481959973099,
+      "false_alarm": true,
+      "missed": 0.08096331924650269,
+      "fng_at_exit": 50
+    },
+    {
+      "exit": "2025-02-03 08:00:00+00:00",
+      "reentry": "2025-02-12 17:00:00+00:00",
+      "rules": [
+        "C2"
+      ],
+      "hours_out": 225,
+      "min_30d_from_exit": -0.17125148261275736,
+      "false_alarm": false,
+      "missed": 0.017510050277629086,
+      "fng_at_exit": 60
+    },
+    {
+      "exit": "2025-02-28 16:00:00+00:00",
+      "reentry": "2025-03-19 06:00:00+00:00",
+      "rules": [
+        "C2"
+      ],
+      "hours_out": 446,
+      "min_30d_from_exit": -0.07551702453037834,
+      "false_alarm": true,
+      "missed": -0.009032743695897572,
+      "fng_at_exit": 10
+    },
+    {
+      "exit": "2025-04-07 09:00:00+00:00",
+      "reentry": "2025-04-14 20:00:00+00:00",
+      "rules": [
+        "C2"
+      ],
+      "hours_out": 179,
+      "min_30d_from_exit": -0.015415837999233961,
+      "false_alarm": true,
+      "missed": 0.11312687926031262,
+      "fng_at_exit": 34
+    },
+    {
+      "exit": "2025-06-22 23:00:00+00:00",
+      "reentry": "2025-06-30 00:00:00+00:00",
+      "rules": [
+        "C2"
+      ],
+      "hours_out": 169,
+      "min_30d_from_exit": -0.0025272547076312657,
+      "false_alarm": true,
+      "missed": 0.07331615460852325,
+      "fng_at_exit": 49
+    },
+    {
+      "exit": "2025-07-24 01:00:00+00:00",
+      "reentry": "2025-08-10 01:00:00+00:00",
+      "rules": [
+        "C4"
+      ],
+      "hours_out": 408,
+      "min_30d_from_exit": -0.05762579990320493,
+      "false_alarm": true,
+      "missed": -0.019442185147343416,
+      "fng_at_exit": 74
+    },
+    {
+      "exit": "2025-08-20 01:00:00+00:00",
+      "reentry": "2025-09-04 00:00:00+00:00",
+      "rules": [
+        "C4"
+      ],
+      "hours_out": 359,
+      "min_30d_from_exit": -0.05111174541511598,
+      "false_alarm": true,
+      "missed": -0.013366925916336037,
+      "fng_at_exit": 56
+    },
+    {
+      "exit": "2025-09-05 23:00:00+00:00",
+      "reentry": "2025-09-14 08:00:00+00:00",
+      "rules": [
+        "C2"
+      ],
+      "hours_out": 201,
+      "min_30d_from_exit": -0.01779213556187975,
+      "false_alarm": true,
+      "missed": 0.0450482498591509,
+      "fng_at_exit": 51
+    },
+    {
+      "exit": "2025-09-24 01:00:00+00:00",
+      "reentry": "2025-10-05 13:00:00+00:00",
+      "rules": [
+        "C4"
+      ],
+      "hours_out": 276,
+      "min_30d_from_exit": -0.06860898485587286,
+      "false_alarm": true,
+      "missed": 0.09675340361786766,
+      "fng_at_exit": 43
+    },
+    {
+      "exit": "2025-10-11 02:00:00+00:00",
+      "reentry": "2025-12-09 16:00:00+00:00",
+      "rules": [
+        "C2"
+      ],
+      "hours_out": 1430,
+      "min_30d_from_exit": -0.102961797522094,
+      "false_alarm": false,
+      "missed": -0.16546872087127473,
+      "fng_at_exit": 64
+    },
+    {
+      "exit": "2025-12-16 01:00:00+00:00",
+      "reentry": "2025-12-27 00:00:00+00:00",
+      "rules": [
+        "C4"
+      ],
+      "hours_out": 263,
+      "min_30d_from_exit": -0.016180275861586768,
+      "false_alarm": true,
+      "missed": 0.017387272246423002,
+      "fng_at_exit": 16
+    },
+    {
+      "exit": "2026-01-22 15:00:00+00:00",
+      "reentry": "2026-02-15 00:00:00+00:00",
+      "rules": [
+        "C2"
+      ],
+      "hours_out": 561,
+      "min_30d_from_exit": -0.293875007018923,
+      "false_alarm": false,
+      "missed": -0.21617833679600207,
+      "fng_at_exit": 24
+    },
+    {
+      "exit": "2026-02-18 01:00:00+00:00",
+      "reentry": "2026-03-08 11:00:00+00:00",
+      "rules": [
+        "C4"
+      ],
+      "hours_out": 442,
+      "min_30d_from_exit": -0.0652002301342004,
+      "false_alarm": true,
+      "missed": 0.009035889339345182,
+      "fng_at_exit": 10
+    },
+    {
+      "exit": "2026-03-22 01:00:00+00:00",
+      "reentry": "2026-04-17 00:00:00+00:00",
+      "rules": [
+        "C4"
+      ],
+      "hours_out": 623,
+      "min_30d_from_exit": -0.04789271196599443,
+      "false_alarm": true,
+      "missed": 0.08988899386266236,
+      "fng_at_exit": 12
+    },
+    {
+      "exit": "2026-06-02 01:00:00+00:00",
+      "reentry": "2026-06-19 16:00:00+00:00",
+      "rules": [
+        "C4"
+      ],
+      "hours_out": 423,
+      "min_30d_from_exit": -0.1826673906241888,
+      "false_alarm": false,
+      "missed": -0.1135041929206494,
+      "fng_at_exit": 29
+    },
+    {
+      "exit": "2026-06-25 05:00:00+00:00",
+      "reentry": "2026-07-05 00:00:00+00:00",
+      "rules": [
+        "C2"
+      ],
+      "hours_out": 235,
+      "min_30d_from_exit": -0.05002682512788814,
+      "false_alarm": true,
+      "missed": 0.029147254460391014,
+      "fng_at_exit": 17
+    },
+    {
+      "exit": "2026-07-07 03:00:00+00:00",
+      "reentry": "2026-07-15 00:00:00+00:00",
+      "rules": [
+        "C4"
+      ],
+      "hours_out": 189,
+      "min_30d_from_exit": -0.025638230647709315,
+      "false_alarm": true,
+      "missed": 0.026982622432859316,
+      "fng_at_exit": 24
+    },
+    {
+      "exit": "2026-07-31 01:00:00+00:00",
+      "reentry": "2026-08-08 00:00:00+00:00",
+      "rules": [
+        "C3"
+      ],
+      "hours_out": 191,
+      "min_30d_from_exit": -0.03404682791128966,
+      "false_alarm": true,
+      "missed": 0.0027664013600186,
+      "fng_at_exit": 28
+    },
+    {
+      "exit": "2026-08-22 09:00:00+00:00",
+      "reentry": "2026-08-29 17:00:00+00:00",
+      "rules": [
+        "C2"
+      ],
+      "hours_out": 176,
+      "min_30d_from_exit": -0.02296327870636583,
+      "false_alarm": true,
+      "missed": 0.01047106852318036,
+      "fng_at_exit": 72
+    }
+  ]
+}

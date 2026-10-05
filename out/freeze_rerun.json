@@ -1,0 +1,32 @@
+{
+ "freeze_commit": "62286d9",
+ "method": "offline rerun (SENTIMENT_OFFLINE=1, same LLM cache) of each test-window run from a clean worktree of the freeze commit; log.jsonl compared byte for byte",
+ "checked_at": "2026-09-23T17:30:45+00:00",
+ "runs": {
+  "baseline_v1_2026-08-11_2026-09-22": {
+   "log_last_hash": "368bf8998bcec1301faae3cdaeef855f67f842fbf1f3182b7ae8d513469cf666",
+   "run_log_last_hash": "368bf8998bcec1301faae3cdaeef855f67f842fbf1f3182b7ae8d513469cf666",
+   "log_identical": true
+  },
+  "llm_v1_2026-08-11_2026-09-22": {
+   "log_last_hash": "c407f891c01b240d7571e154bb503564bbdf527c86a83055867939325cd0f379",
+   "run_log_last_hash": "c407f891c01b240d7571e154bb503564bbdf527c86a83055867939325cd0f379",
+   "log_identical": true
+  },
+  "nonews_v1_2026-08-11_2026-09-22": {
+   "log_last_hash": "a930af0603f708471b1db90fe198bcf80f933e640495efd732d753a7f7217759",
+   "run_log_last_hash": "a930af0603f708471b1db90fe198bcf80f933e640495efd732d753a7f7217759",
+   "log_identical": true
+  },
+  "shuffled_v1_2026-08-11_2026-09-22": {
+   "log_last_hash": "9a10baf756bdcf0e53e4d84d8fbbcfea1f69e091df6e11d0b41ff6c265077155",
+   "run_log_last_hash": "9a10baf756bdcf0e53e4d84d8fbbcfea1f69e091df6e11d0b41ff6c265077155",
+   "log_identical": true
+  },
+  "blinded_v1_2026-08-11_2026-09-22": {
+   "log_last_hash": "7044c58a39d55c25a970fe0fea98df01588d54e4edf85713c8a18802e54aeedf",
+   "run_log_last_hash": "7044c58a39d55c25a970fe0fea98df01588d54e4edf85713c8a18802e54aeedf",
+   "log_identical": true
+  }
+ }
+}

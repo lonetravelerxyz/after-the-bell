@@ -1,0 +1,90 @@
+{
+  "source_commit": "3a8b49ea6fb4bf52aef20909740f125ad0b5b39a",
+  "source_dirty": false,
+  "source_dirty_paths": [],
+  "prereg_freeze_commit": "62286d9",
+  "prereg_freeze_commit_full": "62286d958e19bac1d18ffa822dda3f65fd1ff65b",
+  "prereg_freeze_time": "2026-09-23T21:32:47+08:00",
+  "prereg_fixed_sha256_at_freeze": "6888f13021adfa2b7495c576ab6fe821c09f65326287f5e876becfd4091427e2",
+  "prereg_deviations_at_freeze": "(none)",
+  "prereg_sha256": "3ce087ba64edd64ea2fa29470c52edafe525ec5d254a63721897d098b6c06683",
+  "code_checks": {
+    "llm_v1_2026-08-11_2026-09-22": {
+      "stamp": "62286d9-dirty",
+      "commit": "62286d9",
+      "dirty": true,
+      "files_differing_from_freeze": [],
+      "check": "replay code identical to the PREREG freeze commit 62286d9; the run also had uncommitted changes (-dirty), not verifiable from git",
+      "matches_freeze": false
+    },
+    "baseline_v1_2026-08-11_2026-09-22": {
+      "stamp": null,
+      "check": "no code_stamp recorded (run made before replay wrote one)"
+    },
+    "nonews_v1_2026-08-11_2026-09-22": {
+      "stamp": "40e1a8d",
+      "commit": "40e1a8d",
+      "dirty": false,
+      "files_differing_from_freeze": [
+        "sentiment/metrics.py",
+        "sentiment/replay.py"
+      ],
+      "check": "replay code differs from the PREREG freeze commit 62286d9 in sentiment/metrics.py, sentiment/replay.py",
+      "matches_freeze": false
+    },
+    "shuffled_v1_2026-08-11_2026-09-22": {
+      "stamp": "40e1a8d",
+      "commit": "40e1a8d",
+      "dirty": false,
+      "files_differing_from_freeze": [
+        "sentiment/metrics.py",
+        "sentiment/replay.py"
+      ],
+      "check": "replay code differs from the PREREG freeze commit 62286d9 in sentiment/metrics.py, sentiment/replay.py",
+      "matches_freeze": false
+    },
+    "blinded_v1_2026-08-11_2026-09-22": {
+      "stamp": "ba9ba86",
+      "commit": "ba9ba86",
+      "dirty": false,
+      "files_differing_from_freeze": [
+        "b-sentiment-agent/sentiment/config.py",
+        "b-sentiment-agent/sentiment/evidence.py",
+        "b-sentiment-agent/sentiment/llm.py",
+        "b-sentiment-agent/sentiment/metrics.py",
+        "b-sentiment-agent/sentiment/replay.py"
+      ],
+      "check": "replay code differs from the PREREG freeze commit 62286d9 in b-sentiment-agent/sentiment/config.py, b-sentiment-agent/sentiment/evidence.py, b-sentiment-agent/sentiment/llm.py, b-sentiment-agent/sentiment/metrics.py, b-sentiment-agent/sentiment/replay.py",
+      "matches_freeze": false
+    },
+    "llm_2026-06-22_2026-08-10": {
+      "stamp": null,
+      "check": "no code_stamp recorded (run made before replay wrote one)"
+    },
+    "baseline_2026-06-22_2026-08-10": {
+      "stamp": null,
+      "check": "no code_stamp recorded (run made before replay wrote one)"
+    },
+    "llm_v1_2026-06-22_2026-07-15": {
+      "stamp": null,
+      "check": "no code_stamp recorded (run made before replay wrote one)"
+    },
+    "baseline_v1_2026-06-22_2026-07-15": {
+      "stamp": null,
+      "check": "no code_stamp recorded (run made before replay wrote one)"
+    }
+  },
+  "runs": [
+    "llm_v1_2026-08-11_2026-09-22",
+    "baseline_v1_2026-08-11_2026-09-22",
+    "nonews_v1_2026-08-11_2026-09-22",
+    "shuffled_v1_2026-08-11_2026-09-22",
+    "blinded_v1_2026-08-11_2026-09-22",
+    "llm_2026-06-22_2026-08-10",
+    "baseline_2026-06-22_2026-08-10",
+    "llm_v1_2026-06-22_2026-07-15",
+    "baseline_v1_2026-06-22_2026-07-15",
+    "live"
+  ],
+  "exported": "2026-10-05T13:16:36Z"
+}

@@ -1,0 +1,11 @@
+.venv/
+.env
+.env.*
+!.env.example
+/data/
+logs/
+__pycache__/
+.pytest_cache/
+*.pyc
+.DS_Store
+/judge-out/

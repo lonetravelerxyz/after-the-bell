@@ -1,0 +1,46 @@
+run,rule,decision,hourly,weight_moved,pnl_effect_est,meaning
+llm_v1_2026-08-11_2026-09-22,name_cap,1,0,0.000143,0.008516,per-name cap (v1: vol-scaled)
+llm_v1_2026-08-11_2026-09-22,off_hours,69,0,0.018517,0.042607,outside the US session the cap is scaled for new exposure
+llm_v1_2026-08-11_2026-09-22,stop_loss,1,18,0.428071,29.706653,"name down its stop from entry -> flat + 24h cooldown (v1: stop = clip(2 x vol_7d, 3%, 10%))"
+llm_v1_2026-08-11_2026-09-22,cooldown,12,0,0.584668,21.276564,name in stop-loss cooldown -> 0
+llm_v1_2026-08-11_2026-09-22,beta_neutral,2437,0,7.919456,72.784461,v1: minimal-L2 change to a beta-neutral book
+baseline_v1_2026-08-11_2026-09-22,name_cap,16,0,0.139235,5.543893,per-name cap (v1: vol-scaled)
+baseline_v1_2026-08-11_2026-09-22,off_hours,92,0,1.619148,-20.560262,outside the US session the cap is scaled for new exposure
+baseline_v1_2026-08-11_2026-09-22,stop_loss,3,20,0.290476,5.5076,"name down its stop from entry -> flat + 24h cooldown (v1: stop = clip(2 x vol_7d, 3%, 10%))"
+baseline_v1_2026-08-11_2026-09-22,cooldown,132,0,2.082713,-78.265086,name in stop-loss cooldown -> 0
+baseline_v1_2026-08-11_2026-09-22,beta_neutral,2428,0,18.98988,302.64178,v1: minimal-L2 change to a beta-neutral book
+shuffled_v1_2026-08-11_2026-09-22,off_hours,60,0,0.014901,-0.048039,outside the US session the cap is scaled for new exposure
+shuffled_v1_2026-08-11_2026-09-22,stop_loss,4,12,0.449523,-2.087845,"name down its stop from entry -> flat + 24h cooldown (v1: stop = clip(2 x vol_7d, 3%, 10%))"
+shuffled_v1_2026-08-11_2026-09-22,cooldown,7,0,0.505,20.295949,name in stop-loss cooldown -> 0
+shuffled_v1_2026-08-11_2026-09-22,beta_neutral,2438,0,6.059259,54.581948,v1: minimal-L2 change to a beta-neutral book
+shuffled_v1_2026-08-11_2026-09-22,net_cap,20,0,0.066088,1.048901,net exposure cap MAX_NET
+blinded_v1_2026-08-11_2026-09-22,name_cap,1,0,0.000135,0.012525,per-name cap (v1: vol-scaled)
+blinded_v1_2026-08-11_2026-09-22,off_hours,112,0,0.0332,-0.07796,outside the US session the cap is scaled for new exposure
+blinded_v1_2026-08-11_2026-09-22,stop_loss,4,16,0.583944,13.822664,"name down its stop from entry -> flat + 24h cooldown (v1: stop = clip(2 x vol_7d, 3%, 10%))"
+blinded_v1_2026-08-11_2026-09-22,cooldown,14,0,0.674,-19.673643,name in stop-loss cooldown -> 0
+blinded_v1_2026-08-11_2026-09-22,beta_neutral,2399,0,5.699494,11.972141,v1: minimal-L2 change to a beta-neutral book
+llm_2026-06-22_2026-08-10,off_hours,132,0,0.685574,0.249577,outside the US session the cap is scaled for new exposure
+llm_2026-06-22_2026-08-10,stop_loss,2,19,1.233727,36.056399,"name down its stop from entry -> flat + 24h cooldown (v1: stop = clip(2 x vol_7d, 3%, 10%))"
+llm_2026-06-22_2026-08-10,cooldown,41,0,2.26,-18.386518,name in stop-loss cooldown -> 0
+llm_2026-06-22_2026-08-10,net_cap,72,0,0.398523,-7.71475,net exposure cap MAX_NET
+baseline_2026-06-22_2026-08-10,off_hours,125,0,5.267574,-4.853796,outside the US session the cap is scaled for new exposure
+baseline_2026-06-22_2026-08-10,funding_block,2,0,0.022407,1.412124,|funding| >= FUNDING_BLOCK blocks new exposure on the paying side
+baseline_2026-06-22_2026-08-10,stop_loss,7,29,0.600138,11.149046,"name down its stop from entry -> flat + 24h cooldown (v1: stop = clip(2 x vol_7d, 3%, 10%))"
+baseline_2026-06-22_2026-08-10,cooldown,207,0,5.051935,-189.420629,name in stop-loss cooldown -> 0
+baseline_2026-06-22_2026-08-10,net_cap,292,0,6.277544,77.462987,net exposure cap MAX_NET
+llm_v1_2026-06-22_2026-07-15,name_cap,3,0,0.002719,0.036803,per-name cap (v1: vol-scaled)
+llm_v1_2026-06-22_2026-07-15,off_hours,78,0,0.021579,-0.459079,outside the US session the cap is scaled for new exposure
+llm_v1_2026-06-22_2026-07-15,stop_loss,3,7,0.468473,17.67704,"name down its stop from entry -> flat + 24h cooldown (v1: stop = clip(2 x vol_7d, 3%, 10%))"
+llm_v1_2026-06-22_2026-07-15,cooldown,10,0,0.528604,-5.01402,name in stop-loss cooldown -> 0
+llm_v1_2026-06-22_2026-07-15,beta_neutral,1346,0,3.529274,30.766583,v1: minimal-L2 change to a beta-neutral book
+baseline_v1_2026-06-22_2026-07-15,name_cap,14,0,0.278181,-3.766453,per-name cap (v1: vol-scaled)
+baseline_v1_2026-06-22_2026-07-15,off_hours,42,0,0.667312,27.813251,outside the US session the cap is scaled for new exposure
+baseline_v1_2026-06-22_2026-07-15,funding_block,2,0,0.022407,1.418174,|funding| >= FUNDING_BLOCK blocks new exposure on the paying side
+baseline_v1_2026-06-22_2026-07-15,stop_loss,6,10,0.239488,-28.08822,"name down its stop from entry -> flat + 24h cooldown (v1: stop = clip(2 x vol_7d, 3%, 10%))"
+baseline_v1_2026-06-22_2026-07-15,cooldown,90,0,1.598607,-2.281287,name in stop-loss cooldown -> 0
+baseline_v1_2026-06-22_2026-07-15,beta_neutral,1321,0,9.323315,70.562463,v1: minimal-L2 change to a beta-neutral book
+live,invalid,2,0,0.0,,LLM output invalid -> hold the current book
+live,off_hours,8,0,0.0015,,outside the US session the cap is scaled for new exposure
+live,stop_loss,0,2,0.130116,,"name down its stop from entry -> flat + 24h cooldown (v1: stop = clip(2 x vol_7d, 3%, 10%))"
+live,cooldown,3,0,0.14,,name in stop-loss cooldown -> 0
+live,beta_neutral,694,0,1.325829,,v1: minimal-L2 change to a beta-neutral book

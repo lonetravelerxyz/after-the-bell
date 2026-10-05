@@ -1,0 +1,5083 @@
+{
+  "generated_at": "2026-10-05T13:16:39+00:00",
+  "out_dir": "out",
+  "windows": {
+    "test": {
+      "start": "2026-08-11",
+      "end": "2026-09-22"
+    },
+    "dev": {
+      "start": "2026-06-22",
+      "end": "2026-08-10"
+    },
+    "dev-half": {
+      "start": "2026-06-22",
+      "end": "2026-07-15"
+    }
+  },
+  "git": {
+    "head": "0bf15b8",
+    "prereg_sha256": "3ce087ba64edd64ea2fa29470c52edafe525ec5d254a63721897d098b6c06683",
+    "prereg_deviations_now": "- 2026-09-23 14:20 UTC, **timestamps**: the \"FROZEN ~14:45 UTC\" in the Status line was written ahead\n  of time and is wrong. The freeze is commit `62286d9` at 13:32:47 UTC, and git is authoritative.\n  The baseline test run started at 13:32:53 UTC, after the freeze.\n- 2026-09-23 14:20 UTC, **code after freeze**: `sentiment/replay.py` (a `code_stamp` field) and\n  `sentiment/metrics.py` (daily statistics on complete UTC days, counts of bootstrap paths) were\n  edited at about 13:38 UTC, before the llm/nonews/shuffled test runs started on that tree. Neither\n  edit touches decisions, risk actions or fills. Proof: every test run is rerun offline from a clean\n  checkout of `62286d9`, and the log hashes are compared in `sentiment/out/freeze_rerun.json`.\n- 2026-09-23 14:20 UTC, **signal test (c)**: the event direction now comes only from cards known at\n  the entry bar. The previous version used every card of the ticker-day, which looks ahead. Forward\n  windows must end before the window end. This was fixed before any test-window signal test was\n  run; the dev before/after values are in `trials.log`.",
+    "source": "PROVENANCE.json (exported repo; the research repo's git history is not shipped)",
+    "prereg_freeze_commit": "62286d9",
+    "prereg_freeze_time": "2026-09-23T21:32:47+08:00",
+    "export_code_checks": {
+      "llm_v1_2026-08-11_2026-09-22": {
+        "stamp": "62286d9-dirty",
+        "commit": "62286d9",
+        "dirty": true,
+        "files_differing_from_freeze": [],
+        "check": "replay code identical to the PREREG freeze commit 62286d9; the run also had uncommitted changes (-dirty), not verifiable from git",
+        "matches_freeze": false
+      },
+      "baseline_v1_2026-08-11_2026-09-22": {
+        "stamp": null,
+        "check": "no code_stamp recorded (run made before replay wrote one)"
+      },
+      "nonews_v1_2026-08-11_2026-09-22": {
+        "stamp": "40e1a8d",
+        "commit": "40e1a8d",
+        "dirty": false,
+        "files_differing_from_freeze": [
+          "sentiment/metrics.py",
+          "sentiment/replay.py"
+        ],
+        "check": "replay code differs from the PREREG freeze commit 62286d9 in sentiment/metrics.py, sentiment/replay.py",
+        "matches_freeze": false
+      },
+      "shuffled_v1_2026-08-11_2026-09-22": {
+        "stamp": "40e1a8d",
+        "commit": "40e1a8d",
+        "dirty": false,
+        "files_differing_from_freeze": [
+          "sentiment/metrics.py",
+          "sentiment/replay.py"
+        ],
+        "check": "replay code differs from the PREREG freeze commit 62286d9 in sentiment/metrics.py, sentiment/replay.py",
+        "matches_freeze": false
+      },
+      "blinded_v1_2026-08-11_2026-09-22": {
+        "stamp": "ba9ba86",
+        "commit": "ba9ba86",
+        "dirty": false,
+        "files_differing_from_freeze": [
+          "b-sentiment-agent/sentiment/config.py",
+          "b-sentiment-agent/sentiment/evidence.py",
+          "b-sentiment-agent/sentiment/llm.py",
+          "b-sentiment-agent/sentiment/metrics.py",
+          "b-sentiment-agent/sentiment/replay.py"
+        ],
+        "check": "replay code differs from the PREREG freeze commit 62286d9 in b-sentiment-agent/sentiment/config.py, b-sentiment-agent/sentiment/evidence.py, b-sentiment-agent/sentiment/llm.py, b-sentiment-agent/sentiment/metrics.py, b-sentiment-agent/sentiment/replay.py",
+        "matches_freeze": false
+      },
+      "llm_2026-06-22_2026-08-10": {
+        "stamp": null,
+        "check": "no code_stamp recorded (run made before replay wrote one)"
+      },
+      "baseline_2026-06-22_2026-08-10": {
+        "stamp": null,
+        "check": "no code_stamp recorded (run made before replay wrote one)"
+      },
+      "llm_v1_2026-06-22_2026-07-15": {
+        "stamp": null,
+        "check": "no code_stamp recorded (run made before replay wrote one)"
+      },
+      "baseline_v1_2026-06-22_2026-07-15": {
+        "stamp": null,
+        "check": "no code_stamp recorded (run made before replay wrote one)"
+      }
+    },
+    "prereg_freeze_time_utc": "2026-09-23T13:32:47+00:00",
+    "prereg_fixed_sha256_at_freeze": "6888f13021adfa2b7495c576ab6fe821c09f65326287f5e876becfd4091427e2",
+    "prereg_deviations_at_freeze": "(none)",
+    "prereg_changed_since_freeze": false,
+    "prereg_deviations_added": true
+  },
+  "runs": [
+    {
+      "run_id": "llm_v1_2026-08-11_2026-09-22",
+      "window": "test",
+      "variant": "llm",
+      "version": "v1",
+      "start": "2026-08-11",
+      "end": "2026-09-22",
+      "mode": "replay",
+      "optional": false,
+      "expected": true,
+      "status": "complete",
+      "live_modes": [],
+      "label": "estimated (replay)",
+      "n_log_records": 272,
+      "metrics": {
+        "start": "2026-08-11 00:00:00+00:00",
+        "end": "2026-09-23 00:00:00+00:00",
+        "n_days": 43,
+        "partial_first_day_h": 0.0,
+        "partial_last_day_h": 0.0,
+        "partial_last_day_return": null,
+        "start_equity": 10000.0,
+        "final_equity": 9891.736778586504,
+        "total_return": -0.010826322141349598,
+        "sharpe": -2.176826651071828,
+        "sortino": -3.0168091318774257,
+        "max_dd": -0.019719893182536308,
+        "gross_sharpe": -0.9115652970442463,
+        "win_rate": 0.43915343915343913,
+        "round_trips": 189,
+        "trades": 585,
+        "n_decisions": 258,
+        "n_invalid": 0,
+        "n_risk_exits": 14,
+        "turnover_ann": 82.90820077857919,
+        "costs": {
+          "fees": 58.09635217159602,
+          "spread": 3.3079513928531403,
+          "funding": -1.2358364530093384
+        },
+        "ladder": {
+          "gross": -0.004562308139603566,
+          "after_fees": -0.01037194335676317,
+          "after_spread": -0.010702738496048525,
+          "after_funding": -0.010826322141349598
+        }
+      },
+      "n_items": 466,
+      "n_cards": 693,
+      "risk_version": "v1",
+      "prompt_version": "v1",
+      "code_stamp": "62286d9-dirty",
+      "cards_from": null,
+      "provenance": {
+        "n_evidence_items": 287,
+        "why": [],
+        "n_unknown_items": 0,
+        "unknown_examples": [],
+        "items_checked": true,
+        "stale": false
+      },
+      "log_verified": true,
+      "log_last_hash": "c407f891c01b240d7571e154bb503564bbdf527c86a83055867939325cd0f379",
+      "recorded_last_hash": "c407f891c01b240d7571e154bb503564bbdf527c86a83055867939325cd0f379",
+      "hash_matches_recorded": true,
+      "n_hours": 1033,
+      "note": null,
+      "dir": "out/llm_v1_2026-08-11_2026-09-22",
+      "risk": {
+        "by_rule": {
+          "name_cap": {
+            "decision": 1,
+            "hourly_check": 0,
+            "weight_moved": 0.00014328052826558663,
+            "pnl_effect_est": 0.008516127349490055,
+            "n_priced": 1,
+            "meaning": "per-name cap (v1: vol-scaled)"
+          },
+          "off_hours": {
+            "decision": 69,
+            "hourly_check": 0,
+            "weight_moved": 0.018517443476541894,
+            "pnl_effect_est": 0.042607102763844815,
+            "n_priced": 68,
+            "meaning": "outside the US session the cap is scaled for new exposure"
+          },
+          "stop_loss": {
+            "decision": 1,
+            "hourly_check": 18,
+            "weight_moved": 0.42807052383643335,
+            "pnl_effect_est": 29.706653174284433,
+            "n_priced": 19,
+            "meaning": "name down its stop from entry -> flat + 24h cooldown (v1: stop = clip(2 x vol_7d, 3%, 10%))"
+          },
+          "cooldown": {
+            "decision": 12,
+            "hourly_check": 0,
+            "weight_moved": 0.5846676341677117,
+            "pnl_effect_est": 21.2765638234808,
+            "n_priced": 12,
+            "meaning": "name in stop-loss cooldown -> 0"
+          },
+          "beta_neutral": {
+            "decision": 2437,
+            "hourly_check": 0,
+            "weight_moved": 7.919455844161972,
+            "pnl_effect_est": 72.78446130087089,
+            "n_priced": 2427,
+            "meaning": "v1: minimal-L2 change to a beta-neutral book"
+          }
+        },
+        "n_records_with_action": 272,
+        "n_records": 272,
+        "effects_priced": true
+      },
+      "code": {
+        "stamp": "62286d9-dirty",
+        "commit": "62286d9",
+        "dirty": true,
+        "files_differing_from_freeze": [],
+        "check": "replay code identical to the PREREG freeze commit 62286d9; the run also had uncommitted changes (-dirty), not verifiable from git (checked in the research repo at export, PROVENANCE.json)",
+        "matches_freeze": false
+      },
+      "beta": {
+        "status": "computed",
+        "basis": "daily gross equity returns vs EW basket",
+        "n_days": 43,
+        "beta": 0.007575165964839179,
+        "t": 0.4961125715382036,
+        "r2": 0.0059672919001286795,
+        "alpha_bp_day": -1.4129367424533419,
+        "within_band": true
+      }
+    },
+    {
+      "run_id": "baseline_v1_2026-08-11_2026-09-22",
+      "window": "test",
+      "variant": "baseline",
+      "version": "v1",
+      "start": "2026-08-11",
+      "end": "2026-09-22",
+      "mode": "replay",
+      "optional": false,
+      "expected": true,
+      "status": "complete",
+      "live_modes": [],
+      "label": "estimated (replay)",
+      "n_log_records": 276,
+      "metrics": {
+        "start": "2026-08-11 00:00:00+00:00",
+        "end": "2026-09-23 00:00:00+00:00",
+        "n_days": 43,
+        "partial_first_day_h": 0.0,
+        "partial_last_day_h": 0.0,
+        "partial_last_day_return": null,
+        "start_equity": 10000.0,
+        "final_equity": 9762.849622221209,
+        "total_return": -0.02371503777787909,
+        "sharpe": -7.5911264691129805,
+        "sortino": -8.025009986767662,
+        "max_dd": -0.026388636115425412,
+        "gross_sharpe": -5.739277542791077,
+        "win_rate": 0.4611872146118721,
+        "round_trips": 219,
+        "trades": 944,
+        "n_decisions": 258,
+        "n_invalid": 0,
+        "n_risk_exits": 18,
+        "turnover_ann": 83.03187259873184,
+        "costs": {
+          "fees": 58.13245759869767,
+          "spread": 2.978832267173185,
+          "funding": 0.941380846012588
+        },
+        "ladder": {
+          "gross": -0.01769804687589316,
+          "after_fees": -0.023511292635762904,
+          "after_spread": -0.023809175862480325,
+          "after_funding": -0.02371503777787909
+        }
+      },
+      "n_items": 466,
+      "n_cards": 693,
+      "risk_version": "v1",
+      "prompt_version": null,
+      "code_stamp": null,
+      "cards_from": null,
+      "provenance": {
+        "n_evidence_items": 349,
+        "why": [],
+        "n_unknown_items": 0,
+        "unknown_examples": [],
+        "items_checked": true,
+        "stale": false
+      },
+      "log_verified": true,
+      "log_last_hash": "368bf8998bcec1301faae3cdaeef855f67f842fbf1f3182b7ae8d513469cf666",
+      "recorded_last_hash": "368bf8998bcec1301faae3cdaeef855f67f842fbf1f3182b7ae8d513469cf666",
+      "hash_matches_recorded": true,
+      "n_hours": 1033,
+      "note": null,
+      "dir": "out/baseline_v1_2026-08-11_2026-09-22",
+      "risk": {
+        "by_rule": {
+          "name_cap": {
+            "decision": 16,
+            "hourly_check": 0,
+            "weight_moved": 0.13923549826453874,
+            "pnl_effect_est": 5.543893439397284,
+            "n_priced": 16,
+            "meaning": "per-name cap (v1: vol-scaled)"
+          },
+          "off_hours": {
+            "decision": 92,
+            "hourly_check": 0,
+            "weight_moved": 1.6191475328893152,
+            "pnl_effect_est": -20.560262080643554,
+            "n_priced": 92,
+            "meaning": "outside the US session the cap is scaled for new exposure"
+          },
+          "stop_loss": {
+            "decision": 3,
+            "hourly_check": 20,
+            "weight_moved": 0.29047588468587104,
+            "pnl_effect_est": 5.507600251518026,
+            "n_priced": 23,
+            "meaning": "name down its stop from entry -> flat + 24h cooldown (v1: stop = clip(2 x vol_7d, 3%, 10%))"
+          },
+          "cooldown": {
+            "decision": 132,
+            "hourly_check": 0,
+            "weight_moved": 2.082713312815571,
+            "pnl_effect_est": -78.26508632640899,
+            "n_priced": 130,
+            "meaning": "name in stop-loss cooldown -> 0"
+          },
+          "beta_neutral": {
+            "decision": 2428,
+            "hourly_check": 0,
+            "weight_moved": 18.989880325905183,
+            "pnl_effect_est": 302.6417796209459,
+            "n_priced": 2420,
+            "meaning": "v1: minimal-L2 change to a beta-neutral book"
+          }
+        },
+        "n_records_with_action": 276,
+        "n_records": 276,
+        "effects_priced": true
+      },
+      "code": {
+        "stamp": null,
+        "check": "no code_stamp recorded (run made before replay wrote one) (checked in the research repo at export, PROVENANCE.json)"
+      },
+      "beta": {
+        "status": "computed",
+        "basis": "daily gross equity returns vs EW basket",
+        "n_days": 43,
+        "beta": 0.008505918948397915,
+        "t": 0.8864358666814531,
+        "r2": 0.01880469291546405,
+        "alpha_bp_day": -4.561078309178701,
+        "within_band": true
+      }
+    },
+    {
+      "run_id": "nonews_v1_2026-08-11_2026-09-22",
+      "window": "test",
+      "variant": "nonews",
+      "version": "v1",
+      "start": "2026-08-11",
+      "end": "2026-09-22",
+      "mode": "replay",
+      "optional": false,
+      "expected": true,
+      "status": "complete",
+      "live_modes": [],
+      "label": "estimated (replay)",
+      "n_log_records": 258,
+      "metrics": {
+        "start": "2026-08-11 00:00:00+00:00",
+        "end": "2026-09-23 00:00:00+00:00",
+        "n_days": 43,
+        "partial_first_day_h": 0.0,
+        "partial_last_day_h": 0.0,
+        "partial_last_day_return": null,
+        "start_equity": 10000.0,
+        "final_equity": 10000.0,
+        "total_return": 0.0,
+        "sharpe": null,
+        "sortino": null,
+        "max_dd": 0.0,
+        "gross_sharpe": null,
+        "win_rate": null,
+        "round_trips": 0,
+        "trades": 0,
+        "n_decisions": 258,
+        "n_invalid": 0,
+        "n_risk_exits": 0,
+        "turnover_ann": 0.0,
+        "costs": {
+          "fees": 0.0,
+          "spread": 0.0,
+          "funding": 0.0
+        },
+        "ladder": {
+          "gross": 0.0,
+          "after_fees": 0.0,
+          "after_spread": 0.0,
+          "after_funding": 0.0
+        }
+      },
+      "n_items": 466,
+      "n_cards": 693,
+      "risk_version": "v1",
+      "prompt_version": "v1",
+      "code_stamp": "40e1a8d",
+      "cards_from": null,
+      "provenance": {
+        "n_evidence_items": 0,
+        "why": [],
+        "n_unknown_items": 0,
+        "unknown_examples": [],
+        "items_checked": true,
+        "stale": false
+      },
+      "log_verified": true,
+      "log_last_hash": "a930af0603f708471b1db90fe198bcf80f933e640495efd732d753a7f7217759",
+      "recorded_last_hash": "a930af0603f708471b1db90fe198bcf80f933e640495efd732d753a7f7217759",
+      "hash_matches_recorded": true,
+      "n_hours": 1033,
+      "note": null,
+      "dir": "out/nonews_v1_2026-08-11_2026-09-22",
+      "risk": {
+        "by_rule": {},
+        "n_records_with_action": 0,
+        "n_records": 258,
+        "effects_priced": true
+      },
+      "code": {
+        "stamp": "40e1a8d",
+        "commit": "40e1a8d",
+        "dirty": false,
+        "files_differing_from_freeze": [
+          "sentiment/metrics.py",
+          "sentiment/replay.py"
+        ],
+        "check": "replay code differs from the PREREG freeze commit 62286d9 in sentiment/metrics.py, sentiment/replay.py (checked in the research repo at export, PROVENANCE.json)",
+        "matches_freeze": false
+      },
+      "beta": {
+        "status": "computed",
+        "basis": "daily gross equity returns vs EW basket",
+        "n_days": 43,
+        "beta": 0.0,
+        "t": null,
+        "r2": null,
+        "alpha_bp_day": 0.0,
+        "within_band": true
+      }
+    },
+    {
+      "run_id": "shuffled_v1_2026-08-11_2026-09-22",
+      "window": "test",
+      "variant": "shuffled",
+      "version": "v1",
+      "start": "2026-08-11",
+      "end": "2026-09-22",
+      "mode": "replay",
+      "optional": false,
+      "expected": true,
+      "status": "complete",
+      "live_modes": [],
+      "label": "estimated (replay)",
+      "n_log_records": 268,
+      "metrics": {
+        "start": "2026-08-11 00:00:00+00:00",
+        "end": "2026-09-23 00:00:00+00:00",
+        "n_days": 43,
+        "partial_first_day_h": 0.0,
+        "partial_last_day_h": 0.0,
+        "partial_last_day_return": null,
+        "start_equity": 10000.0,
+        "final_equity": 9990.86489086798,
+        "total_return": -0.0009135109132019092,
+        "sharpe": -0.15923973438032885,
+        "sortino": -0.23468600743909038,
+        "max_dd": -0.018051463656761246,
+        "gross_sharpe": 0.9818748989284024,
+        "win_rate": 0.4479166666666667,
+        "round_trips": 192,
+        "trades": 591,
+        "n_decisions": 258,
+        "n_invalid": 0,
+        "n_risk_exits": 10,
+        "turnover_ann": 79.41502653196653,
+        "costs": {
+          "fees": 55.93175836660744,
+          "spread": 3.096798274113693,
+          "funding": 1.5137861852602883
+        },
+        "ladder": {
+          "gross": 0.004837966132344107,
+          "after_fees": -0.0007552097043166395,
+          "after_spread": -0.0010648895317278972,
+          "after_funding": -0.0009135109132019092
+        }
+      },
+      "n_items": 733,
+      "n_cards": 1134,
+      "risk_version": "v1",
+      "prompt_version": "v1",
+      "code_stamp": "40e1a8d",
+      "cards_from": null,
+      "provenance": {
+        "n_evidence_items": 352,
+        "why": [],
+        "n_unknown_items": 0,
+        "unknown_examples": [],
+        "items_checked": true,
+        "stale": false
+      },
+      "log_verified": true,
+      "log_last_hash": "9a10baf756bdcf0e53e4d84d8fbbcfea1f69e091df6e11d0b41ff6c265077155",
+      "recorded_last_hash": "9a10baf756bdcf0e53e4d84d8fbbcfea1f69e091df6e11d0b41ff6c265077155",
+      "hash_matches_recorded": true,
+      "n_hours": 1033,
+      "note": null,
+      "dir": "out/shuffled_v1_2026-08-11_2026-09-22",
+      "risk": {
+        "by_rule": {
+          "off_hours": {
+            "decision": 60,
+            "hourly_check": 0,
+            "weight_moved": 0.014901132908815465,
+            "pnl_effect_est": -0.04803856849545961,
+            "n_priced": 58,
+            "meaning": "outside the US session the cap is scaled for new exposure"
+          },
+          "stop_loss": {
+            "decision": 4,
+            "hourly_check": 12,
+            "weight_moved": 0.44952258694208547,
+            "pnl_effect_est": -2.087844677683429,
+            "n_priced": 16,
+            "meaning": "name down its stop from entry -> flat + 24h cooldown (v1: stop = clip(2 x vol_7d, 3%, 10%))"
+          },
+          "cooldown": {
+            "decision": 7,
+            "hourly_check": 0,
+            "weight_moved": 0.5049999999999999,
+            "pnl_effect_est": 20.295948541098213,
+            "n_priced": 7,
+            "meaning": "name in stop-loss cooldown -> 0"
+          },
+          "beta_neutral": {
+            "decision": 2438,
+            "hourly_check": 0,
+            "weight_moved": 6.059258935613725,
+            "pnl_effect_est": 54.58194755500613,
+            "n_priced": 2429,
+            "meaning": "v1: minimal-L2 change to a beta-neutral book"
+          },
+          "net_cap": {
+            "decision": 20,
+            "hourly_check": 0,
+            "weight_moved": 0.06608808181673811,
+            "pnl_effect_est": 1.0489008989371889,
+            "n_priced": 20,
+            "meaning": "net exposure cap MAX_NET"
+          }
+        },
+        "n_records_with_action": 268,
+        "n_records": 268,
+        "effects_priced": true
+      },
+      "code": {
+        "stamp": "40e1a8d",
+        "commit": "40e1a8d",
+        "dirty": false,
+        "files_differing_from_freeze": [
+          "sentiment/metrics.py",
+          "sentiment/replay.py"
+        ],
+        "check": "replay code differs from the PREREG freeze commit 62286d9 in sentiment/metrics.py, sentiment/replay.py (checked in the research repo at export, PROVENANCE.json)",
+        "matches_freeze": false
+      },
+      "beta": {
+        "status": "computed",
+        "basis": "daily gross equity returns vs EW basket",
+        "n_days": 43,
+        "beta": -0.0016887380722850017,
+        "t": -0.10775055539192556,
+        "r2": 0.0002830950098202667,
+        "alpha_bp_day": 1.229857551680434,
+        "within_band": true
+      }
+    },
+    {
+      "run_id": "blinded_v1_2026-08-11_2026-09-22",
+      "window": "test",
+      "variant": "blinded",
+      "version": "v1",
+      "start": "2026-08-11",
+      "end": "2026-09-22",
+      "mode": "replay",
+      "optional": true,
+      "expected": true,
+      "status": "complete",
+      "live_modes": [],
+      "label": "estimated (replay)",
+      "n_log_records": 273,
+      "metrics": {
+        "start": "2026-08-11 00:00:00+00:00",
+        "end": "2026-09-23 00:00:00+00:00",
+        "n_days": 43,
+        "partial_first_day_h": 0.0,
+        "partial_last_day_h": 0.0,
+        "partial_last_day_return": null,
+        "start_equity": 10000.0,
+        "final_equity": 9756.879443204483,
+        "total_return": -0.024312055679551636,
+        "sharpe": -4.726600339415146,
+        "sortino": -5.810966880528643,
+        "max_dd": -0.02491634904191531,
+        "gross_sharpe": -3.5706443355379944,
+        "win_rate": 0.41350210970464135,
+        "round_trips": 237,
+        "trades": 588,
+        "n_decisions": 258,
+        "n_invalid": 0,
+        "n_risk_exits": 15,
+        "turnover_ann": 79.43296298316498,
+        "costs": {
+          "fees": 55.495783376196854,
+          "spread": 3.04623240630095,
+          "funding": -1.822960641494496
+        },
+        "ladder": {
+          "gross": -0.018275558037152195,
+          "after_fees": -0.023825136374771905,
+          "after_spread": -0.02412975961540198,
+          "after_funding": -0.024312055679551525
+        }
+      },
+      "n_items": 466,
+      "n_cards": 693,
+      "risk_version": "v1",
+      "prompt_version": "v1",
+      "code_stamp": "ba9ba86",
+      "cards_from": null,
+      "provenance": {
+        "n_evidence_items": 287,
+        "why": [],
+        "n_unknown_items": 0,
+        "unknown_examples": [],
+        "items_checked": true,
+        "stale": false
+      },
+      "log_verified": true,
+      "log_last_hash": "7044c58a39d55c25a970fe0fea98df01588d54e4edf85713c8a18802e54aeedf",
+      "recorded_last_hash": "7044c58a39d55c25a970fe0fea98df01588d54e4edf85713c8a18802e54aeedf",
+      "hash_matches_recorded": true,
+      "n_hours": 1033,
+      "note": null,
+      "dir": "out/blinded_v1_2026-08-11_2026-09-22",
+      "risk": {
+        "by_rule": {
+          "name_cap": {
+            "decision": 1,
+            "hourly_check": 0,
+            "weight_moved": 0.00013477619585423872,
+            "pnl_effect_est": 0.012525403604932985,
+            "n_priced": 1,
+            "meaning": "per-name cap (v1: vol-scaled)"
+          },
+          "off_hours": {
+            "decision": 112,
+            "hourly_check": 0,
+            "weight_moved": 0.03320040462883144,
+            "pnl_effect_est": -0.07796039188456955,
+            "n_priced": 112,
+            "meaning": "outside the US session the cap is scaled for new exposure"
+          },
+          "stop_loss": {
+            "decision": 4,
+            "hourly_check": 16,
+            "weight_moved": 0.5839440166014335,
+            "pnl_effect_est": 13.822664393391332,
+            "n_priced": 20,
+            "meaning": "name down its stop from entry -> flat + 24h cooldown (v1: stop = clip(2 x vol_7d, 3%, 10%))"
+          },
+          "cooldown": {
+            "decision": 14,
+            "hourly_check": 0,
+            "weight_moved": 0.6740000000000002,
+            "pnl_effect_est": -19.67364250253001,
+            "n_priced": 14,
+            "meaning": "name in stop-loss cooldown -> 0"
+          },
+          "beta_neutral": {
+            "decision": 2399,
+            "hourly_check": 0,
+            "weight_moved": 5.699494097950468,
+            "pnl_effect_est": 11.97214067451905,
+            "n_priced": 2389,
+            "meaning": "v1: minimal-L2 change to a beta-neutral book"
+          }
+        },
+        "n_records_with_action": 273,
+        "n_records": 273,
+        "effects_priced": true
+      },
+      "code": {
+        "stamp": "ba9ba86",
+        "commit": "ba9ba86",
+        "dirty": false,
+        "files_differing_from_freeze": [
+          "b-sentiment-agent/sentiment/config.py",
+          "b-sentiment-agent/sentiment/evidence.py",
+          "b-sentiment-agent/sentiment/llm.py",
+          "b-sentiment-agent/sentiment/metrics.py",
+          "b-sentiment-agent/sentiment/replay.py"
+        ],
+        "check": "replay code differs from the PREREG freeze commit 62286d9 in b-sentiment-agent/sentiment/config.py, b-sentiment-agent/sentiment/evidence.py, b-sentiment-agent/sentiment/llm.py, b-sentiment-agent/sentiment/metrics.py, b-sentiment-agent/sentiment/replay.py (checked in the research repo at export, PROVENANCE.json)",
+        "matches_freeze": false
+      },
+      "beta": {
+        "status": "computed",
+        "basis": "daily gross equity returns vs EW basket",
+        "n_days": 43,
+        "beta": -0.021725735129310367,
+        "t": -1.3872856366806419,
+        "r2": 0.04483590217996469,
+        "alpha_bp_day": -3.1940750886734466,
+        "within_band": true
+      }
+    },
+    {
+      "run_id": "llm_2026-06-22_2026-08-10",
+      "window": "dev",
+      "variant": "llm",
+      "version": "v0",
+      "start": "2026-06-22",
+      "end": "2026-08-10",
+      "mode": "replay",
+      "optional": false,
+      "expected": true,
+      "status": "complete",
+      "live_modes": [],
+      "label": "estimated (replay)",
+      "n_log_records": 319,
+      "metrics": {
+        "start": "2026-06-22 00:00:00+00:00",
+        "end": "2026-08-11 00:00:00+00:00",
+        "n_days": 50,
+        "partial_first_day_h": 0.0,
+        "partial_last_day_h": 0.0,
+        "partial_last_day_return": null,
+        "start_equity": 10000.0,
+        "final_equity": 9392.899671668058,
+        "total_return": -0.060710032833194205,
+        "sharpe": -8.015273171031806,
+        "sortino": -8.380203556996435,
+        "max_dd": -0.06177314182547189,
+        "gross_sharpe": -7.158073029275509,
+        "win_rate": 0.2923076923076923,
+        "round_trips": 65,
+        "trades": 298,
+        "n_decisions": 300,
+        "n_invalid": 0,
+        "n_risk_exits": 19,
+        "turnover_ann": 81.50270428439349,
+        "costs": {
+          "fees": 64.91307367717953,
+          "spread": 3.0658543506442015,
+          "funding": 0.3388349496114505
+        },
+        "ladder": {
+          "gross": -0.05394602352537292,
+          "after_fees": -0.060437330893091,
+          "after_spread": -0.060743916328155345,
+          "after_funding": -0.060710032833194205
+        }
+      },
+      "n_items": 473,
+      "n_cards": 830,
+      "risk_version": "v0",
+      "prompt_version": "v0",
+      "code_stamp": null,
+      "cards_from": null,
+      "provenance": {
+        "n_evidence_items": 414,
+        "why": [],
+        "n_unknown_items": 0,
+        "unknown_examples": [],
+        "items_checked": true,
+        "stale": false
+      },
+      "log_verified": true,
+      "log_last_hash": "2d1e55ed3ba5f31632e60dac303e856c0392e0bdba20c7b4498bf22b5c9a1f8f",
+      "recorded_last_hash": "2d1e55ed3ba5f31632e60dac303e856c0392e0bdba20c7b4498bf22b5c9a1f8f",
+      "hash_matches_recorded": true,
+      "n_hours": 1201,
+      "note": null,
+      "dir": "out/llm_2026-06-22_2026-08-10",
+      "risk": {
+        "by_rule": {
+          "off_hours": {
+            "decision": 132,
+            "hourly_check": 0,
+            "weight_moved": 0.6855743636822451,
+            "pnl_effect_est": 0.2495774040878309,
+            "n_priced": 132,
+            "meaning": "outside the US session the cap is scaled for new exposure"
+          },
+          "stop_loss": {
+            "decision": 2,
+            "hourly_check": 19,
+            "weight_moved": 1.2337272854788537,
+            "pnl_effect_est": 36.05639918839756,
+            "n_priced": 21,
+            "meaning": "name down its stop from entry -> flat + 24h cooldown (v1: stop = clip(2 x vol_7d, 3%, 10%))"
+          },
+          "cooldown": {
+            "decision": 41,
+            "hourly_check": 0,
+            "weight_moved": 2.26,
+            "pnl_effect_est": -18.386517701535965,
+            "n_priced": 41,
+            "meaning": "name in stop-loss cooldown -> 0"
+          },
+          "net_cap": {
+            "decision": 72,
+            "hourly_check": 0,
+            "weight_moved": 0.3985230011660153,
+            "pnl_effect_est": -7.714749996958011,
+            "n_priced": 72,
+            "meaning": "net exposure cap MAX_NET"
+          }
+        },
+        "n_records_with_action": 141,
+        "n_records": 319,
+        "effects_priced": true
+      },
+      "code": {
+        "stamp": null,
+        "check": "no code_stamp recorded (run made before replay wrote one) (checked in the research repo at export, PROVENANCE.json)"
+      },
+      "beta": {
+        "status": "computed",
+        "basis": "daily gross equity returns vs EW basket",
+        "n_days": 50,
+        "beta": 0.0558304552442161,
+        "t": 2.685903435895222,
+        "r2": 0.1306564851582056,
+        "alpha_bp_day": -10.750861109326005,
+        "within_band": false
+      }
+    },
+    {
+      "run_id": "baseline_2026-06-22_2026-08-10",
+      "window": "dev",
+      "variant": "baseline",
+      "version": "v0",
+      "start": "2026-06-22",
+      "end": "2026-08-10",
+      "mode": "replay",
+      "optional": false,
+      "expected": true,
+      "status": "complete",
+      "live_modes": [],
+      "label": "estimated (replay)",
+      "n_log_records": 323,
+      "metrics": {
+        "start": "2026-06-22 00:00:00+00:00",
+        "end": "2026-08-11 00:00:00+00:00",
+        "n_days": 50,
+        "partial_first_day_h": 0.0,
+        "partial_last_day_h": 0.0,
+        "partial_last_day_return": null,
+        "start_equity": 10000.0,
+        "final_equity": 9568.537055921097,
+        "total_return": -0.04314629440789031,
+        "sharpe": -6.301444846612127,
+        "sortino": -7.062939287267584,
+        "max_dd": -0.045505135170512134,
+        "gross_sharpe": -4.79121036617275,
+        "win_rate": 0.3238095238095238,
+        "round_trips": 210,
+        "trades": 1209,
+        "n_decisions": 300,
+        "n_invalid": 0,
+        "n_risk_exits": 23,
+        "turnover_ann": 127.81903267550955,
+        "costs": {
+          "fees": 102.84473740226578,
+          "spread": 5.456328924147949,
+          "funding": 4.603626071361825
+        },
+        "ladder": {
+          "gross": -0.03277655038238536,
+          "after_fees": -0.043061024122611924,
+          "after_spread": -0.04360665701502675,
+          "after_funding": -0.04314629440789053
+        }
+      },
+      "n_items": 473,
+      "n_cards": 830,
+      "risk_version": "v0",
+      "prompt_version": null,
+      "code_stamp": null,
+      "cards_from": null,
+      "provenance": {
+        "n_evidence_items": 414,
+        "why": [],
+        "n_unknown_items": 0,
+        "unknown_examples": [],
+        "items_checked": true,
+        "stale": false
+      },
+      "log_verified": true,
+      "log_last_hash": "5415d818fd6b90c3eb374b21ea122659e5d8a3e2be7d53e0670ce978a45a2a3e",
+      "recorded_last_hash": "5415d818fd6b90c3eb374b21ea122659e5d8a3e2be7d53e0670ce978a45a2a3e",
+      "hash_matches_recorded": true,
+      "n_hours": 1201,
+      "note": null,
+      "dir": "out/baseline_2026-06-22_2026-08-10",
+      "risk": {
+        "by_rule": {
+          "off_hours": {
+            "decision": 125,
+            "hourly_check": 0,
+            "weight_moved": 5.267574357528683,
+            "pnl_effect_est": -4.853795930404281,
+            "n_priced": 125,
+            "meaning": "outside the US session the cap is scaled for new exposure"
+          },
+          "funding_block": {
+            "decision": 2,
+            "hourly_check": 0,
+            "weight_moved": 0.022407,
+            "pnl_effect_est": 1.412124146453558,
+            "n_priced": 2,
+            "meaning": "|funding| >= FUNDING_BLOCK blocks new exposure on the paying side"
+          },
+          "stop_loss": {
+            "decision": 7,
+            "hourly_check": 29,
+            "weight_moved": 0.6001384289032049,
+            "pnl_effect_est": 11.149045591219748,
+            "n_priced": 36,
+            "meaning": "name down its stop from entry -> flat + 24h cooldown (v1: stop = clip(2 x vol_7d, 3%, 10%))"
+          },
+          "cooldown": {
+            "decision": 207,
+            "hourly_check": 0,
+            "weight_moved": 5.051935000000001,
+            "pnl_effect_est": -189.4206290765358,
+            "n_priced": 207,
+            "meaning": "name in stop-loss cooldown -> 0"
+          },
+          "net_cap": {
+            "decision": 292,
+            "hourly_check": 0,
+            "weight_moved": 6.277543961628361,
+            "pnl_effect_est": 77.46298657948124,
+            "n_priced": 292,
+            "meaning": "net exposure cap MAX_NET"
+          }
+        },
+        "n_records_with_action": 195,
+        "n_records": 323,
+        "effects_priced": true
+      },
+      "code": {
+        "stamp": null,
+        "check": "no code_stamp recorded (run made before replay wrote one) (checked in the research repo at export, PROVENANCE.json)"
+      },
+      "beta": {
+        "status": "computed",
+        "basis": "daily gross equity returns vs EW basket",
+        "n_days": 50,
+        "beta": -0.033793159774100606,
+        "t": -1.742819519088321,
+        "r2": 0.05951358598236478,
+        "alpha_bp_day": -6.805132833314363,
+        "within_band": false
+      }
+    },
+    {
+      "run_id": "llm_v1_2026-06-22_2026-07-15",
+      "window": "dev-half",
+      "variant": "llm",
+      "version": "v1",
+      "start": "2026-06-22",
+      "end": "2026-07-15",
+      "mode": "replay",
+      "optional": false,
+      "expected": true,
+      "status": "complete",
+      "live_modes": [],
+      "label": "estimated (replay)",
+      "n_log_records": 151,
+      "metrics": {
+        "start": "2026-06-22 00:00:00+00:00",
+        "end": "2026-07-16 00:00:00+00:00",
+        "n_days": 24,
+        "partial_first_day_h": 0.0,
+        "partial_last_day_h": 0.0,
+        "partial_last_day_return": null,
+        "start_equity": 10000.0,
+        "final_equity": 10056.256621690649,
+        "total_return": 0.0056256621690649045,
+        "sharpe": 1.7147235010670212,
+        "sortino": 3.1757917745585083,
+        "max_dd": -0.007858162786452905,
+        "gross_sharpe": 2.8855964876319513,
+        "win_rate": 0.3763440860215054,
+        "round_trips": 93,
+        "trades": 309,
+        "n_decisions": 144,
+        "n_invalid": 0,
+        "n_risk_exits": 7,
+        "turnover_ann": 86.12252447591096,
+        "costs": {
+          "fees": 34.03873682584496,
+          "spread": 1.8995091680032037,
+          "funding": -2.8332639306476213
+        },
+        "ladder": {
+          "gross": 0.009502813161514245,
+          "after_fees": 0.006098939478929699,
+          "after_spread": 0.0059089885621295135,
+          "after_funding": 0.005625662169064682
+        }
+      },
+      "n_items": 163,
+      "n_cards": 316,
+      "risk_version": "v1",
+      "prompt_version": "v1",
+      "code_stamp": null,
+      "cards_from": "sentiment/out/llm_2026-06-22_2026-08-10",
+      "provenance": {
+        "n_evidence_items": 139,
+        "why": [],
+        "n_unknown_items": 0,
+        "unknown_examples": [],
+        "items_checked": true,
+        "stale": false
+      },
+      "log_verified": true,
+      "log_last_hash": "d830d8e5915bd08141b8347e72cea35f7b4cbbf425f2bf6929cbd6dff3c3dce9",
+      "recorded_last_hash": "d830d8e5915bd08141b8347e72cea35f7b4cbbf425f2bf6929cbd6dff3c3dce9",
+      "hash_matches_recorded": true,
+      "n_hours": 577,
+      "note": null,
+      "dir": "out/llm_v1_2026-06-22_2026-07-15",
+      "risk": {
+        "by_rule": {
+          "name_cap": {
+            "decision": 3,
+            "hourly_check": 0,
+            "weight_moved": 0.0027186729838815024,
+            "pnl_effect_est": 0.03680294944154722,
+            "n_priced": 3,
+            "meaning": "per-name cap (v1: vol-scaled)"
+          },
+          "off_hours": {
+            "decision": 78,
+            "hourly_check": 0,
+            "weight_moved": 0.021578720761657517,
+            "pnl_effect_est": -0.4590791530095376,
+            "n_priced": 78,
+            "meaning": "outside the US session the cap is scaled for new exposure"
+          },
+          "stop_loss": {
+            "decision": 3,
+            "hourly_check": 7,
+            "weight_moved": 0.4684729942360741,
+            "pnl_effect_est": 17.677040356818793,
+            "n_priced": 10,
+            "meaning": "name down its stop from entry -> flat + 24h cooldown (v1: stop = clip(2 x vol_7d, 3%, 10%))"
+          },
+          "cooldown": {
+            "decision": 10,
+            "hourly_check": 0,
+            "weight_moved": 0.5286043634164642,
+            "pnl_effect_est": -5.014020075538314,
+            "n_priced": 10,
+            "meaning": "name in stop-loss cooldown -> 0"
+          },
+          "beta_neutral": {
+            "decision": 1346,
+            "hourly_check": 0,
+            "weight_moved": 3.5292737022147938,
+            "pnl_effect_est": 30.7665826736466,
+            "n_priced": 1346,
+            "meaning": "v1: minimal-L2 change to a beta-neutral book"
+          }
+        },
+        "n_records_with_action": 150,
+        "n_records": 151,
+        "effects_priced": true
+      },
+      "code": {
+        "stamp": null,
+        "check": "no code_stamp recorded (run made before replay wrote one) (checked in the research repo at export, PROVENANCE.json)"
+      },
+      "beta": {
+        "status": "computed",
+        "basis": "daily gross equity returns vs EW basket",
+        "n_days": 24,
+        "beta": -0.014887516624554693,
+        "t": -0.5313742622312899,
+        "r2": 0.012671845541463278,
+        "alpha_bp_day": 4.119982085511084,
+        "within_band": true
+      }
+    },
+    {
+      "run_id": "baseline_v1_2026-06-22_2026-07-15",
+      "window": "dev-half",
+      "variant": "baseline",
+      "version": "v1",
+      "start": "2026-06-22",
+      "end": "2026-07-15",
+      "mode": "replay",
+      "optional": false,
+      "expected": true,
+      "status": "complete",
+      "live_modes": [],
+      "label": "estimated (replay)",
+      "n_log_records": 153,
+      "metrics": {
+        "start": "2026-06-22 00:00:00+00:00",
+        "end": "2026-07-16 00:00:00+00:00",
+        "n_days": 24,
+        "partial_first_day_h": 0.0,
+        "partial_last_day_h": 0.0,
+        "partial_last_day_return": null,
+        "start_equity": 10000.0,
+        "final_equity": 9844.808461256182,
+        "total_return": -0.015519153874381852,
+        "sharpe": -7.97049243897491,
+        "sortino": -8.31086457818226,
+        "max_dd": -0.016332392235628435,
+        "gross_sharpe": -6.057936134731042,
+        "win_rate": 0.3644067796610169,
+        "round_trips": 118,
+        "trades": 534,
+        "n_decisions": 144,
+        "n_invalid": 0,
+        "n_risk_exits": 9,
+        "turnover_ann": 94.09720483095981,
+        "costs": {
+          "fees": 36.78107951681064,
+          "spread": 1.8662180974003697,
+          "funding": -0.0172816147063896
+        },
+        "ladder": {
+          "gross": -0.01165269595149021,
+          "after_fees": -0.015330803903171208,
+          "after_spread": -0.01551742571291126,
+          "after_funding": -0.015519153874381852
+        }
+      },
+      "n_items": 163,
+      "n_cards": 316,
+      "risk_version": "v1",
+      "prompt_version": null,
+      "code_stamp": null,
+      "cards_from": "sentiment/out/llm_2026-06-22_2026-08-10",
+      "provenance": {
+        "n_evidence_items": 139,
+        "why": [],
+        "n_unknown_items": 0,
+        "unknown_examples": [],
+        "items_checked": true,
+        "stale": false
+      },
+      "log_verified": true,
+      "log_last_hash": "78b4042597d2438df7f9c3f155dbc1118ea7baf4eed8217351a0dbda84d2ba62",
+      "recorded_last_hash": "78b4042597d2438df7f9c3f155dbc1118ea7baf4eed8217351a0dbda84d2ba62",
+      "hash_matches_recorded": true,
+      "n_hours": 577,
+      "note": null,
+      "dir": "out/baseline_v1_2026-06-22_2026-07-15",
+      "risk": {
+        "by_rule": {
+          "name_cap": {
+            "decision": 14,
+            "hourly_check": 0,
+            "weight_moved": 0.2781808356223005,
+            "pnl_effect_est": -3.7664525209775785,
+            "n_priced": 14,
+            "meaning": "per-name cap (v1: vol-scaled)"
+          },
+          "off_hours": {
+            "decision": 42,
+            "hourly_check": 0,
+            "weight_moved": 0.6673115983341668,
+            "pnl_effect_est": 27.8132510887314,
+            "n_priced": 42,
+            "meaning": "outside the US session the cap is scaled for new exposure"
+          },
+          "funding_block": {
+            "decision": 2,
+            "hourly_check": 0,
+            "weight_moved": 0.022407,
+            "pnl_effect_est": 1.4181736533460252,
+            "n_priced": 2,
+            "meaning": "|funding| >= FUNDING_BLOCK blocks new exposure on the paying side"
+          },
+          "stop_loss": {
+            "decision": 6,
+            "hourly_check": 10,
+            "weight_moved": 0.23948752953798513,
+            "pnl_effect_est": -28.088219571122703,
+            "n_priced": 16,
+            "meaning": "name down its stop from entry -> flat + 24h cooldown (v1: stop = clip(2 x vol_7d, 3%, 10%))"
+          },
+          "cooldown": {
+            "decision": 90,
+            "hourly_check": 0,
+            "weight_moved": 1.5986065849510285,
+            "pnl_effect_est": -2.281287435414618,
+            "n_priced": 90,
+            "meaning": "name in stop-loss cooldown -> 0"
+          },
+          "beta_neutral": {
+            "decision": 1321,
+            "hourly_check": 0,
+            "weight_moved": 9.323314931674263,
+            "pnl_effect_est": 70.56246280482013,
+            "n_priced": 1321,
+            "meaning": "v1: minimal-L2 change to a beta-neutral book"
+          }
+        },
+        "n_records_with_action": 152,
+        "n_records": 153,
+        "effects_priced": true
+      },
+      "code": {
+        "stamp": null,
+        "check": "no code_stamp recorded (run made before replay wrote one) (checked in the research repo at export, PROVENANCE.json)"
+      },
+      "beta": {
+        "status": "computed",
+        "basis": "daily gross equity returns vs EW basket",
+        "n_days": 24,
+        "beta": -0.02383865196092689,
+        "t": -1.522639627324011,
+        "r2": 0.09533638881780326,
+        "alpha_bp_day": -4.638666752133014,
+        "within_band": true
+      }
+    },
+    {
+      "run_id": "live",
+      "window": "live",
+      "variant": "llm",
+      "version": null,
+      "start": null,
+      "end": null,
+      "mode": "live",
+      "optional": false,
+      "expected": true,
+      "status": "live",
+      "live_modes": [
+        "shadow"
+      ],
+      "label": "estimated (shadow ledger: simulated fills at live-venue quotes)",
+      "n_log_records": 75,
+      "metrics": {
+        "start": "2026-09-23 10:00:00+00:00",
+        "end": "2026-10-05 12:00:00+00:00",
+        "n_days": 11,
+        "partial_first_day_h": 14.0,
+        "partial_last_day_h": 12.0,
+        "partial_last_day_return": -0.00042808112532433107,
+        "start_equity": 10000.0,
+        "final_equity": 9973.276856496192,
+        "total_return": -0.0026723143503808444,
+        "sharpe": -4.161023055339418,
+        "sortino": -5.724193636357539,
+        "max_dd": -0.009803966965085786,
+        "gross_sharpe": -3.0337408670475736,
+        "win_rate": 0.4666666666666667,
+        "round_trips": 30,
+        "trades": 136,
+        "n_decisions": 73,
+        "n_invalid": 2,
+        "n_risk_exits": 2,
+        "turnover_ann": 70.02582209592784,
+        "costs": {
+          "fees": 13.919659500000003,
+          "spread": 1.1956999999998237,
+          "funding": 0.8654159962000002
+        },
+        "ladder": {
+          "gross": -0.0012473200000007179,
+          "after_fees": -0.002639285950000736,
+          "after_spread": -0.0027588559500006937,
+          "after_funding": -0.0026723143503806224
+        }
+      },
+      "n_items": null,
+      "n_cards": null,
+      "risk_version": null,
+      "prompt_version": null,
+      "code_stamp": null,
+      "cards_from": null,
+      "log_verified": true,
+      "log_last_hash": "e22a2e45ceaa506824c8a1faf60903affd5462bee1367b5bbdc9d4084a80a5d5",
+      "recorded_last_hash": null,
+      "hash_matches_recorded": null,
+      "n_hours": 291,
+      "note": null,
+      "dir": "out/live",
+      "risk": {
+        "by_rule": {
+          "invalid": {
+            "decision": 2,
+            "hourly_check": 0,
+            "weight_moved": 0,
+            "pnl_effect_est": null,
+            "n_priced": 0,
+            "meaning": "LLM output invalid -> hold the current book"
+          },
+          "off_hours": {
+            "decision": 8,
+            "hourly_check": 0,
+            "weight_moved": 0.0014999444019423228,
+            "pnl_effect_est": null,
+            "n_priced": 0,
+            "meaning": "outside the US session the cap is scaled for new exposure"
+          },
+          "stop_loss": {
+            "decision": 0,
+            "hourly_check": 2,
+            "weight_moved": 0.13011597650380036,
+            "pnl_effect_est": null,
+            "n_priced": 0,
+            "meaning": "name down its stop from entry -> flat + 24h cooldown (v1: stop = clip(2 x vol_7d, 3%, 10%))"
+          },
+          "cooldown": {
+            "decision": 3,
+            "hourly_check": 0,
+            "weight_moved": 0.14,
+            "pnl_effect_est": null,
+            "n_priced": 0,
+            "meaning": "name in stop-loss cooldown -> 0"
+          },
+          "beta_neutral": {
+            "decision": 694,
+            "hourly_check": 0,
+            "weight_moved": 1.3258290406930697,
+            "pnl_effect_est": null,
+            "n_priced": 0,
+            "meaning": "v1: minimal-L2 change to a beta-neutral book"
+          }
+        },
+        "n_records_with_action": 74,
+        "n_records": 75,
+        "effects_priced": true
+      }
+    }
+  ],
+  "comparisons": {
+    "test v1": {
+      "window": "test",
+      "version": "v1",
+      "llm_run": "llm_v1_2026-08-11_2026-09-22",
+      "llm_status": "complete",
+      "vs": {
+        "baseline": {
+          "run": "baseline_v1_2026-08-11_2026-09-22",
+          "status": "complete",
+          "increment": {
+            "run_a": "llm_v1_2026-08-11_2026-09-22",
+            "run_b": "baseline_v1_2026-08-11_2026-09-22",
+            "n_days": 43,
+            "block_days": 5,
+            "n_boot": 2000,
+            "n_boot_dropped": 0,
+            "n_boot_used": 2000,
+            "seed": 20260923,
+            "sharpe_a": -2.176826651071828,
+            "sharpe_b": -7.5911264691129805,
+            "sharpe_diff": 5.414299818041153,
+            "ci95": [
+              -0.12320153344195083,
+              10.769219341000623
+            ],
+            "p_diff_le_0": 0.0295,
+            "n_distinct_paths": 2000
+          },
+          "reading": "llm − baseline Sharpe +5.41, 95% CI [−0.12, +10.77] (includes 0, 43 days, 2000 of 2000 bootstrap paths used): the LLM agent is not distinguishable from the fixed-rule baseline."
+        },
+        "nonews": {
+          "run": "nonews_v1_2026-08-11_2026-09-22",
+          "status": "complete",
+          "increment": {
+            "run_a": "llm_v1_2026-08-11_2026-09-22",
+            "run_b": "nonews_v1_2026-08-11_2026-09-22",
+            "n_days": 43,
+            "block_days": 5,
+            "n_boot": 2000,
+            "n_boot_dropped": 2000,
+            "n_boot_used": 0,
+            "seed": 20260923,
+            "sharpe_a": -2.176826651071828,
+            "sharpe_b": null,
+            "sharpe_diff": null,
+            "ci95": [
+              null,
+              null
+            ],
+            "p_diff_le_0": null,
+            "n_distinct_paths": 2000
+          },
+          "reading": "llm − nonews Sharpe n/a, 95% CI [n/a, n/a] (n/a, 43 days, 0 of 2000 bootstrap paths used): no finite bootstrap; not readable."
+        },
+        "shuffled": {
+          "run": "shuffled_v1_2026-08-11_2026-09-22",
+          "status": "complete",
+          "increment": {
+            "run_a": "llm_v1_2026-08-11_2026-09-22",
+            "run_b": "shuffled_v1_2026-08-11_2026-09-22",
+            "n_days": 43,
+            "block_days": 5,
+            "n_boot": 2000,
+            "n_boot_dropped": 0,
+            "n_boot_used": 2000,
+            "seed": 20260923,
+            "sharpe_a": -2.176826651071828,
+            "sharpe_b": -0.15923973438032885,
+            "sharpe_diff": -2.0175869166914993,
+            "ci95": [
+              -10.489115664059774,
+              5.76567109279203
+            ],
+            "p_diff_le_0": 0.7065,
+            "n_distinct_paths": 2000
+          },
+          "reading": "llm − shuffled Sharpe −2.02, 95% CI [−10.49, +5.77] (includes 0, 43 days, 2000 of 2000 bootstrap paths used): stale (shuffled) news does as well: no evidence that news timing matters."
+        },
+        "blinded": {
+          "run": "blinded_v1_2026-08-11_2026-09-22",
+          "status": "complete",
+          "increment": {
+            "run_a": "llm_v1_2026-08-11_2026-09-22",
+            "run_b": "blinded_v1_2026-08-11_2026-09-22",
+            "n_days": 43,
+            "block_days": 5,
+            "n_boot": 2000,
+            "n_boot_dropped": 0,
+            "n_boot_used": 2000,
+            "seed": 20260923,
+            "sharpe_a": -2.176826651071828,
+            "sharpe_b": -4.726600339415146,
+            "sharpe_diff": 2.549773688343318,
+            "ci95": [
+              -0.37122464606694516,
+              5.979949551313083
+            ],
+            "p_diff_le_0": 0.0495,
+            "n_distinct_paths": 2000
+          },
+          "reading": "llm − blinded Sharpe +2.55, 95% CI [−0.37, +5.98] (includes 0, 43 days, 2000 of 2000 bootstrap paths used): blinding names and dates makes no significant difference: no sign of reliance on name priors."
+        }
+      }
+    },
+    "dev v0": {
+      "window": "dev",
+      "version": "v0",
+      "llm_run": "llm_2026-06-22_2026-08-10",
+      "llm_status": "complete",
+      "vs": {
+        "baseline": {
+          "run": "baseline_2026-06-22_2026-08-10",
+          "status": "complete",
+          "increment": {
+            "run_a": "llm_2026-06-22_2026-08-10",
+            "run_b": "baseline_2026-06-22_2026-08-10",
+            "n_days": 50,
+            "block_days": 5,
+            "n_boot": 2000,
+            "n_boot_dropped": 0,
+            "n_boot_used": 2000,
+            "seed": 20260923,
+            "sharpe_a": -8.015273171031806,
+            "sharpe_b": -6.301444846612127,
+            "sharpe_diff": -1.713828324419679,
+            "ci95": [
+              -8.037352525844685,
+              4.455220542550925
+            ],
+            "p_diff_le_0": 0.722,
+            "n_distinct_paths": 2000
+          },
+          "reading": "llm − baseline Sharpe −1.71, 95% CI [−8.04, +4.46] (includes 0, 50 days, 2000 of 2000 bootstrap paths used): in-sample check outside the pre-registered test window; P&L not a criterion, no claim read."
+        },
+        "nonews": {
+          "run": null,
+          "status": "not run yet",
+          "reading": "not computed: nonews not run yet (only complete, current runs are compared)"
+        },
+        "shuffled": {
+          "run": null,
+          "status": "not run yet",
+          "reading": "not computed: shuffled not run yet (only complete, current runs are compared)"
+        },
+        "blinded": {
+          "run": null,
+          "status": "not run yet",
+          "reading": "not computed: blinded not run yet (only complete, current runs are compared)"
+        }
+      }
+    },
+    "dev-half v1": {
+      "window": "dev-half",
+      "version": "v1",
+      "llm_run": "llm_v1_2026-06-22_2026-07-15",
+      "llm_status": "complete",
+      "vs": {
+        "baseline": {
+          "run": "baseline_v1_2026-06-22_2026-07-15",
+          "status": "complete",
+          "increment": {
+            "run_a": "llm_v1_2026-06-22_2026-07-15",
+            "run_b": "baseline_v1_2026-06-22_2026-07-15",
+            "n_days": 24,
+            "block_days": 5,
+            "n_boot": 2000,
+            "n_boot_dropped": 0,
+            "n_boot_used": 2000,
+            "seed": 20260923,
+            "sharpe_a": 1.7147235010670212,
+            "sharpe_b": -7.97049243897491,
+            "sharpe_diff": 9.685215940041932,
+            "ci95": [
+              5.335350055139521,
+              15.718148096376977
+            ],
+            "p_diff_le_0": 0.0005,
+            "n_distinct_paths": 1993
+          },
+          "reading": "llm − baseline Sharpe +9.69, 95% CI [+5.34, +15.72] (above 0, 24 days, 2000 of 2000 bootstrap paths used): in-sample check outside the pre-registered test window; P&L not a criterion, no claim read."
+        },
+        "nonews": {
+          "run": null,
+          "status": "not run yet",
+          "reading": "not computed: nonews not run yet (only complete, current runs are compared)"
+        },
+        "shuffled": {
+          "run": null,
+          "status": "not run yet",
+          "reading": "not computed: shuffled not run yet (only complete, current runs are compared)"
+        },
+        "blinded": {
+          "run": null,
+          "status": "not run yet",
+          "reading": "not computed: blinded not run yet (only complete, current runs are compared)"
+        }
+      }
+    }
+  },
+  "readings": {
+    "window": {
+      "start": "2026-08-11",
+      "end": "2026-09-22"
+    },
+    "prereg": "docs/PREREG.md",
+    "prereg_freeze_commit": "62286d9",
+    "prereg_freeze_time_utc": "2026-09-23T13:32:47+00:00",
+    "prereg_changed_since_freeze": false,
+    "runs": {
+      "llm": {
+        "run": "llm_v1_2026-08-11_2026-09-22",
+        "status": "complete",
+        "note": null
+      },
+      "baseline": {
+        "run": "baseline_v1_2026-08-11_2026-09-22",
+        "status": "complete",
+        "note": null
+      },
+      "nonews": {
+        "run": "nonews_v1_2026-08-11_2026-09-22",
+        "status": "complete",
+        "note": null
+      },
+      "shuffled": {
+        "run": "shuffled_v1_2026-08-11_2026-09-22",
+        "status": "complete",
+        "note": null
+      },
+      "blinded": {
+        "run": "blinded_v1_2026-08-11_2026-09-22",
+        "status": "complete",
+        "note": null
+      }
+    },
+    "headline": {
+      "run": "llm_v1_2026-08-11_2026-09-22",
+      "status": "complete",
+      "label": "estimated (replay)",
+      "rule": "reported whatever its sign",
+      "metrics": {
+        "start": "2026-08-11 00:00:00+00:00",
+        "end": "2026-09-23 00:00:00+00:00",
+        "n_days": 43,
+        "partial_first_day_h": 0.0,
+        "partial_last_day_h": 0.0,
+        "partial_last_day_return": null,
+        "start_equity": 10000.0,
+        "final_equity": 9891.736778586504,
+        "total_return": -0.010826322141349598,
+        "sharpe": -2.176826651071828,
+        "sortino": -3.0168091318774257,
+        "max_dd": -0.019719893182536308,
+        "gross_sharpe": -0.9115652970442463,
+        "win_rate": 0.43915343915343913,
+        "round_trips": 189,
+        "trades": 585,
+        "n_decisions": 258,
+        "n_invalid": 0,
+        "n_risk_exits": 14,
+        "turnover_ann": 82.90820077857919,
+        "costs": {
+          "fees": 58.09635217159602,
+          "spread": 3.3079513928531403,
+          "funding": -1.2358364530093384
+        },
+        "ladder": {
+          "gross": -0.004562308139603566,
+          "after_fees": -0.01037194335676317,
+          "after_spread": -0.010702738496048525,
+          "after_funding": -0.010826322141349598
+        }
+      },
+      "risk_version": "v1",
+      "prompt_version": "v1",
+      "versions_ok": true,
+      "code": {
+        "stamp": "62286d9-dirty",
+        "commit": "62286d9",
+        "dirty": true,
+        "files_differing_from_freeze": [],
+        "check": "replay code identical to the PREREG freeze commit 62286d9; the run also had uncommitted changes (-dirty), not verifiable from git (checked in the research repo at export, PROVENANCE.json)",
+        "matches_freeze": false
+      }
+    },
+    "increment": {
+      "claim": false,
+      "verdict": "not claimed: the 95% CI includes 0",
+      "increment": {
+        "run_a": "llm_v1_2026-08-11_2026-09-22",
+        "run_b": "baseline_v1_2026-08-11_2026-09-22",
+        "n_days": 43,
+        "block_days": 5,
+        "n_boot": 2000,
+        "n_boot_dropped": 0,
+        "n_boot_used": 2000,
+        "seed": 20260923,
+        "sharpe_a": -2.176826651071828,
+        "sharpe_b": -7.5911264691129805,
+        "sharpe_diff": 5.414299818041153,
+        "ci95": [
+          -0.12320153344195083,
+          10.769219341000623
+        ],
+        "p_diff_le_0": 0.0295,
+        "n_distinct_paths": 2000
+      },
+      "status": "complete"
+    },
+    "information": {
+      "nonews": {
+        "claim": null,
+        "verdict": "not readable: no finite bootstrap",
+        "increment": {
+          "run_a": "llm_v1_2026-08-11_2026-09-22",
+          "run_b": "nonews_v1_2026-08-11_2026-09-22",
+          "n_days": 43,
+          "block_days": 5,
+          "n_boot": 2000,
+          "n_boot_dropped": 2000,
+          "n_boot_used": 0,
+          "seed": 20260923,
+          "sharpe_a": -2.176826651071828,
+          "sharpe_b": null,
+          "sharpe_diff": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "p_diff_le_0": null,
+          "n_distinct_paths": 2000
+        },
+        "status": "complete"
+      },
+      "shuffled": {
+        "claim": false,
+        "verdict": "llm not distinguishable from shuffled (95% CI includes 0)",
+        "increment": {
+          "run_a": "llm_v1_2026-08-11_2026-09-22",
+          "run_b": "shuffled_v1_2026-08-11_2026-09-22",
+          "n_days": 43,
+          "block_days": 5,
+          "n_boot": 2000,
+          "n_boot_dropped": 0,
+          "n_boot_used": 2000,
+          "seed": 20260923,
+          "sharpe_a": -2.176826651071828,
+          "sharpe_b": -0.15923973438032885,
+          "sharpe_diff": -2.0175869166914993,
+          "ci95": [
+            -10.489115664059774,
+            5.76567109279203
+          ],
+          "p_diff_le_0": 0.7065,
+          "n_distinct_paths": 2000
+        },
+        "status": "complete"
+      },
+      "claim": false,
+      "verdict": "not claimed (vs nonews: CI n/a; vs shuffled: CI includes 0): the agent's P&L is not attributable to the news it reads"
+    },
+    "signal_tests": {
+      "status": "complete",
+      "path": "out/signal_tests_test.json",
+      "bar": 2.6,
+      "window": "2026-08-11..2026-09-22",
+      "window_ok": true,
+      "rows": [
+        {
+          "id": "a_ic_4h",
+          "what": "(a) rank IC of the baseline score vs forward perp return, 4h, Newey-West t",
+          "estimate": -0.006572614448651365,
+          "estimate_unit": null,
+          "n": 257,
+          "t": -0.29641609961771964,
+          "significant": false,
+          "status": "not significant"
+        },
+        {
+          "id": "a_ic_24h",
+          "what": "(a) rank IC of the baseline score vs forward perp return, 24h, Newey-West t",
+          "estimate": -0.03240181217212265,
+          "estimate_unit": null,
+          "n": 252,
+          "t": -0.8545372726035049,
+          "significant": false,
+          "status": "not significant"
+        },
+        {
+          "id": "a_ic_72h",
+          "what": "(a) rank IC of the baseline score vs forward perp return, 72h, Newey-West t",
+          "estimate": -0.0551225923522697,
+          "estimate_unit": null,
+          "n": 240,
+          "t": -0.9589160469569774,
+          "significant": false,
+          "status": "not significant"
+        },
+        {
+          "id": "b_rating_24h",
+          "what": "(b) signed 24h demeaned return after rating cards, one observation per event",
+          "estimate": 3.79787766466564,
+          "estimate_unit": "bp",
+          "n": 29,
+          "t": 0.06572025558904374,
+          "significant": false,
+          "status": "not significant"
+        },
+        {
+          "id": "c_news_new_24h",
+          "what": "(c) signed 24h demeaned return after news/new cards, one observation per ticker-day",
+          "estimate": -19.47092914757198,
+          "estimate_unit": "bp",
+          "n": 73,
+          "t": -0.549606861391691,
+          "significant": false,
+          "status": "not significant"
+        }
+      ],
+      "extra_rows": [],
+      "n_tests": 5,
+      "n_significant": 0,
+      "generated_by": "sentiment/signal_tests.py"
+    },
+    "risk": {
+      "llm_v1_2026-08-11_2026-09-22": {
+        "variant": "llm",
+        "beta": {
+          "status": "computed",
+          "basis": "daily gross equity returns vs EW basket",
+          "n_days": 43,
+          "beta": 0.007575165964839179,
+          "t": 0.4961125715382036,
+          "r2": 0.0059672919001286795,
+          "alpha_bp_day": -1.4129367424533419,
+          "within_band": true
+        },
+        "risk": {
+          "by_rule": {
+            "name_cap": {
+              "decision": 1,
+              "hourly_check": 0,
+              "weight_moved": 0.00014328052826558663,
+              "pnl_effect_est": 0.008516127349490055,
+              "n_priced": 1,
+              "meaning": "per-name cap (v1: vol-scaled)"
+            },
+            "off_hours": {
+              "decision": 69,
+              "hourly_check": 0,
+              "weight_moved": 0.018517443476541894,
+              "pnl_effect_est": 0.042607102763844815,
+              "n_priced": 68,
+              "meaning": "outside the US session the cap is scaled for new exposure"
+            },
+            "stop_loss": {
+              "decision": 1,
+              "hourly_check": 18,
+              "weight_moved": 0.42807052383643335,
+              "pnl_effect_est": 29.706653174284433,
+              "n_priced": 19,
+              "meaning": "name down its stop from entry -> flat + 24h cooldown (v1: stop = clip(2 x vol_7d, 3%, 10%))"
+            },
+            "cooldown": {
+              "decision": 12,
+              "hourly_check": 0,
+              "weight_moved": 0.5846676341677117,
+              "pnl_effect_est": 21.2765638234808,
+              "n_priced": 12,
+              "meaning": "name in stop-loss cooldown -> 0"
+            },
+            "beta_neutral": {
+              "decision": 2437,
+              "hourly_check": 0,
+              "weight_moved": 7.919455844161972,
+              "pnl_effect_est": 72.78446130087089,
+              "n_priced": 2427,
+              "meaning": "v1: minimal-L2 change to a beta-neutral book"
+            }
+          },
+          "n_records_with_action": 272,
+          "n_records": 272,
+          "effects_priced": true
+        }
+      },
+      "baseline_v1_2026-08-11_2026-09-22": {
+        "variant": "baseline",
+        "beta": {
+          "status": "computed",
+          "basis": "daily gross equity returns vs EW basket",
+          "n_days": 43,
+          "beta": 0.008505918948397915,
+          "t": 0.8864358666814531,
+          "r2": 0.01880469291546405,
+          "alpha_bp_day": -4.561078309178701,
+          "within_band": true
+        },
+        "risk": {
+          "by_rule": {
+            "name_cap": {
+              "decision": 16,
+              "hourly_check": 0,
+              "weight_moved": 0.13923549826453874,
+              "pnl_effect_est": 5.543893439397284,
+              "n_priced": 16,
+              "meaning": "per-name cap (v1: vol-scaled)"
+            },
+            "off_hours": {
+              "decision": 92,
+              "hourly_check": 0,
+              "weight_moved": 1.6191475328893152,
+              "pnl_effect_est": -20.560262080643554,
+              "n_priced": 92,
+              "meaning": "outside the US session the cap is scaled for new exposure"
+            },
+            "stop_loss": {
+              "decision": 3,
+              "hourly_check": 20,
+              "weight_moved": 0.29047588468587104,
+              "pnl_effect_est": 5.507600251518026,
+              "n_priced": 23,
+              "meaning": "name down its stop from entry -> flat + 24h cooldown (v1: stop = clip(2 x vol_7d, 3%, 10%))"
+            },
+            "cooldown": {
+              "decision": 132,
+              "hourly_check": 0,
+              "weight_moved": 2.082713312815571,
+              "pnl_effect_est": -78.26508632640899,
+              "n_priced": 130,
+              "meaning": "name in stop-loss cooldown -> 0"
+            },
+            "beta_neutral": {
+              "decision": 2428,
+              "hourly_check": 0,
+              "weight_moved": 18.989880325905183,
+              "pnl_effect_est": 302.6417796209459,
+              "n_priced": 2420,
+              "meaning": "v1: minimal-L2 change to a beta-neutral book"
+            }
+          },
+          "n_records_with_action": 276,
+          "n_records": 276,
+          "effects_priced": true
+        }
+      },
+      "nonews_v1_2026-08-11_2026-09-22": {
+        "variant": "nonews",
+        "beta": {
+          "status": "computed",
+          "basis": "daily gross equity returns vs EW basket",
+          "n_days": 43,
+          "beta": 0.0,
+          "t": null,
+          "r2": null,
+          "alpha_bp_day": 0.0,
+          "within_band": true
+        },
+        "risk": {
+          "by_rule": {},
+          "n_records_with_action": 0,
+          "n_records": 258,
+          "effects_priced": true
+        }
+      },
+      "shuffled_v1_2026-08-11_2026-09-22": {
+        "variant": "shuffled",
+        "beta": {
+          "status": "computed",
+          "basis": "daily gross equity returns vs EW basket",
+          "n_days": 43,
+          "beta": -0.0016887380722850017,
+          "t": -0.10775055539192556,
+          "r2": 0.0002830950098202667,
+          "alpha_bp_day": 1.229857551680434,
+          "within_band": true
+        },
+        "risk": {
+          "by_rule": {
+            "off_hours": {
+              "decision": 60,
+              "hourly_check": 0,
+              "weight_moved": 0.014901132908815465,
+              "pnl_effect_est": -0.04803856849545961,
+              "n_priced": 58,
+              "meaning": "outside the US session the cap is scaled for new exposure"
+            },
+            "stop_loss": {
+              "decision": 4,
+              "hourly_check": 12,
+              "weight_moved": 0.44952258694208547,
+              "pnl_effect_est": -2.087844677683429,
+              "n_priced": 16,
+              "meaning": "name down its stop from entry -> flat + 24h cooldown (v1: stop = clip(2 x vol_7d, 3%, 10%))"
+            },
+            "cooldown": {
+              "decision": 7,
+              "hourly_check": 0,
+              "weight_moved": 0.5049999999999999,
+              "pnl_effect_est": 20.295948541098213,
+              "n_priced": 7,
+              "meaning": "name in stop-loss cooldown -> 0"
+            },
+            "beta_neutral": {
+              "decision": 2438,
+              "hourly_check": 0,
+              "weight_moved": 6.059258935613725,
+              "pnl_effect_est": 54.58194755500613,
+              "n_priced": 2429,
+              "meaning": "v1: minimal-L2 change to a beta-neutral book"
+            },
+            "net_cap": {
+              "decision": 20,
+              "hourly_check": 0,
+              "weight_moved": 0.06608808181673811,
+              "pnl_effect_est": 1.0489008989371889,
+              "n_priced": 20,
+              "meaning": "net exposure cap MAX_NET"
+            }
+          },
+          "n_records_with_action": 268,
+          "n_records": 268,
+          "effects_priced": true
+        }
+      },
+      "blinded_v1_2026-08-11_2026-09-22": {
+        "variant": "blinded",
+        "beta": {
+          "status": "computed",
+          "basis": "daily gross equity returns vs EW basket",
+          "n_days": 43,
+          "beta": -0.021725735129310367,
+          "t": -1.3872856366806419,
+          "r2": 0.04483590217996469,
+          "alpha_bp_day": -3.1940750886734466,
+          "within_band": true
+        },
+        "risk": {
+          "by_rule": {
+            "name_cap": {
+              "decision": 1,
+              "hourly_check": 0,
+              "weight_moved": 0.00013477619585423872,
+              "pnl_effect_est": 0.012525403604932985,
+              "n_priced": 1,
+              "meaning": "per-name cap (v1: vol-scaled)"
+            },
+            "off_hours": {
+              "decision": 112,
+              "hourly_check": 0,
+              "weight_moved": 0.03320040462883144,
+              "pnl_effect_est": -0.07796039188456955,
+              "n_priced": 112,
+              "meaning": "outside the US session the cap is scaled for new exposure"
+            },
+            "stop_loss": {
+              "decision": 4,
+              "hourly_check": 16,
+              "weight_moved": 0.5839440166014335,
+              "pnl_effect_est": 13.822664393391332,
+              "n_priced": 20,
+              "meaning": "name down its stop from entry -> flat + 24h cooldown (v1: stop = clip(2 x vol_7d, 3%, 10%))"
+            },
+            "cooldown": {
+              "decision": 14,
+              "hourly_check": 0,
+              "weight_moved": 0.6740000000000002,
+              "pnl_effect_est": -19.67364250253001,
+              "n_priced": 14,
+              "meaning": "name in stop-loss cooldown -> 0"
+            },
+            "beta_neutral": {
+              "decision": 2399,
+              "hourly_check": 0,
+              "weight_moved": 5.699494097950468,
+              "pnl_effect_est": 11.97214067451905,
+              "n_priced": 2389,
+              "meaning": "v1: minimal-L2 change to a beta-neutral book"
+            }
+          },
+          "n_records_with_action": 273,
+          "n_records": 273,
+          "effects_priced": true
+        }
+      }
+    },
+    "blinded": {
+      "status": "complete",
+      "reading": "llm − blinded Sharpe +2.55, 95% CI [−0.37, +5.98] (includes 0, 43 days, 2000 of 2000 bootstrap paths used): blinding names and dates makes no significant difference: no sign of reliance on name priors."
+    },
+    "code_provenance": {
+      "freeze_commit": "62286d9",
+      "freeze_time_utc": "2026-09-23T13:32:47+00:00",
+      "replay_path_changed_since_freeze": null,
+      "rerun": {
+        "status": "present",
+        "path": "out/freeze_rerun.json",
+        "freeze_commit": "62286d9",
+        "runs": {
+          "baseline_v1_2026-08-11_2026-09-22": {
+            "rerun_last_hash": "368bf8998bcec1301faae3cdaeef855f67f842fbf1f3182b7ae8d513469cf666",
+            "run_last_hash": "368bf8998bcec1301faae3cdaeef855f67f842fbf1f3182b7ae8d513469cf666",
+            "identical": true
+          },
+          "llm_v1_2026-08-11_2026-09-22": {
+            "rerun_last_hash": "c407f891c01b240d7571e154bb503564bbdf527c86a83055867939325cd0f379",
+            "run_last_hash": "c407f891c01b240d7571e154bb503564bbdf527c86a83055867939325cd0f379",
+            "identical": true
+          },
+          "nonews_v1_2026-08-11_2026-09-22": {
+            "rerun_last_hash": "a930af0603f708471b1db90fe198bcf80f933e640495efd732d753a7f7217759",
+            "run_last_hash": "a930af0603f708471b1db90fe198bcf80f933e640495efd732d753a7f7217759",
+            "identical": true
+          },
+          "shuffled_v1_2026-08-11_2026-09-22": {
+            "rerun_last_hash": "9a10baf756bdcf0e53e4d84d8fbbcfea1f69e091df6e11d0b41ff6c265077155",
+            "run_last_hash": "9a10baf756bdcf0e53e4d84d8fbbcfea1f69e091df6e11d0b41ff6c265077155",
+            "identical": true
+          },
+          "blinded_v1_2026-08-11_2026-09-22": {
+            "rerun_last_hash": "7044c58a39d55c25a970fe0fea98df01588d54e4edf85713c8a18802e54aeedf",
+            "run_last_hash": "7044c58a39d55c25a970fe0fea98df01588d54e4edf85713c8a18802e54aeedf",
+            "identical": true
+          }
+        }
+      },
+      "runs": {
+        "llm_v1_2026-08-11_2026-09-22": {
+          "stamp": "62286d9-dirty",
+          "check": "replay code identical to the PREREG freeze commit 62286d9; the run also had uncommitted changes (-dirty), not verifiable from git (checked in the research repo at export, PROVENANCE.json)",
+          "matches_freeze": false,
+          "rerun_identical": true,
+          "verified": true
+        },
+        "baseline_v1_2026-08-11_2026-09-22": {
+          "stamp": null,
+          "check": "no code_stamp recorded (run made before replay wrote one) (checked in the research repo at export, PROVENANCE.json)",
+          "matches_freeze": null,
+          "rerun_identical": true,
+          "verified": true
+        },
+        "nonews_v1_2026-08-11_2026-09-22": {
+          "stamp": "40e1a8d",
+          "check": "replay code differs from the PREREG freeze commit 62286d9 in sentiment/metrics.py, sentiment/replay.py (checked in the research repo at export, PROVENANCE.json)",
+          "matches_freeze": false,
+          "rerun_identical": true,
+          "verified": true
+        },
+        "shuffled_v1_2026-08-11_2026-09-22": {
+          "stamp": "40e1a8d",
+          "check": "replay code differs from the PREREG freeze commit 62286d9 in sentiment/metrics.py, sentiment/replay.py (checked in the research repo at export, PROVENANCE.json)",
+          "matches_freeze": false,
+          "rerun_identical": true,
+          "verified": true
+        },
+        "blinded_v1_2026-08-11_2026-09-22": {
+          "stamp": "ba9ba86",
+          "check": "replay code differs from the PREREG freeze commit 62286d9 in b-sentiment-agent/sentiment/config.py, b-sentiment-agent/sentiment/evidence.py, b-sentiment-agent/sentiment/llm.py, b-sentiment-agent/sentiment/metrics.py, b-sentiment-agent/sentiment/replay.py (checked in the research repo at export, PROVENANCE.json)",
+          "matches_freeze": false,
+          "rerun_identical": true,
+          "verified": true
+        }
+      },
+      "n_unverified": 0,
+      "verdict": "all 5 test runs used the freeze-commit 62286d9 replay code (git stamp, or a rerun from the freeze commit ending on the same log_last_hash)"
+    },
+    "deviations": {
+      "notes": [
+        {
+          "date": "2026-09-23",
+          "id": "timestamps",
+          "title": "hand-written freeze and trials.log stamps are wrong (git commit times are authoritative)",
+          "text": "PREREG.md says \"FROZEN 2026-09-23 ~14:45 UTC\", and trials.log entries 2-5 are stamped 12:10, 12:10, 13:30 and 14:40 UTC; these stamps were written by hand ahead of time. Per git, entries 2-3 (v0 dev results) were committed in dac95b5 at 12:07:55 UTC, entry 4 (risk v1) in 2ed0093 at 12:59:36 UTC, and entry 5 (prompt-v1 check) with the freeze in 62286d9 at 13:32:47 UTC. The test runs started after 62286d9; the freeze time printed in section 3 is read from git."
+        },
+        {
+          "date": "2026-09-23",
+          "id": "code-after-freeze",
+          "title": "replay.py and metrics.py edited after the freeze, before the llm/nonews/shuffled test runs",
+          "text": "sentiment/replay.py (adds the code_stamp field to metrics.json) and sentiment/metrics.py (daily statistics over complete UTC days, bootstrap path counts) were edited after the freeze commit and were uncommitted when the llm, nonews and shuffled test runs started (the baseline test run used the freeze-commit code). By inspection neither edit reaches a decision, risk action or fill (metrics are computed after the replay loop); this counts as verified only when a rerun from a clean checkout of the freeze commit ends on the same log_last_hash (freeze_rerun.json, section 9b)."
+        },
+        {
+          "date": "2026-09-23",
+          "id": "signal-test-c-lookahead",
+          "title": "signal test (c): direction only from cards known at the event's entry",
+          "text": "Test (c) took each ticker-day's direction (and whether it counts) from all cards of that UTC day, including cards available hours after the entry bar its return is measured from: a look-ahead. Fixed before the test-window signal tests were run: the direction now comes only from the cards available at the event's entry bar; the all-day version is kept as a descriptive field (all_day_sign). Test (b) is unaffected (a rating ticker-day has one availability time)."
+        },
+        {
+          "date": "2026-09-23",
+          "id": "signal-test-window-end",
+          "title": "signal tests: a forward window must end strictly before the window end",
+          "text": "The snapshot keeps only bars that close by the window end, so an exit exactly at the test window's end had no price (the dev window had one) and was counted as 'no IC' / 'no price'. Now every forward window must end strictly before the window end in both windows, and a missing price is its own skip reason. Changed before the test-window signal tests were run."
+        },
+        {
+          "date": "2026-09-23",
+          "id": "project-split-paths",
+          "title": "project split (075a0d4): config.py, evidence.py, llm.py and replay.py differ from the freeze in paths only",
+          "text": "The research repo was split into one directory per project (075a0d4 moved sentiment/ to b-sentiment-agent/sentiment/ without edits). After the move, config.py (data, snapshot, cache, out and .env locations relative to the project directory), evidence.py (news_items reads config.RAW), llm.py (reads config.ENV_FILE) and replay.py (git pathspecs of code_stamp; --cards-from written before the split resolved via config.run_dir) were edited for paths only, so the code-provenance list shows them as differing from the freeze commit. No decision, risk action, fill or metric changed: offline replays after the edits end on the same log_last_hash as the shipped runs."
+        }
+      ],
+      "prereg_section": "- 2026-09-23 14:20 UTC, **timestamps**: the \"FROZEN ~14:45 UTC\" in the Status line was written ahead\n  of time and is wrong. The freeze is commit `62286d9` at 13:32:47 UTC, and git is authoritative.\n  The baseline test run started at 13:32:53 UTC, after the freeze.\n- 2026-09-23 14:20 UTC, **code after freeze**: `sentiment/replay.py` (a `code_stamp` field) and\n  `sentiment/metrics.py` (daily statistics on complete UTC days, counts of bootstrap paths) were\n  edited at about 13:38 UTC, before the llm/nonews/shuffled test runs started on that tree. Neither\n  edit touches decisions, risk actions or fills. Proof: every test run is rerun offline from a clean\n  checkout of `62286d9`, and the log hashes are compared in `sentiment/out/freeze_rerun.json`.\n- 2026-09-23 14:20 UTC, **signal test (c)**: the event direction now comes only from cards known at\n  the entry bar. The previous version used every card of the ticker-day, which looks ahead. Forward\n  windows must end before the window end. This was fixed before any test-window signal test was\n  run; the dev before/after values are in `trials.log`.",
+      "prereg_section_added_since_freeze": true
+    }
+  },
+  "dev_reference": {
+    "runs": [
+      {
+        "run": "llm_2026-06-22_2026-08-10",
+        "window": "dev",
+        "version": "v0",
+        "variant": "llm",
+        "status": "complete",
+        "metrics": {
+          "start": "2026-06-22 00:00:00+00:00",
+          "end": "2026-08-11 00:00:00+00:00",
+          "n_days": 50,
+          "partial_first_day_h": 0.0,
+          "partial_last_day_h": 0.0,
+          "partial_last_day_return": null,
+          "start_equity": 10000.0,
+          "final_equity": 9392.899671668058,
+          "total_return": -0.060710032833194205,
+          "sharpe": -8.015273171031806,
+          "sortino": -8.380203556996435,
+          "max_dd": -0.06177314182547189,
+          "gross_sharpe": -7.158073029275509,
+          "win_rate": 0.2923076923076923,
+          "round_trips": 65,
+          "trades": 298,
+          "n_decisions": 300,
+          "n_invalid": 0,
+          "n_risk_exits": 19,
+          "turnover_ann": 81.50270428439349,
+          "costs": {
+            "fees": 64.91307367717953,
+            "spread": 3.0658543506442015,
+            "funding": 0.3388349496114505
+          },
+          "ladder": {
+            "gross": -0.05394602352537292,
+            "after_fees": -0.060437330893091,
+            "after_spread": -0.060743916328155345,
+            "after_funding": -0.060710032833194205
+          }
+        },
+        "beta": {
+          "status": "computed",
+          "basis": "daily gross equity returns vs EW basket",
+          "n_days": 50,
+          "beta": 0.0558304552442161,
+          "t": 2.685903435895222,
+          "r2": 0.1306564851582056,
+          "alpha_bp_day": -10.750861109326005,
+          "within_band": false
+        },
+        "label": "estimated (replay), in-sample"
+      },
+      {
+        "run": "baseline_2026-06-22_2026-08-10",
+        "window": "dev",
+        "version": "v0",
+        "variant": "baseline",
+        "status": "complete",
+        "metrics": {
+          "start": "2026-06-22 00:00:00+00:00",
+          "end": "2026-08-11 00:00:00+00:00",
+          "n_days": 50,
+          "partial_first_day_h": 0.0,
+          "partial_last_day_h": 0.0,
+          "partial_last_day_return": null,
+          "start_equity": 10000.0,
+          "final_equity": 9568.537055921097,
+          "total_return": -0.04314629440789031,
+          "sharpe": -6.301444846612127,
+          "sortino": -7.062939287267584,
+          "max_dd": -0.045505135170512134,
+          "gross_sharpe": -4.79121036617275,
+          "win_rate": 0.3238095238095238,
+          "round_trips": 210,
+          "trades": 1209,
+          "n_decisions": 300,
+          "n_invalid": 0,
+          "n_risk_exits": 23,
+          "turnover_ann": 127.81903267550955,
+          "costs": {
+            "fees": 102.84473740226578,
+            "spread": 5.456328924147949,
+            "funding": 4.603626071361825
+          },
+          "ladder": {
+            "gross": -0.03277655038238536,
+            "after_fees": -0.043061024122611924,
+            "after_spread": -0.04360665701502675,
+            "after_funding": -0.04314629440789053
+          }
+        },
+        "beta": {
+          "status": "computed",
+          "basis": "daily gross equity returns vs EW basket",
+          "n_days": 50,
+          "beta": -0.033793159774100606,
+          "t": -1.742819519088321,
+          "r2": 0.05951358598236478,
+          "alpha_bp_day": -6.805132833314363,
+          "within_band": false
+        },
+        "label": "estimated (replay), in-sample"
+      },
+      {
+        "run": "llm_v1_2026-06-22_2026-07-15",
+        "window": "dev-half",
+        "version": "v1",
+        "variant": "llm",
+        "status": "complete",
+        "metrics": {
+          "start": "2026-06-22 00:00:00+00:00",
+          "end": "2026-07-16 00:00:00+00:00",
+          "n_days": 24,
+          "partial_first_day_h": 0.0,
+          "partial_last_day_h": 0.0,
+          "partial_last_day_return": null,
+          "start_equity": 10000.0,
+          "final_equity": 10056.256621690649,
+          "total_return": 0.0056256621690649045,
+          "sharpe": 1.7147235010670212,
+          "sortino": 3.1757917745585083,
+          "max_dd": -0.007858162786452905,
+          "gross_sharpe": 2.8855964876319513,
+          "win_rate": 0.3763440860215054,
+          "round_trips": 93,
+          "trades": 309,
+          "n_decisions": 144,
+          "n_invalid": 0,
+          "n_risk_exits": 7,
+          "turnover_ann": 86.12252447591096,
+          "costs": {
+            "fees": 34.03873682584496,
+            "spread": 1.8995091680032037,
+            "funding": -2.8332639306476213
+          },
+          "ladder": {
+            "gross": 0.009502813161514245,
+            "after_fees": 0.006098939478929699,
+            "after_spread": 0.0059089885621295135,
+            "after_funding": 0.005625662169064682
+          }
+        },
+        "beta": {
+          "status": "computed",
+          "basis": "daily gross equity returns vs EW basket",
+          "n_days": 24,
+          "beta": -0.014887516624554693,
+          "t": -0.5313742622312899,
+          "r2": 0.012671845541463278,
+          "alpha_bp_day": 4.119982085511084,
+          "within_band": true
+        },
+        "label": "estimated (replay), in-sample"
+      },
+      {
+        "run": "baseline_v1_2026-06-22_2026-07-15",
+        "window": "dev-half",
+        "version": "v1",
+        "variant": "baseline",
+        "status": "complete",
+        "metrics": {
+          "start": "2026-06-22 00:00:00+00:00",
+          "end": "2026-07-16 00:00:00+00:00",
+          "n_days": 24,
+          "partial_first_day_h": 0.0,
+          "partial_last_day_h": 0.0,
+          "partial_last_day_return": null,
+          "start_equity": 10000.0,
+          "final_equity": 9844.808461256182,
+          "total_return": -0.015519153874381852,
+          "sharpe": -7.97049243897491,
+          "sortino": -8.31086457818226,
+          "max_dd": -0.016332392235628435,
+          "gross_sharpe": -6.057936134731042,
+          "win_rate": 0.3644067796610169,
+          "round_trips": 118,
+          "trades": 534,
+          "n_decisions": 144,
+          "n_invalid": 0,
+          "n_risk_exits": 9,
+          "turnover_ann": 94.09720483095981,
+          "costs": {
+            "fees": 36.78107951681064,
+            "spread": 1.8662180974003697,
+            "funding": -0.0172816147063896
+          },
+          "ladder": {
+            "gross": -0.01165269595149021,
+            "after_fees": -0.015330803903171208,
+            "after_spread": -0.01551742571291126,
+            "after_funding": -0.015519153874381852
+          }
+        },
+        "beta": {
+          "status": "computed",
+          "basis": "daily gross equity returns vs EW basket",
+          "n_days": 24,
+          "beta": -0.02383865196092689,
+          "t": -1.522639627324011,
+          "r2": 0.09533638881780326,
+          "alpha_bp_day": -4.638666752133014,
+          "within_band": true
+        },
+        "label": "estimated (replay), in-sample"
+      }
+    ],
+    "increments": {
+      "dev v0": {
+        "reading": "llm − baseline Sharpe −1.71, 95% CI [−8.04, +4.46] (includes 0, 50 days, 2000 of 2000 bootstrap paths used): in-sample check outside the pre-registered test window; P&L not a criterion, no claim read.",
+        "increment": {
+          "run_a": "llm_2026-06-22_2026-08-10",
+          "run_b": "baseline_2026-06-22_2026-08-10",
+          "n_days": 50,
+          "block_days": 5,
+          "n_boot": 2000,
+          "n_boot_dropped": 0,
+          "n_boot_used": 2000,
+          "seed": 20260923,
+          "sharpe_a": -8.015273171031806,
+          "sharpe_b": -6.301444846612127,
+          "sharpe_diff": -1.713828324419679,
+          "ci95": [
+            -8.037352525844685,
+            4.455220542550925
+          ],
+          "p_diff_le_0": 0.722,
+          "n_distinct_paths": 2000
+        }
+      },
+      "dev-half v1": {
+        "reading": "llm − baseline Sharpe +9.69, 95% CI [+5.34, +15.72] (above 0, 24 days, 2000 of 2000 bootstrap paths used): in-sample check outside the pre-registered test window; P&L not a criterion, no claim read.",
+        "increment": {
+          "run_a": "llm_v1_2026-06-22_2026-07-15",
+          "run_b": "baseline_v1_2026-06-22_2026-07-15",
+          "n_days": 24,
+          "block_days": 5,
+          "n_boot": 2000,
+          "n_boot_dropped": 0,
+          "n_boot_used": 2000,
+          "seed": 20260923,
+          "sharpe_a": 1.7147235010670212,
+          "sharpe_b": -7.97049243897491,
+          "sharpe_diff": 9.685215940041932,
+          "ci95": [
+            5.335350055139521,
+            15.718148096376977
+          ],
+          "p_diff_le_0": 0.0005,
+          "n_distinct_paths": 1993
+        }
+      }
+    },
+    "signal_tests": {
+      "status": "complete",
+      "path": "out/signal_tests_dev.json",
+      "bar": 2.6,
+      "window": "2026-06-22..2026-08-10",
+      "window_ok": true,
+      "rows": [
+        {
+          "id": "a_ic_4h",
+          "what": "(a) rank IC of the baseline score vs forward perp return, 4h, Newey-West t",
+          "estimate": -0.019219612390224756,
+          "estimate_unit": null,
+          "n": 298,
+          "t": -0.9497649389992314,
+          "significant": false,
+          "status": "not significant"
+        },
+        {
+          "id": "a_ic_24h",
+          "what": "(a) rank IC of the baseline score vs forward perp return, 24h, Newey-West t",
+          "estimate": -0.0590199371559896,
+          "estimate_unit": null,
+          "n": 293,
+          "t": -1.566952766608458,
+          "significant": false,
+          "status": "not significant"
+        },
+        {
+          "id": "a_ic_72h",
+          "what": "(a) rank IC of the baseline score vs forward perp return, 72h, Newey-West t",
+          "estimate": -0.07418423294561116,
+          "estimate_unit": null,
+          "n": 281,
+          "t": -1.0573021204122093,
+          "significant": false,
+          "status": "not significant"
+        },
+        {
+          "id": "b_rating_24h",
+          "what": "(b) signed 24h demeaned return after rating cards, one observation per event",
+          "estimate": -54.35472535472317,
+          "estimate_unit": "bp",
+          "n": 65,
+          "t": -1.7586249696215626,
+          "significant": false,
+          "status": "not significant"
+        },
+        {
+          "id": "c_news_new_24h",
+          "what": "(c) signed 24h demeaned return after news/new cards, one observation per ticker-day",
+          "estimate": 29.858248392302908,
+          "estimate_unit": "bp",
+          "n": 94,
+          "t": 1.1473938855670265,
+          "significant": false,
+          "status": "not significant"
+        }
+      ],
+      "extra_rows": [],
+      "n_tests": 5,
+      "n_significant": 0,
+      "generated_by": "sentiment/signal_tests.py"
+    },
+    "diagnosis": {
+      "path": "docs/DIAGNOSIS-dev.md",
+      "exists": true,
+      "digest": [
+        "The v0 LLM's dev loss is real against flat, but it cannot be told apart from the fixed-rule baseline or from long or short equal-weight basket benchmarks; costs are a small part of it and the risk layer did not cause it.",
+        "The largest piece is market and crypto-sector timing: the book was on the wrong side of the swings of the crypto-beta names, not structurally tilted.",
+        "A flat stop and sizing that ignored volatility sent most of the trip loss through MSTR, COIN, HOOD and CRCL; this motivated risk v1 (vol-scaled caps and stops, beta neutralisation), fixed before the test window.",
+        "No exploitable sentiment signal in dev: the baseline score has no predictive rank IC, cards mostly describe the move that already happened, fresh news does not beat costs, and no test clears a multiple-testing bar.",
+        "The test window is a different regime (crypto fear flips to greed, far fewer earnings), so dev results should not be used to predict the test window in either direction."
+      ],
+      "sha256": "b2e5748d7b0e07b5d79c6cc3efc9aa71b0186c1a3c66f67faad5a9e7bf20b207",
+      "status": "in-sample / estimated (replay), v0 dev window"
+    },
+    "trials": {
+      "status": "present",
+      "path": "trials.log",
+      "n_entries": 13,
+      "entries": [
+        {
+          "entry": 1,
+          "ts": "2026-09-23T10:46:08+00:00",
+          "window": "dev smoke 2026-07-01..07-03",
+          "change": "review fixes (all variants): no-churn band max(0.25% equity, 25% of |target w|) instead of a flat 0.25%; stop-loss and daily kill checked on every hourly mark (risk.check) with the entry re-averaged …",
+          "verdict": null,
+          "criteria": null,
+          "result": null
+        },
+        {
+          "entry": 2,
+          "ts": "2026-09-23T12:10:00+00:00",
+          "window": "dev 2026-06-22..2026-08-10",
+          "change": "baseline v0 (CONTRACT formula), first full dev run",
+          "verdict": null,
+          "criteria": null,
+          "result": {
+            "return": -0.04315,
+            "gross": -0.03278,
+            "sharpe": -6.301,
+            "max_dd": -0.04551,
+            "trades": 1209
+          }
+        },
+        {
+          "entry": 3,
+          "ts": "2026-09-23T12:10:00+00:00",
+          "window": "dev 2026-06-22..2026-08-10",
+          "change": "llm v0 (prompts/decide.md at 94cbe51), first full dev run",
+          "verdict": null,
+          "criteria": null,
+          "result": {
+            "return": -0.06071,
+            "gross": -0.05395,
+            "sharpe": -8.015,
+            "max_dd": -0.06177,
+            "trades": 298
+          }
+        },
+        {
+          "entry": 4,
+          "ts": "2026-09-23T13:30:00+00:00",
+          "window": "dev 2026-06-22..2026-08-10",
+          "change": "risk v1 (fixed before test, not tuned on dev P&L): trailing-60d beta neutralisation (minimal-L2, within caps), vol-scaled per-name cap MAX_W_NAME*clip(median_vol/vol_i,0.33,1), stop clip(2*vol_7d at …",
+          "verdict": "pass all three (both policies)",
+          "criteria": "beta to EW basket within ±0.03; incremental fees+spread <= +0.6% equity; maxDD lower than v0 (P&L not a criterion)",
+          "result": {
+            "llm": {
+              "beta": [
+                0.056,
+                -0.015
+              ],
+              "fees_spread": [
+                0.0068,
+                0.00828
+              ],
+              "max_dd": [
+                -0.0618,
+                -0.0345
+              ],
+              "return": [
+                -0.0607,
+                -0.0304
+              ]
+            },
+            "baseline": {
+              "beta": [
+                -0.034,
+                -0.013
+              ],
+              "fees_spread": [
+                0.01083,
+                0.00913
+              ],
+              "max_dd": [
+                -0.0455,
+                -0.0343
+              ]
+            }
+          }
+        },
+        {
+          "entry": 5,
+          "ts": "2026-09-23T14:40:00+00:00",
+          "window": "dev first half 2026-06-22..2026-07-15 (144 decisions), cards pinned to the v0 dev run",
+          "change": "prompt v1 + risk v1 with Qwen (first live exercise of the risk-aware prompt)",
+          "verdict": "FAIL on the explainability criteria: showing the caps/cooldowns did not make the model respect them; net-cap clips vanished only because beta neutralisation replaced them. Not iterated further (no prompt tuning on dev, per DIAGNOSIS-dev.md). Explainability is shown instead as requested -> risk actions -> executed, per decision. 24-day P&L is noise.",
+          "criteria": "cooldown re-requests near 0; off-hours and net-cap clips fall sharply (P&L not a criterion)",
+          "result": {
+            "cooldown_rerequests": [
+              14,
+              10
+            ],
+            "off_hours_clips": [
+              60,
+              78
+            ],
+            "net_cap_clips": [
+              72,
+              0
+            ],
+            "beta_neutral_actions": [
+              0,
+              1346
+            ],
+            "mean_L1_requested_minus_executed": [
+              0.0118,
+              0.029
+            ],
+            "invalid": [
+              0,
+              0
+            ],
+            "llm_v1": {
+              "return": 0.0056,
+              "sharpe": 1.71,
+              "max_dd": -0.0079,
+              "trades": 309
+            },
+            "baseline_v1": {
+              "return": -0.0155,
+              "sharpe": -7.97,
+              "max_dd": -0.0163,
+              "trades": 534
+            }
+          }
+        },
+        {
+          "entry": 6,
+          "ts": "2026-09-23T14:10:27+00:00",
+          "window": "none (erratum)",
+          "change": "erratum: hand-written timestamps",
+          "verdict": null,
+          "criteria": null,
+          "result": null
+        },
+        {
+          "entry": 7,
+          "ts": "2026-09-23T14:10:27+00:00",
+          "window": "test 2026-08-11..2026-09-22",
+          "change": "deviation: replay-path code edited after the freeze, before the llm/nonews/shuffled test runs",
+          "verdict": null,
+          "criteria": null,
+          "result": null
+        },
+        {
+          "entry": 8,
+          "ts": "2026-09-23T14:10:27+00:00",
+          "window": "dev 2026-06-22..2026-08-10 (signal tests only; test-window signal tests not yet run)",
+          "change": "signal tests: (c) direction only from cards known at the event's entry bar (was: every card of the ticker-day, a look-ahead); every forward window must end strictly before the window end (the test sn…",
+          "verdict": null,
+          "criteria": null,
+          "result": {
+            "c_news_new_24h": {
+              "before": {
+                "n": 91,
+                "estimate_bp": 36.34,
+                "t": 1.37
+              },
+              "after": {
+                "n": 94,
+                "estimate_bp": 29.86,
+                "t": 1.15
+              }
+            },
+            "a_ic_n": {
+              "before": [
+                299,
+                294,
+                282
+              ],
+              "after": [
+                298,
+                293,
+                281
+              ]
+            },
+            "b_rating_24h": "unchanged"
+          }
+        },
+        {
+          "entry": 9,
+          "ts": "2026-09-23T16:19:47+00:00",
+          "window": "none (deviation, no run)",
+          "change": "deviation: project split (075a0d4) path-only edits to replay-path files",
+          "verdict": null,
+          "criteria": null,
+          "result": null
+        },
+        {
+          "entry": 10,
+          "ts": "2026-09-23T17:31:18+00:00",
+          "window": "TEST 2026-08-11..2026-09-22 (pre-registered, run once, v1)",
+          "change": "none — pre-registered test runs per docs/PREREG.md (frozen 62286d9)",
+          "verdict": null,
+          "criteria": null,
+          "result": {
+            "baseline": {
+              "return": -0.02372,
+              "gross": -0.0177,
+              "sharpe": -7.591,
+              "max_dd": -0.02639,
+              "trades": 944,
+              "log_last_hash": "368bf8998bcec1301faae3cdaeef855f67f842fbf1f3182b7ae8d513469cf666"
+            },
+            "llm": {
+              "return": -0.01083,
+              "gross": -0.00456,
+              "sharpe": -2.177,
+              "max_dd": -0.01972,
+              "trades": 585,
+              "log_last_hash": "c407f891c01b240d7571e154bb503564bbdf527c86a83055867939325cd0f379"
+            },
+            "nonews": {
+              "return": 0.0,
+              "gross": 0.0,
+              "sharpe": null,
+              "max_dd": 0.0,
+              "trades": 0,
+              "log_last_hash": "a930af0603f708471b1db90fe198bcf80f933e640495efd732d753a7f7217759"
+            },
+            "shuffled": {
+              "return": -0.00091,
+              "gross": 0.00484,
+              "sharpe": -0.159,
+              "max_dd": -0.01805,
+              "trades": 591,
+              "log_last_hash": "9a10baf756bdcf0e53e4d84d8fbbcfea1f69e091df6e11d0b41ff6c265077155"
+            },
+            "blinded": {
+              "return": -0.02431,
+              "gross": -0.01828,
+              "sharpe": -4.727,
+              "max_dd": -0.02492,
+              "trades": 588,
+              "log_last_hash": "7044c58a39d55c25a970fe0fea98df01588d54e4edf85713c8a18802e54aeedf"
+            }
+          }
+        },
+        {
+          "entry": 11,
+          "ts": "2026-09-28T15:59:38+00:00",
+          "window": "LIVE shadow 2026-09-23 12:00 -> 2026-09-28 12:00 UTC (sealed)",
+          "change": "none - live shadow loop stopped by hand after the 2026-09-28 15:00 UTC hourly step, log sealed (out/live/SEAL.json: file sha256 + last record hash 0ef7d7a1...); reconcile rerun over the sealed log; r…",
+          "verdict": null,
+          "criteria": null,
+          "result": {
+            "n_records": 31,
+            "n_decisions": 31,
+            "hourly_marks": 126,
+            "return": 0.00134,
+            "max_dd": -0.00449,
+            "orders_matched": "51/51",
+            "fill_gap_bp_median": 2.94,
+            "decision_identity": "2/31",
+            "why": "inputs not code: the Store now yields cards at t the live step did not see in 29/31 decisions (ratings/insider items fetched after the step with an earlier available_at), live-only cards in 21, and 18/31 live steps logged HTTP 503 from the news/MCP source and decided on stale inputs; both decisions with matching inputs reproduce exactly; 95/95 hourly risk checks identical"
+          }
+        },
+        {
+          "entry": 12,
+          "ts": "2026-09-28T16:52:29+00:00",
+          "window": "LIVE shadow segment 2 from 2026-09-28T16:52:29Z",
+          "change": "none - live shadow loop restarted (same code, risk v1, prompt v1, shadow ledger) after the submission deadline was extended to 2026-10-08; records append to the same hash chain after the segment-1 se…",
+          "verdict": null,
+          "criteria": null,
+          "result": null
+        },
+        {
+          "entry": 13,
+          "ts": "2026-10-05T12:03:31+00:00",
+          "window": "LIVE shadow 2026-09-23 12:00 -> 2026-10-05 12:00 UTC (sealed, final)",
+          "change": "none - live shadow loop stopped by hand after the 2026-10-05 12:00 UTC decision step (user decision); log sealed by scripts/seal_live.py (out/live/SEAL.json: file hashes, last record hash; segment 1 …",
+          "verdict": null,
+          "criteria": null,
+          "result": {
+            "n_records": 75,
+            "n_decisions": 73,
+            "hourly_marks": 291,
+            "return": -0.00267,
+            "max_dd": -0.0098,
+            "orders_matched": "115/119",
+            "fill_gap_bp_median": 0.15,
+            "decision_identity": "15/73",
+            "hourly_risk_checks": "217/218",
+            "replay_only_cards": 53,
+            "live_only_cards": 45,
+            "source_error_steps": 32,
+            "last_hash": "e22a2e45ceaa506824c8a1faf60903affd5462bee1367b5bbdc9d4084a80a5d5"
+          }
+        }
+      ],
+      "explainability": {
+        "entry": 5,
+        "ts": "2026-09-23T14:40:00+00:00",
+        "window": "dev first half 2026-06-22..2026-07-15 (144 decisions), cards pinned to the v0 dev run",
+        "criteria": "cooldown re-requests near 0; off-hours and net-cap clips fall sharply (P&L not a criterion)",
+        "verdict": "FAIL on the explainability criteria: showing the caps/cooldowns did not make the model respect them; net-cap clips vanished only because beta neutralisation replaced them. Not iterated further (no prompt tuning on dev, per DIAGNOSIS-dev.md). Explainability is shown instead as requested -> risk actions -> executed, per decision. 24-day P&L is noise.",
+        "before_after": {
+          "cooldown_rerequests": [
+            14,
+            10
+          ],
+          "off_hours_clips": [
+            60,
+            78
+          ],
+          "net_cap_clips": [
+            72,
+            0
+          ],
+          "beta_neutral_actions": [
+            0,
+            1346
+          ]
+        }
+      }
+    }
+  },
+  "chains": {
+    "run": "llm_v1_2026-08-11_2026-09-22",
+    "run_status": "complete",
+    "items": [
+      {
+        "run": "llm_v1_2026-08-11_2026-09-22",
+        "ts": "2026-09-01 04:00:00+00:00",
+        "equity": 9827.750950572969,
+        "executed_size": 0.3440329281408024,
+        "confidence": 0.6,
+        "valid": true,
+        "prompt_version": "v1",
+        "risk_version": "v1",
+        "n_cards_shown": 30,
+        "prompt_cached": true,
+        "book_actions": [],
+        "rows": [
+          {
+            "ticker": "NVDA",
+            "prev_target": 0.0024975807071785988,
+            "book_before": 0.002696,
+            "requested": 0.07,
+            "risk_steps": [
+              {
+                "rule": "beta_neutral",
+                "before": 0.07,
+                "after": 0.06716574687420636
+              }
+            ],
+            "final_target": 0.06716574687420636,
+            "executed_dw": 0.0644853358609617,
+            "fills": [
+              {
+                "ticker": "NVDA",
+                "side": "buy",
+                "qty": 2.8781123754406694,
+                "price": 220.19495354435222,
+                "fee": 0.38024749248335005,
+                "half_spread_cost": 0.014256857302371254,
+                "ts": "2026-09-01 04:00:00+00:00",
+                "order_id": "sim-20260901T0400-NVDA"
+              }
+            ],
+            "reason": "Fresh $3.5B MediaTek convertible bond and NVLink Fusion integration is a strong new catalyst with minimal price reaction yet.",
+            "cards": [
+              {
+                "card_id": "b579089dd7-1",
+                "in_prompt_text": true,
+                "scope": "name",
+                "tickers": [
+                  "NVDA"
+                ],
+                "subject": "NVDA",
+                "stance": 2,
+                "strength": 0.9,
+                "novelty": "new",
+                "age_h": 2.0,
+                "available_at": "2026-09-01T02:00:00+00:00",
+                "since_bp": "NVDA -8",
+                "summary": "Nvidia will buy $3.5B of MediaTek convertible bonds and integrate MediaTek onto NVLink Fusion for rack-scale AI infrastructure.",
+                "off_ticker": false
+              },
+              {
+                "card_id": "f877d633e9-2",
+                "in_prompt_text": true,
+                "scope": "sector",
+                "tickers": [],
+                "subject": "ai_semis",
+                "stance": 1,
+                "strength": 0.7,
+                "novelty": "recap",
+                "age_h": 1.0,
+                "available_at": "2026-09-01T03:00:00+00:00",
+                "since_bp": "-",
+                "summary": "JPMorgan argues AI demand is badly underestimated ahead of Broadcom's Q3 print, with guided AI semiconductor revenue of $16B representing over 200% YoY growth.",
+                "off_ticker": false
+              }
+            ],
+            "cited_not_shown": []
+          },
+          {
+            "ticker": "AAPL",
+            "prev_target": -0.00019551003419605433,
+            "book_before": -0.000169,
+            "requested": 0.05,
+            "risk_steps": [
+              {
+                "rule": "beta_neutral",
+                "before": 0.05,
+                "after": 0.050221864672461446
+              }
+            ],
+            "final_target": 0.050221864672461446,
+            "executed_dw": 0.05040227612878626,
+            "fills": [
+              {
+                "ticker": "AAPL",
+                "side": "buy",
+                "qty": 1.5614829852567704,
+                "price": 317.22472919182434,
+                "fee": 0.29720461028143225,
+                "half_spread_cost": 0.007384552567686424,
+                "ts": "2026-09-01 04:00:00+00:00",
+                "order_id": "sim-20260901T0400-AAPL"
+              }
+            ],
+            "reason": "New CEO appointment and upcoming Sept 9 event with foldable iPhone and on-device AI provide fresh positive momentum.",
+            "cards": [
+              {
+                "card_id": "b579089dd7-0",
+                "in_prompt_text": true,
+                "scope": "name",
+                "tickers": [
+                  "AAPL"
+                ],
+                "subject": "AAPL",
+                "stance": 1,
+                "strength": 0.7,
+                "novelty": "new",
+                "age_h": 2.0,
+                "available_at": "2026-09-01T02:00:00+00:00",
+                "since_bp": "AAPL +5",
+                "summary": "John Ternus takes over as Apple CEO; Sept. 9 event expected to showcase foldable iPhone, Gemini-based Siri, and on-device AI hardware.",
+                "off_ticker": false
+              }
+            ],
+            "cited_not_shown": []
+          },
+          {
+            "ticker": "GOOGL",
+            "prev_target": 0.06263942790377988,
+            "book_before": 0.061158,
+            "requested": 0.061,
+            "risk_steps": [
+              {
+                "rule": "beta_neutral",
+                "before": 0.061,
+                "after": 0.05913957817361167
+              }
+            ],
+            "final_target": 0.05913957817361167,
+            "executed_dw": 0.0,
+            "fills": []
+          },
+          {
+            "ticker": "META",
+            "prev_target": -0.0463485102775111,
+            "book_before": -0.048677,
+            "requested": 0.07,
+            "risk_steps": [
+              {
+                "rule": "beta_neutral",
+                "before": 0.07,
+                "after": 0.06699109101364606
+              }
+            ],
+            "final_target": 0.06699109101364606,
+            "executed_dw": 0.11569399338081143,
+            "fills": [
+              {
+                "ticker": "META",
+                "side": "buy",
+                "qty": 1.9854423704677566,
+                "price": 572.6742666199775,
+                "fee": 0.6822070520543113,
+                "half_spread_cost": 0.008471128082004573,
+                "ts": "2026-09-01 04:00:00+00:00",
+                "order_id": "sim-20260901T0400-META"
+              }
+            ],
+            "reason": "Flipping short to long on the major new 6.6 GW nuclear power deals for data centers, which have barely moved the stock yet.",
+            "cards": [
+              {
+                "card_id": "b579089dd7-4",
+                "in_prompt_text": true,
+                "scope": "name",
+                "tickers": [
+                  "META"
+                ],
+                "subject": "META",
+                "stance": 2,
+                "strength": 0.9,
+                "novelty": "new",
+                "age_h": 2.0,
+                "available_at": "2026-09-01T02:00:00+00:00",
+                "since_bp": "META -6",
+                "summary": "Meta signed deals with Oklo, Vistra, and TerraPower for up to 6.6 GW of nuclear power by 2035 for PJM-region data centers.",
+                "off_ticker": false
+              }
+            ],
+            "cited_not_shown": []
+          },
+          {
+            "ticker": "AMZN",
+            "prev_target": 0.05213999252762078,
+            "book_before": 0.051106,
+            "requested": 0.051,
+            "risk_steps": [
+              {
+                "rule": "beta_neutral",
+                "before": 0.051,
+                "after": 0.04970633714638172
+              }
+            ],
+            "final_target": 0.04970633714638172,
+            "executed_dw": 0.0,
+            "fills": []
+          },
+          {
+            "ticker": "TSLA",
+            "prev_target": -0.07514237928233113,
+            "book_before": -0.08027,
+            "requested": -0.04,
+            "risk_steps": [
+              {
+                "rule": "beta_neutral",
+                "before": -0.04,
+                "after": -0.04551242514942622
+              }
+            ],
+            "final_target": -0.04551242514942622,
+            "executed_dw": 0.034766107963697064,
+            "fills": [
+              {
+                "ticker": "TSLA",
+                "side": "buy",
+                "qty": 0.9317877844377922,
+                "price": 366.6850502811641,
+                "fee": 0.20500359035276774,
+                "half_spread_cost": 0.014023668141012788,
+                "ts": "2026-09-01 04:00:00+00:00",
+                "order_id": "sim-20260901T0400-TSLA"
+              }
+            ]
+          },
+          {
+            "ticker": "MSTR",
+            "prev_target": 0.007534913734115846,
+            "book_before": 0.008647,
+            "requested": 0.0,
+            "risk_steps": [
+              {
+                "rule": "beta_neutral",
+                "before": 0.0,
+                "after": -0.008550615698672688
+              }
+            ],
+            "final_target": -0.008550615698672688,
+            "executed_dw": -0.017200252919981965,
+            "fills": [
+              {
+                "ticker": "MSTR",
+                "side": "sell",
+                "qty": 1.2832699897537974,
+                "price": 131.72582802850357,
+                "fee": 0.10142388119066893,
+                "half_spread_cost": 0.005353765819481045,
+                "ts": "2026-09-01 04:00:00+00:00",
+                "order_id": "sim-20260901T0400-MSTR"
+              }
+            ]
+          },
+          {
+            "ticker": "COIN",
+            "prev_target": 0.007380245324367141,
+            "book_before": 0.00845,
+            "requested": 0.0,
+            "risk_steps": [
+              {
+                "rule": "beta_neutral",
+                "before": 0.0,
+                "after": -0.008375098077747837
+              }
+            ],
+            "final_target": -0.008375098077747837,
+            "executed_dw": -0.016828229241211617,
+            "fills": [
+              {
+                "ticker": "COIN",
+                "side": "sell",
+                "qty": 0.8836710258698757,
+                "price": 187.15522075534332,
+                "fee": 0.09923018755306637,
+                "half_spread_cost": 0.004223280028642157,
+                "ts": "2026-09-01 04:00:00+00:00",
+                "order_id": "sim-20260901T0400-COIN"
+              }
+            ]
+          },
+          {
+            "ticker": "HOOD",
+            "prev_target": 0.007463707350233851,
+            "book_before": 0.008477,
+            "requested": 0.0,
+            "risk_steps": [
+              {
+                "rule": "beta_neutral",
+                "before": 0.0,
+                "after": -0.008469810735888527
+              }
+            ],
+            "final_target": -0.008469810735888527,
+            "executed_dw": -0.016949764880336123,
+            "fills": [
+              {
+                "ticker": "HOOD",
+                "side": "sell",
+                "qty": 1.573189300554686,
+                "price": 105.88558405271279,
+                "fee": 0.09994684074882698,
+                "half_spread_cost": 0.006947121024055253,
+                "ts": "2026-09-01 04:00:00+00:00",
+                "order_id": "sim-20260901T0400-HOOD"
+              }
+            ]
+          },
+          {
+            "ticker": "CRCL",
+            "prev_target": 0.018324704205933906,
+            "book_before": 0.018256,
+            "requested": 0.0,
+            "risk_steps": [
+              {
+                "rule": "beta_neutral",
+                "before": 0.0,
+                "after": -0.009446869464182063
+              }
+            ],
+            "final_target": -0.009446869464182063,
+            "executed_dw": -0.027706967765016254,
+            "fills": [
+              {
+                "ticker": "CRCL",
+                "side": "sell",
+                "qty": 2.8749152016973727,
+                "price": 94.71485580839625,
+                "fee": 0.16337830727407984,
+                "half_spread_cost": 0.014789114642075033,
+                "ts": "2026-09-01 04:00:00+00:00",
+                "order_id": "sim-20260901T0400-CRCL"
+              }
+            ]
+          }
+        ],
+        "focus": [
+          "META",
+          "NVDA",
+          "AAPL"
+        ],
+        "llm_request_hash": "bb4e46e68f7e7e3d3f54c993b42176568f07f8c478cfd595b9b72a3abb89ef62",
+        "record_hash": "6cdc63ff806a36ea0ef3725f374f19a41afd4ae6a5100aa61141d2d4bb750176"
+      },
+      {
+        "run": "llm_v1_2026-08-11_2026-09-22",
+        "ts": "2026-09-21 16:00:00+00:00",
+        "equity": 9887.66260629984,
+        "executed_size": 0.2786543311865516,
+        "confidence": 0.6,
+        "valid": true,
+        "prompt_version": "v1",
+        "risk_version": "v1",
+        "n_cards_shown": 17,
+        "prompt_cached": true,
+        "book_actions": [],
+        "rows": [
+          {
+            "ticker": "NVDA",
+            "prev_target": 0.0003004720242568931,
+            "book_before": 0.000302,
+            "requested": 0.06,
+            "risk_steps": [
+              {
+                "rule": "beta_neutral",
+                "before": 0.06,
+                "after": 0.05472810928456393
+              }
+            ],
+            "final_target": 0.05472810928456393,
+            "executed_dw": 0.05443738002913879,
+            "fills": [
+              {
+                "ticker": "NVDA",
+                "side": "buy",
+                "qty": 2.3889145539145296,
+                "price": 225.31506872736273,
+                "fee": 0.32295506813942954,
+                "half_spread_cost": 0.012108756566601271,
+                "ts": "2026-09-21 16:00:00+00:00",
+                "order_id": "sim-20260921T1600-NVDA"
+              }
+            ],
+            "reason": "Jensen Huang's guidance that chip shipments could double next year plus the Vera Rubin NVL72 MLPerf debut is strong fresh catalyst.",
+            "cards": [
+              {
+                "card_id": "963b3cd022-0",
+                "in_prompt_text": true,
+                "scope": "name",
+                "tickers": [
+                  "NVDA"
+                ],
+                "subject": "NVDA",
+                "stance": 1,
+                "strength": 0.7,
+                "novelty": "new",
+                "age_h": 15.0,
+                "available_at": "2026-09-21T01:00:00+00:00",
+                "since_bp": "NVDA +121",
+                "summary": "Jensen Huang said chip unit shipments could double next year; Nvidia co-launched an AI energy alliance with Google and debuted Vera Rubin NVL72 on MLPerf.",
+                "off_ticker": false
+              }
+            ],
+            "cited_not_shown": []
+          },
+          {
+            "ticker": "AAPL",
+            "prev_target": 1.2642186593923184e-05,
+            "book_before": 1.3e-05,
+            "requested": 0.0,
+            "risk_steps": [
+              {
+                "rule": "beta_neutral",
+                "before": 0.0,
+                "after": -0.00022151931278162692
+              }
+            ],
+            "final_target": -0.00022151931278162692,
+            "executed_dw": -0.00023425893738607509,
+            "fills": [
+              {
+                "ticker": "AAPL",
+                "side": "sell",
+                "qty": 0.006856227407817109,
+                "price": 337.8349634002713,
+                "fee": 0.0013897640012302981,
+                "half_spread_cost": 3.453207310188031e-05,
+                "ts": "2026-09-21 16:00:00+00:00",
+                "order_id": "sim-20260921T1600-AAPL"
+              }
+            ]
+          },
+          {
+            "ticker": "GOOGL",
+            "prev_target": 0.03042942211374083,
+            "book_before": 0.030683,
+            "requested": 0.03,
+            "risk_steps": [
+              {
+                "rule": "beta_neutral",
+                "before": 0.03,
+                "after": 0.027351935533553553
+              }
+            ],
+            "final_target": 0.027351935533553553,
+            "executed_dw": 0.0,
+            "fills": []
+          },
+          {
+            "ticker": "META",
+            "prev_target": 0.00024049202749880434,
+            "book_before": 0.000243,
+            "requested": 0.08,
+            "risk_steps": [
+              {
+                "rule": "beta_neutral",
+                "before": 0.08,
+                "after": 0.07597105953624367
+              }
+            ],
+            "final_target": 0.07597105953624367,
+            "executed_dw": 0.07574178048476099,
+            "fills": [
+              {
+                "ticker": "META",
+                "side": "buy",
+                "qty": 1.0387876813648846,
+                "price": 720.9453712906327,
+                "fee": 0.4493455023802453,
+                "half_spread_cost": 0.005579630542184298,
+                "ts": "2026-09-21 16:00:00+00:00",
+                "order_id": "sim-20260921T1600-META"
+              }
+            ],
+            "reason": "Wells Fargo's significant price target increase to $796 is a strong fresh catalyst justifying a new long despite the recent rally.",
+            "cards": [
+              {
+                "card_id": "9fd012ef6c-0",
+                "in_prompt_text": true,
+                "scope": "name",
+                "tickers": [
+                  "META"
+                ],
+                "subject": "META",
+                "stance": 2,
+                "strength": 0.62,
+                "novelty": "new",
+                "age_h": 2.0,
+                "available_at": "2026-09-21T14:00:00+00:00",
+                "since_bp": "META +575",
+                "summary": "Wells Fargo maintains META Overweight, PT 640 -> 796 (+24%)",
+                "off_ticker": false
+              }
+            ],
+            "cited_not_shown": []
+          },
+          {
+            "ticker": "AMZN",
+            "prev_target": 0.059183220041533056,
+            "book_before": 0.059425,
+            "requested": 0.0,
+            "risk_steps": [
+              {
+                "rule": "beta_neutral",
+                "before": 0.0,
+                "after": -0.0029987239682112915
+              }
+            ],
+            "final_target": -0.0029987239682112915,
+            "executed_dw": -0.06243095756471945,
+            "fills": [
+              {
+                "ticker": "AMZN",
+                "side": "sell",
+                "qty": 2.410984624802736,
+                "price": 256.0349154605974,
+                "fee": 0.37037774675290114,
+                "half_spread_cost": 0.03636859257196731,
+                "ts": "2026-09-21 16:00:00+00:00",
+                "order_id": "sim-20260921T1600-AMZN"
+              }
+            ],
+            "reason": "Closing position as there is no fresh evidence to support holding against macro headwinds.",
+            "cards": [],
+            "cited_not_shown": []
+          },
+          {
+            "ticker": "TSLA",
+            "prev_target": -0.029994309924649815,
+            "book_before": -0.029901,
+            "requested": -0.04,
+            "risk_steps": [
+              {
+                "rule": "beta_neutral",
+                "before": -0.04,
+                "after": -0.049233890908480654
+              }
+            ],
+            "final_target": -0.049233890908480654,
+            "executed_dw": -0.019335748596695634,
+            "fills": [
+              {
+                "ticker": "TSLA",
+                "side": "sell",
+                "qty": 0.5092781579342519,
+                "price": 375.4045905676641,
+                "fee": 0.11471121501861721,
+                "half_spread_cost": 0.0078476873148423,
+                "ts": "2026-09-21 16:00:00+00:00",
+                "order_id": "sim-20260921T1600-TSLA"
+              }
+            ]
+          },
+          {
+            "ticker": "COIN",
+            "prev_target": 0.0066615286144986,
+            "book_before": 0.00661,
+            "requested": 0.05,
+            "risk_steps": [
+              {
+                "rule": "beta_neutral",
+                "before": 0.05,
+                "after": 0.030597988674659734
+              }
+            ],
+            "final_target": 0.030597988674659734,
+            "executed_dw": 0.023992664394812204,
+            "fills": [
+              {
+                "ticker": "COIN",
+                "side": "buy",
+                "qty": 1.1656690721298968,
+                "price": 203.51519675187046,
+                "fee": 0.14233882233725173,
+                "half_spread_cost": 0.006057692930950168,
+                "ts": "2026-09-21 16:00:00+00:00",
+                "order_id": "sim-20260921T1600-COIN"
+              }
+            ]
+          },
+          {
+            "ticker": "HOOD",
+            "prev_target": 0.0010254895937142183,
+            "book_before": 0.001046,
+            "requested": 0.0,
+            "risk_steps": [
+              {
+                "rule": "beta_neutral",
+                "before": 0.0,
+                "after": -0.018571658585977903
+              }
+            ],
+            "final_target": -0.018571658585977903,
+            "executed_dw": -0.019620645442827697,
+            "fills": [
+              {
+                "ticker": "HOOD",
+                "side": "sell",
+                "qty": 1.5573158862033898,
+                "price": 124.57480462070978,
+                "fee": 0.11640139335390887,
+                "half_spread_cost": 0.008090846703503797,
+                "ts": "2026-09-21 16:00:00+00:00",
+                "order_id": "sim-20260921T1600-HOOD"
+              }
+            ]
+          },
+          {
+            "ticker": "CRCL",
+            "prev_target": 0.0016271188076516343,
+            "book_before": 0.001595,
+            "requested": 0.0,
+            "risk_steps": [
+              {
+                "rule": "beta_neutral",
+                "before": 0.0,
+                "after": -0.02126328765495731
+              }
+            ],
+            "final_target": -0.02126328765495731,
+            "executed_dw": -0.022860895736210748,
+            "fills": [
+              {
+                "ticker": "CRCL",
+                "side": "sell",
+                "qty": 2.4066123787737146,
+                "price": 93.92489871286593,
+                "fee": 0.13562449435047028,
+                "half_spread_cost": 0.012276820764569027,
+                "ts": "2026-09-21 16:00:00+00:00",
+                "order_id": "sim-20260921T1600-CRCL"
+              }
+            ]
+          }
+        ],
+        "focus": [
+          "META",
+          "AMZN",
+          "NVDA"
+        ],
+        "llm_request_hash": "725c6c01ce82c980536a6035d2a3ecb6b7163c3dba549aba117c033828f4b0d2",
+        "record_hash": "81b2f45f6698f4cd4fb89b427d7e32588b825d82acc59483287e33843a5a2807"
+      },
+      {
+        "run": "llm_v1_2026-08-11_2026-09-22",
+        "ts": "2026-09-16 04:00:00+00:00",
+        "equity": 9920.541687379064,
+        "executed_size": 0.2778140501738512,
+        "confidence": 0.45,
+        "valid": true,
+        "prompt_version": "v1",
+        "risk_version": "v1",
+        "n_cards_shown": 45,
+        "prompt_cached": true,
+        "book_actions": [],
+        "rows": [
+          {
+            "ticker": "NVDA",
+            "prev_target": -0.0007115171444245478,
+            "book_before": -0.001435,
+            "requested": 0.0,
+            "risk_steps": [
+              {
+                "rule": "beta_neutral",
+                "before": 0.0,
+                "after": 0.0012776314236001588
+              }
+            ],
+            "final_target": 0.0012776314236001588,
+            "executed_dw": 0.0027129629209719473,
+            "fills": [
+              {
+                "ticker": "NVDA",
+                "side": "buy",
+                "qty": 0.12609377947130435,
+                "price": 213.44480169175048,
+                "fee": 0.016148437052289525,
+                "half_spread_cost": 0.0006054634606719922,
+                "ts": "2026-09-16 04:00:00+00:00",
+                "order_id": "sim-20260916T0400-NVDA"
+              }
+            ]
+          },
+          {
+            "ticker": "AAPL",
+            "prev_target": -2.2058199722929975e-05,
+            "book_before": -0.000137,
+            "requested": 0.0,
+            "risk_steps": [
+              {
+                "rule": "beta_neutral",
+                "before": 0.0,
+                "after": 3.960867188499941e-05
+              }
+            ],
+            "final_target": 3.960867188499941e-05,
+            "executed_dw": 0.0001767339327916422,
+            "fills": [
+              {
+                "ticker": "AAPL",
+                "side": "buy",
+                "qty": 0.005279503175829578,
+                "price": 332.09495087734985,
+                "fee": 0.0010519778087003616,
+                "half_spread_cost": 2.6138172691975638e-05,
+                "ts": "2026-09-16 04:00:00+00:00",
+                "order_id": "sim-20260916T0400-AAPL"
+              }
+            ]
+          },
+          {
+            "ticker": "GOOGL",
+            "prev_target": -0.00045069172608006475,
+            "book_before": -0.002653,
+            "requested": 0.03,
+            "risk_steps": [
+              {
+                "rule": "beta_neutral",
+                "before": 0.03,
+                "after": 0.030809281850913358
+              }
+            ],
+            "final_target": 0.030809281850913358,
+            "executed_dw": 0.033469485735758205,
+            "fills": [
+              {
+                "ticker": "GOOGL",
+                "side": "buy",
+                "qty": 0.9616137035621033,
+                "price": 345.2898261191268,
+                "fee": 0.19922125709803692,
+                "half_spread_cost": 0.00944893080524833,
+                "ts": "2026-09-16 04:00:00+00:00",
+                "order_id": "sim-20260916T0400-GOOGL"
+              }
+            ]
+          },
+          {
+            "ticker": "META",
+            "prev_target": -0.0007257839411749674,
+            "book_before": -0.001529,
+            "requested": 0.0,
+            "risk_steps": [
+              {
+                "rule": "beta_neutral",
+                "before": 0.0,
+                "after": 0.0013032495102271433
+              }
+            ],
+            "final_target": 0.0013032495102271433,
+            "executed_dw": 0.002832939102809213,
+            "fills": [
+              {
+                "ticker": "META",
+                "side": "buy",
+                "qty": 0.0418140824266624,
+                "price": 672.125007562155,
+                "fee": 0.016862574280335024,
+                "half_spread_cost": 0.0002093866167036661,
+                "ts": "2026-09-16 04:00:00+00:00",
+                "order_id": "sim-20260916T0400-META"
+              }
+            ]
+          },
+          {
+            "ticker": "AMZN",
+            "prev_target": 0.07844770012496428,
+            "book_before": 0.079001,
+            "requested": 0.0,
+            "risk_steps": [
+              {
+                "rule": "beta_neutral",
+                "before": 0.0,
+                "after": 0.0007485316094953888
+              }
+            ],
+            "final_target": 0.0007485316094953888,
+            "executed_dw": -0.07826150951929478,
+            "fills": [
+              {
+                "ticker": "AMZN",
+                "side": "sell",
+                "qty": 3.1167401647482627,
+                "price": 249.105323724054,
+                "fee": 0.4658379406220263,
+                "half_spread_cost": 0.045742138709941475,
+                "ts": "2026-09-16 04:00:00+00:00",
+                "order_id": "sim-20260916T0400-AMZN"
+              }
+            ],
+            "reason": "The severe AWS Bahrain/UAE outage (strength 0.7) offsets the older Qualcomm deal, and the position is already near its stop at +0.079 so I am closing it.",
+            "cards": [
+              {
+                "card_id": "00ec71dfda-2",
+                "in_prompt_text": true,
+                "scope": "name",
+                "tickers": [
+                  "AMZN"
+                ],
+                "subject": "AMZN",
+                "stance": -1,
+                "strength": 0.7,
+                "novelty": "new",
+                "age_h": 2.0,
+                "available_at": "2026-09-16T02:00:00+00:00",
+                "since_bp": "AMZN +13",
+                "summary": "AWS could not restore access to damaged infrastructure in Bahrain and one UAE availability zone, though many customers recovered via migration or backups.",
+                "off_ticker": false
+              },
+              {
+                "card_id": "591b171fa9-1",
+                "in_prompt_text": true,
+                "scope": "name",
+                "tickers": [
+                  "AMZN"
+                ],
+                "subject": "AMZN",
+                "stance": 1,
+                "strength": 0.7,
+                "novelty": "new",
+                "age_h": 50.0,
+                "available_at": "2026-09-14T02:00:00+00:00",
+                "since_bp": "AMZN -234",
+                "summary": "AWS signed a multi-generation custom inference chip and optical interconnect deal with Qualcomm, backed by a warrant for up to $60B in purchases.",
+                "off_ticker": false
+              }
+            ],
+            "cited_not_shown": []
+          },
+          {
+            "ticker": "TSLA",
+            "prev_target": -0.03952278560463758,
+            "book_before": -0.038317,
+            "requested": 0.0,
+            "risk_steps": [
+              {
+                "rule": "beta_neutral",
+                "before": 0.0,
+                "after": 0.0027343806893992
+              }
+            ],
+            "final_target": 0.0027343806893992,
+            "executed_dw": 0.04106048240801776,
+            "fills": [
+              {
+                "ticker": "TSLA",
+                "side": "buy",
+                "qty": 1.139212721050604,
+                "price": 357.5646759430284,
+                "fee": 0.24440533645958087,
+                "half_spread_cost": 0.016719020991309484,
+                "ts": "2026-09-16 04:00:00+00:00",
+                "order_id": "sim-20260916T0400-TSLA"
+              }
+            ],
+            "reason": "No evidence cards in the last 72 hours; closing the short as there is no informational basis to hold it.",
+            "cards": [],
+            "cited_not_shown": []
+          },
+          {
+            "ticker": "MSTR",
+            "prev_target": 0.03813413766864442,
+            "book_before": 0.043484,
+            "requested": 0.0,
+            "risk_steps": [
+              {
+                "rule": "beta_neutral",
+                "before": 0.0,
+                "after": 0.005146068227510126
+              }
+            ],
+            "final_target": 0.005146068227510126,
+            "executed_dw": -0.038343682123827355,
+            "fills": [
+              {
+                "ticker": "MSTR",
+                "side": "sell",
+                "qty": 2.9554979763102907,
+                "price": 128.70592367379257,
+                "fee": 0.22823405817422437,
+                "half_spread_cost": 0.01204757385686624,
+                "ts": "2026-09-16 04:00:00+00:00",
+                "order_id": "sim-20260916T0400-MSTR"
+              }
+            ],
+            "reason": "Barclays upgrade is strong but 14h old with MSTR down 269bp since, suggesting the market has digested or rejected the news amid crypto headwinds.",
+            "cards": [
+              {
+                "card_id": "85dfbde86b-0",
+                "in_prompt_text": true,
+                "scope": "name",
+                "tickers": [
+                  "MSTR"
+                ],
+                "subject": "MSTR",
+                "stance": 2,
+                "strength": 0.65,
+                "novelty": "new",
+                "age_h": 14.0,
+                "available_at": "2026-09-15T14:00:00+00:00",
+                "since_bp": "MSTR -269",
+                "summary": "Barclays maintains MSTR Overweight, PT 125 -> 160 (+28%)",
+                "off_ticker": false
+              }
+            ],
+            "cited_not_shown": []
+          },
+          {
+            "ticker": "COIN",
+            "prev_target": 0.0342081104504031,
+            "book_before": 0.036827,
+            "requested": 0.0,
+            "risk_steps": [
+              {
+                "rule": "beta_neutral",
+                "before": 0.0,
+                "after": 0.0050132394528184954
+              }
+            ],
+            "final_target": 0.0050132394528184954,
+            "executed_dw": -0.0318189371508008,
+            "fills": [
+              {
+                "ticker": "COIN",
+                "side": "sell",
+                "qty": 1.8344325503069112,
+                "price": 172.0756058323332,
+                "fee": 0.18939665547156825,
+                "half_spread_cost": 0.008060804199497618,
+                "ts": "2026-09-16 04:00:00+00:00",
+                "order_id": "sim-20260916T0400-COIN"
+              }
+            ]
+          },
+          {
+            "ticker": "HOOD",
+            "prev_target": -0.06268941029557737,
+            "book_before": -0.063072,
+            "requested": -0.03,
+            "risk_steps": [
+              {
+                "rule": "beta_neutral",
+                "before": -0.03,
+                "after": -0.02524247964733168
+              }
+            ],
+            "final_target": -0.02524247964733168,
+            "executed_dw": 0.03783803093177299,
+            "fills": [
+              {
+                "ticker": "HOOD",
+                "side": "buy",
+                "qty": 3.413898222908984,
+                "price": 109.95458526210436,
+                "fee": 0.22522425793619544,
+                "half_spread_cost": 0.015653618149590674,
+                "ts": "2026-09-16 04:00:00+00:00",
+                "order_id": "sim-20260916T0400-HOOD"
+              }
+            ]
+          },
+          {
+            "ticker": "CRCL",
+            "prev_target": -0.003158880084991255,
+            "book_before": -0.005624,
+            "requested": 0.0,
+            "risk_steps": [
+              {
+                "rule": "beta_neutral",
+                "before": 0.0,
+                "after": 0.0056722237708462546
+              }
+            ],
+            "final_target": 0.0056722237708462546,
+            "executed_dw": 0.011299286347806494,
+            "fills": [
+              {
+                "ticker": "CRCL",
+                "side": "buy",
+                "qty": 1.3166798280397773,
+                "price": 85.13462336392764,
+                "fee": 0.06725702475062847,
+                "half_spread_cost": 0.006087490021230887,
+                "ts": "2026-09-16 04:00:00+00:00",
+                "order_id": "sim-20260916T0400-CRCL"
+              }
+            ]
+          }
+        ],
+        "focus": [
+          "AMZN",
+          "TSLA",
+          "MSTR"
+        ],
+        "llm_request_hash": "1fcf8bb94492d04e609028e4745955976e89b0aa11e252aede5160be6b7bb202",
+        "record_hash": "7f9ec15baac06f5bcdf0fdbbac75bae1f44356f610a5add88237b979b12a6095"
+      }
+    ]
+  },
+  "live": {
+    "status": "live",
+    "dir": "out/live",
+    "modes": [
+      "shadow"
+    ],
+    "label": "estimated (shadow ledger: simulated fills at live-venue quotes)",
+    "n_records": 75,
+    "by_risk_version": {
+      "v0": {
+        "n_records": 1,
+        "n_decisions": 1,
+        "n_risk_exits": 0,
+        "n_fills": 3,
+        "n_invalid": 0,
+        "n_errors": 0,
+        "first_ts": "2026-09-23 12:00:00+00:00",
+        "last_ts": "2026-09-23 12:00:00+00:00",
+        "prompt_versions": {
+          "v0": 1
+        }
+      },
+      "v1": {
+        "n_records": 74,
+        "n_decisions": 72,
+        "n_risk_exits": 2,
+        "n_fills": 133,
+        "n_invalid": 2,
+        "n_errors": 2,
+        "first_ts": "2026-09-23 16:00:00+00:00",
+        "last_ts": "2026-10-05 12:00:00+00:00",
+        "prompt_versions": {
+          "v1": 72
+        }
+      }
+    },
+    "versions": "risk v0: 1 records (prompt v0 1), 2026-09-23 12:00 → 2026-09-23 12:00 UTC; risk v1: 74 records (prompt v1 72), 2026-09-23 16:00 → 2026-10-05 12:00 UTC",
+    "log_verified": true,
+    "metrics": {
+      "start": "2026-09-23 10:00:00+00:00",
+      "end": "2026-10-05 12:00:00+00:00",
+      "n_days": 11,
+      "partial_first_day_h": 14.0,
+      "partial_last_day_h": 12.0,
+      "partial_last_day_return": -0.00042808112532433107,
+      "start_equity": 10000.0,
+      "final_equity": 9973.276856496192,
+      "total_return": -0.0026723143503808444,
+      "sharpe": -4.161023055339418,
+      "sortino": -5.724193636357539,
+      "max_dd": -0.009803966965085786,
+      "gross_sharpe": -3.0337408670475736,
+      "win_rate": 0.4666666666666667,
+      "round_trips": 30,
+      "trades": 136,
+      "n_decisions": 73,
+      "n_invalid": 2,
+      "n_risk_exits": 2,
+      "turnover_ann": 70.02582209592784,
+      "costs": {
+        "fees": 13.919659500000003,
+        "spread": 1.1956999999998237,
+        "funding": 0.8654159962000002
+      },
+      "ladder": {
+        "gross": -0.0012473200000007179,
+        "after_fees": -0.002639285950000736,
+        "after_spread": -0.0027588559500006937,
+        "after_funding": -0.0026723143503806224
+      }
+    },
+    "n_hours": 291,
+    "reconcile": {
+      "status": "present",
+      "path": "out/live/reconcile.json",
+      "n_live_records": 75,
+      "n_decisions": 73,
+      "n_risk_exits": 2,
+      "n_identical": 15,
+      "n_unverifiable": 2,
+      "decision_identity_rate": 0.2054794520547945,
+      "prompt_identity_rate": 0.2054794520547945,
+      "targets_identity_rate": 0.2054794520547945,
+      "targets_match_rate": 0.2054794520547945,
+      "risk_rebuild_ok_rate": 1.0,
+      "risk_versions": {
+        "v0": 1,
+        "v1": 72
+      },
+      "n_risk_ctx_checked": 72,
+      "n_risk_ctx_mismatch": 56,
+      "n_hourly_checks": 218,
+      "n_exit_identical": 217,
+      "exit_identity_rate": 0.9954128440366973,
+      "n_live_only_exits": 1,
+      "n_replay_only_exits": 0,
+      "n_positions_breaks": 0,
+      "n_orders": 119,
+      "n_matched": 115,
+      "gap_bp_median": 0.15063961007477644,
+      "gap_bp_p90": 15.457528969204716,
+      "abs_gap_bp_max": 49.28274991580439,
+      "mismatch_inputs": {
+        "evidence": 53,
+        "risk_ctx": 56,
+        "state": 26
+      },
+      "n_decisions_replay_only_cards": 53,
+      "n_decisions_live_only_cards": 45,
+      "n_records_source_errors": 32,
+      "log_verified": true,
+      "store": "raw",
+      "fills_by_mode": {
+        "shadow": {
+          "n_orders": 119,
+          "n_matched": 115,
+          "gap_bp_median": 0.15063961007477644,
+          "gap_bp_p90": 15.457528969204716,
+          "mid_gap_bp_median": 0.1498621268436473,
+          "demo_live_mid_bp_median": -12.81034587933938,
+          "label": "estimated (shadow ledger: simulated fills at live-venue quotes)"
+        }
+      },
+      "covers_log": true,
+      "identity_label": "observed (the replay code recomputes each logged live decision)",
+      "gap_label": "estimated (shadow ledger: live-quote fill model vs the replay's fill model)"
+    }
+  },
+  "leakage": {
+    "cutoff_probe": {
+      "status": "complete",
+      "path": "out/cutoff_probe.json",
+      "model": "qwen3.8-max",
+      "months": [
+        {
+          "month": "2024-07",
+          "p1_n": 10,
+          "p1_acc": 0.7,
+          "p2_n": 10,
+          "p2_median_abs_log_err": 0.05508528379575946,
+          "p2_nonfinite": false
+        },
+        {
+          "month": "2024-08",
+          "p1_n": 12,
+          "p1_acc": 0.9166666666666666,
+          "p2_n": 10,
+          "p2_median_abs_log_err": 0.025471940335936416,
+          "p2_nonfinite": false
+        },
+        {
+          "month": "2024-09",
+          "p1_n": 10,
+          "p1_acc": 0.5,
+          "p2_n": 10,
+          "p2_median_abs_log_err": 0.025781933673133133,
+          "p2_nonfinite": false
+        },
+        {
+          "month": "2024-10",
+          "p1_n": 12,
+          "p1_acc": 0.9166666666666666,
+          "p2_n": 10,
+          "p2_median_abs_log_err": 0.03204221277851806,
+          "p2_nonfinite": false
+        },
+        {
+          "month": "2024-11",
+          "p1_n": 6,
+          "p1_acc": 1.0,
+          "p2_n": 10,
+          "p2_median_abs_log_err": 0.027702554385170625,
+          "p2_nonfinite": false
+        },
+        {
+          "month": "2024-12",
+          "p1_n": 12,
+          "p1_acc": 0.5833333333333334,
+          "p2_n": 10,
+          "p2_median_abs_log_err": 0.0040515540779496465,
+          "p2_nonfinite": false
+        },
+        {
+          "month": "2025-01",
+          "p1_n": 12,
+          "p1_acc": 0.75,
+          "p2_n": 10,
+          "p2_median_abs_log_err": 0.017490978958514213,
+          "p2_nonfinite": false
+        },
+        {
+          "month": "2025-02",
+          "p1_n": 12,
+          "p1_acc": 0.5833333333333334,
+          "p2_n": 10,
+          "p2_median_abs_log_err": 0.041008100502722036,
+          "p2_nonfinite": false
+        },
+        {
+          "month": "2025-03",
+          "p1_n": 2,
+          "p1_acc": 1.0,
+          "p2_n": 10,
+          "p2_median_abs_log_err": 0.034467162595725714,
+          "p2_nonfinite": false
+        },
+        {
+          "month": "2025-04",
+          "p1_n": 12,
+          "p1_acc": 0.6666666666666666,
+          "p2_n": 10,
+          "p2_median_abs_log_err": 0.03346662796402528,
+          "p2_nonfinite": false
+        },
+        {
+          "month": "2025-05",
+          "p1_n": 6,
+          "p1_acc": 0.8333333333333334,
+          "p2_n": 10,
+          "p2_median_abs_log_err": 0.06270178498313185,
+          "p2_nonfinite": false
+        },
+        {
+          "month": "2025-06",
+          "p1_n": 6,
+          "p1_acc": 0.6666666666666666,
+          "p2_n": 10,
+          "p2_median_abs_log_err": 0.11291528013384419,
+          "p2_nonfinite": false
+        },
+        {
+          "month": "2025-07",
+          "p1_n": 12,
+          "p1_acc": 0.6666666666666666,
+          "p2_n": 10,
+          "p2_median_abs_log_err": 0.16952679981081148,
+          "p2_nonfinite": false
+        },
+        {
+          "month": "2025-08",
+          "p1_n": 10,
+          "p1_acc": 0.6,
+          "p2_n": 10,
+          "p2_median_abs_log_err": 0.23979190823054555,
+          "p2_nonfinite": false
+        },
+        {
+          "month": "2025-09",
+          "p1_n": 6,
+          "p1_acc": 0.6666666666666666,
+          "p2_n": 10,
+          "p2_median_abs_log_err": 0.2419558265783725,
+          "p2_nonfinite": false
+        },
+        {
+          "month": "2025-10",
+          "p1_n": 12,
+          "p1_acc": 0.5833333333333334,
+          "p2_n": 10,
+          "p2_median_abs_log_err": 0.1872156548068054,
+          "p2_nonfinite": false
+        },
+        {
+          "month": "2025-11",
+          "p1_n": 8,
+          "p1_acc": 0.5,
+          "p2_n": 10,
+          "p2_median_abs_log_err": 0.31641569886015886,
+          "p2_nonfinite": false
+        },
+        {
+          "month": "2025-12",
+          "p1_n": 12,
+          "p1_acc": 0.5833333333333334,
+          "p2_n": 10,
+          "p2_median_abs_log_err": 0.15863826141377185,
+          "p2_nonfinite": false
+        },
+        {
+          "month": "2026-01",
+          "p1_n": 12,
+          "p1_acc": 0.4166666666666667,
+          "p2_n": 10,
+          "p2_median_abs_log_err": 0.21428048986106818,
+          "p2_nonfinite": false
+        },
+        {
+          "month": "2026-02",
+          "p1_n": 12,
+          "p1_acc": 0.4166666666666667,
+          "p2_n": 0,
+          "p2_median_abs_log_err": null,
+          "p2_nonfinite": true
+        },
+        {
+          "month": "2026-03",
+          "p1_n": 4,
+          "p1_acc": 0.25,
+          "p2_n": 0,
+          "p2_median_abs_log_err": null,
+          "p2_nonfinite": true
+        },
+        {
+          "month": "2026-04",
+          "p1_n": 8,
+          "p1_acc": 0.75,
+          "p2_n": 10,
+          "p2_median_abs_log_err": null,
+          "p2_nonfinite": true
+        },
+        {
+          "month": "2026-05",
+          "p1_n": 12,
+          "p1_acc": 0.5,
+          "p2_n": 0,
+          "p2_median_abs_log_err": null,
+          "p2_nonfinite": true
+        },
+        {
+          "month": "2026-06",
+          "p1_n": 12,
+          "p1_acc": 0.5,
+          "p2_n": 10,
+          "p2_median_abs_log_err": 0.446117518112394,
+          "p2_nonfinite": false
+        },
+        {
+          "month": "2026-07",
+          "p1_n": 12,
+          "p1_acc": 0.4166666666666667,
+          "p2_n": 10,
+          "p2_median_abs_log_err": 0.3990405673325459,
+          "p2_nonfinite": false
+        },
+        {
+          "month": "2026-08",
+          "p1_n": 12,
+          "p1_acc": 0.5,
+          "p2_n": 10,
+          "p2_median_abs_log_err": 0.2967533115248445,
+          "p2_nonfinite": false
+        }
+      ],
+      "first_month_p2_err_ge_10pct": "2025-06",
+      "months_from_that_to_replay_start": 12
+    },
+    "news_timestamp_note": "Note on news timestamps: the MCP stamps `published_at` with a \"Z\" suffix, but the stamps are Beijing (UTC+8) wall time. Evidence (2026-09-23): at 10:52 UTC the MCP already served an item stamped 17:01Z, 6.2h in the future; the Bitget UEX Daily stamped 09:20Z on 9/22 says it uses \"September 22 morning\" quotes; the 9/17 \"[Market Movement Analysis] ... INTC\" item stamped 21:40Z (13:40 UTC after the correction) follows INTC's 13:00 UTC jump. So news is available at published_at - 8h. In live mode the loop also records when it first saw an item (`first_seen`), and availability is the later of the two.",
+    "snapshot_manifest": {
+      "status": "present",
+      "path": "snapshot/MANIFEST.sha256",
+      "manifest_sha256": "bda08aeca8e32c3f939e914058c9b165c5591e479a2d836585e1675afa6b68ae",
+      "files": {
+        "crypto_fng.parquet": {
+          "sha256": "e1ed38179d5dd746d71e84b05eb013f3899d1da8f6413eda6e49320c3ad8fce1",
+          "matches": true
+        },
+        "funding.parquet": {
+          "sha256": "df98359ccde4ba626bb573060a2e034c1c14b6ea75dd97f402f49d4db0f98190",
+          "matches": true
+        },
+        "insider.parquet": {
+          "sha256": "c68c1645c5ac4fe97ba807b7c242b9d79d3e45d3f5f53ec320c1361e04c566d1",
+          "matches": true
+        },
+        "news.parquet": {
+          "sha256": "e50ffde3b029417881c633ea1837a053f9eeaa59dd5257d9a54c659cc875b65e",
+          "matches": true
+        },
+        "perp.parquet": {
+          "sha256": "af69b31d5948649ab7e976795649ed4f105ba2f13a6e94f4215dc2680557bd3d",
+          "matches": true
+        },
+        "ratings.parquet": {
+          "sha256": "147e2396dc786058134e602a2f1af8f7cee7d0d35a4c6c61e97be771064dc432",
+          "matches": true
+        },
+        "spot.parquet": {
+          "sha256": "d80f4a0689032ebb9eeb3cb66c185d8fe013159122a80a886f811fdfd2fd41da",
+          "matches": true
+        }
+      },
+      "unlisted": [],
+      "check_ok": true
+    }
+  },
+  "reproduction": {
+    "llm_cache": {
+      "responses": 2638,
+      "prompt_tokens": 8901638,
+      "completion_tokens": 929515,
+      "by_purpose": {
+        "decide:b5": 6,
+        "decide:blinded": 258,
+        "decide:llm": 806,
+        "decide:nonews": 258,
+        "decide:shuffled": 258,
+        "evidence": 1052
+      },
+      "path": "cache/llm"
+    },
+    "commands": [
+      {
+        "what": "tests",
+        "cmd": "uv run pytest -q tests"
+      },
+      {
+        "what": "snapshot integrity",
+        "cmd": "uv run python -m sentiment.snapshot --check"
+      },
+      {
+        "what": "every shipped replay, offline, into judge-out/, checked against its logged last hash (public repo)",
+        "cmd": "uv run python scripts/judge_replay.py"
+      },
+      {
+        "what": "llm v1, test window (offline, cached LLM replies; compare judge-out/llm_v1_2026-08-11_2026-09-22/metrics.json log_last_hash with out/llm_v1_2026-08-11_2026-09-22/)",
+        "cmd": "SENTIMENT_OFFLINE=1 uv run python -m sentiment.replay --variant llm --start 2026-08-11 --end 2026-09-22 --offline --risk-version v1 --out judge-out/llm_v1_2026-08-11_2026-09-22"
+      },
+      {
+        "what": "baseline v1, test window (offline, cached LLM replies; compare judge-out/baseline_v1_2026-08-11_2026-09-22/metrics.json log_last_hash with out/baseline_v1_2026-08-11_2026-09-22/)",
+        "cmd": "SENTIMENT_OFFLINE=1 uv run python -m sentiment.replay --variant baseline --start 2026-08-11 --end 2026-09-22 --offline --risk-version v1 --out judge-out/baseline_v1_2026-08-11_2026-09-22"
+      },
+      {
+        "what": "nonews v1, test window (offline, cached LLM replies; compare judge-out/nonews_v1_2026-08-11_2026-09-22/metrics.json log_last_hash with out/nonews_v1_2026-08-11_2026-09-22/)",
+        "cmd": "SENTIMENT_OFFLINE=1 uv run python -m sentiment.replay --variant nonews --start 2026-08-11 --end 2026-09-22 --offline --risk-version v1 --out judge-out/nonews_v1_2026-08-11_2026-09-22"
+      },
+      {
+        "what": "shuffled v1, test window (offline, cached LLM replies; compare judge-out/shuffled_v1_2026-08-11_2026-09-22/metrics.json log_last_hash with out/shuffled_v1_2026-08-11_2026-09-22/)",
+        "cmd": "SENTIMENT_OFFLINE=1 uv run python -m sentiment.replay --variant shuffled --start 2026-08-11 --end 2026-09-22 --offline --risk-version v1 --out judge-out/shuffled_v1_2026-08-11_2026-09-22"
+      },
+      {
+        "what": "blinded v1, test window (offline, cached LLM replies; compare judge-out/blinded_v1_2026-08-11_2026-09-22/metrics.json log_last_hash with out/blinded_v1_2026-08-11_2026-09-22/)",
+        "cmd": "SENTIMENT_OFFLINE=1 uv run python -m sentiment.replay --variant blinded --start 2026-08-11 --end 2026-09-22 --offline --risk-version v1 --out judge-out/blinded_v1_2026-08-11_2026-09-22"
+      },
+      {
+        "what": "llm v0, dev window (offline, cached LLM replies; compare judge-out/llm_2026-06-22_2026-08-10/metrics.json log_last_hash with out/llm_2026-06-22_2026-08-10/)",
+        "cmd": "SENTIMENT_OFFLINE=1 uv run python -m sentiment.replay --variant llm --start 2026-06-22 --end 2026-08-10 --offline --risk-version v0 --out judge-out/llm_2026-06-22_2026-08-10"
+      },
+      {
+        "what": "baseline v0, dev window (offline, cached LLM replies; compare judge-out/baseline_2026-06-22_2026-08-10/metrics.json log_last_hash with out/baseline_2026-06-22_2026-08-10/)",
+        "cmd": "SENTIMENT_OFFLINE=1 uv run python -m sentiment.replay --variant baseline --start 2026-06-22 --end 2026-08-10 --offline --risk-version v0 --out judge-out/baseline_2026-06-22_2026-08-10"
+      },
+      {
+        "what": "llm v1, dev-half window (offline, cached LLM replies; compare judge-out/llm_v1_2026-06-22_2026-07-15/metrics.json log_last_hash with out/llm_v1_2026-06-22_2026-07-15/)",
+        "cmd": "SENTIMENT_OFFLINE=1 uv run python -m sentiment.replay --variant llm --start 2026-06-22 --end 2026-07-15 --offline --risk-version v1 --out judge-out/llm_v1_2026-06-22_2026-07-15 --cards-from out/llm_2026-06-22_2026-08-10"
+      },
+      {
+        "what": "baseline v1, dev-half window (offline, cached LLM replies; compare judge-out/baseline_v1_2026-06-22_2026-07-15/metrics.json log_last_hash with out/baseline_v1_2026-06-22_2026-07-15/)",
+        "cmd": "SENTIMENT_OFFLINE=1 uv run python -m sentiment.replay --variant baseline --start 2026-06-22 --end 2026-07-15 --offline --risk-version v1 --out judge-out/baseline_v1_2026-06-22_2026-07-15 --cards-from out/llm_2026-06-22_2026-08-10"
+      },
+      {
+        "what": "ledger hash chains",
+        "cmd": "uv run python -m sentiment.ledger out/*/log.jsonl"
+      },
+      {
+        "what": "live shadow loop (Bitget live quotes, no key needed)",
+        "cmd": "uv run python -m sentiment.live --run --shadow"
+      },
+      {
+        "what": "replay-vs-live reconciliation",
+        "cmd": "uv run python -m sentiment.reconcile"
+      },
+      {
+        "what": "this report",
+        "cmd": "uv run python -m sentiment.report"
+      }
+    ],
+    "items_checked": true
+  },
+  "figures": {
+    "test": [
+      "equity_test.png",
+      "drawdown_test.png",
+      "daily_test.png"
+    ],
+    "dev": [
+      "equity_dev.png",
+      "drawdown_dev.png",
+      "daily_dev.png"
+    ],
+    "dev-half": [
+      "equity_dev_half.png",
+      "drawdown_dev_half.png",
+      "daily_dev_half.png"
+    ],
+    "live": [
+      "equity_live.png",
+      "drawdown_live.png",
+      "daily_live.png"
+    ]
+  },
+  "data": {
+    "universe": [
+      "NVDA",
+      "AAPL",
+      "GOOGL",
+      "META",
+      "AMZN",
+      "TSLA",
+      "MSTR",
+      "COIN",
+      "HOOD",
+      "CRCL"
+    ],
+    "snapshot": {
+      "crypto_fng": {
+        "rows": 115
+      },
+      "funding": {
+        "rows": 2800,
+        "symbols": 10,
+        "first": "2026-06-22",
+        "last": "2026-09-23 00:00"
+      },
+      "insider": {
+        "rows": 134
+      },
+      "news": {
+        "rows": 614,
+        "first": "2026-06-22",
+        "last": "2026-09-22"
+      },
+      "perp": {
+        "rows": 42912,
+        "symbols": 12,
+        "first": "2026-04-20",
+        "last": "2026-09-22 23:00"
+      },
+      "ratings": {
+        "rows": 297
+      },
+      "spot": {
+        "rows": 23640,
+        "symbols": 10,
+        "first": "2026-06-01",
+        "last": "2026-09-22 23:00"
+      }
+    },
+    "items": {
+      "rating": 297,
+      "insider": 65,
+      "news": 614
+    },
+    "cards": {
+      "total": 1508,
+      "by_kind": {
+        "news": 1193,
+        "rating": 265,
+        "insider": 50
+      },
+      "news_by_novelty": {
+        "new": 483,
+        "recap": 435,
+        "post_hoc": 275
+      },
+      "news_post_hoc_share": 0.23051131601005867
+    },
+    "status": "complete"
+  },
+  "design": {
+    "decision_hours_utc": [
+      0,
+      4,
+      8,
+      12,
+      16,
+      20
+    ],
+    "card_lookback_h": 72,
+    "max_w_name": 0.15,
+    "max_gross": 1.0,
+    "max_net": 0.3,
+    "vol_cap_floor": 0.33,
+    "stop_k": 2.0,
+    "stop_floor": 0.03,
+    "stop_cap": 0.1,
+    "stop_cooldown_h": 24,
+    "daily_kill": 0.03,
+    "off_hours_scale": 0.5,
+    "funding_block": 0.001,
+    "taker": 0.0006,
+    "half_spread_fallback": 0.0005,
+    "model": "qwen3.8-max",
+    "start_equity": 10000.0
+  },
+  "other_tests": {
+    "note": "Run after the v1 test window, each against criteria written in its trials.log before the run; none changes the v1 submission, which stays as pre-registered.",
+    "items": {
+      "fg_cross_asset": {
+        "id": "fg_cross_asset",
+        "title": "Crypto fear & greed as a contrarian signal, BTC and four crypto stocks",
+        "question": "Buy fear and sell greed: does the crypto Fear & Greed index time BTC, MSTR, COIN, MARA and RIOT?",
+        "design": "long-only w = clip((75 - F&G)/50, 0, 1) and long/short w = clip((50 - F&G)/50, -1, 1), one day lag, 10 bp per unit turnover; 2018-02..2022-12 and 2023-01..2026-10, each once; pass = beat buy & hold with a block-bootstrap CI excluding 0 in both periods and beat the same rule on BTC 30-day momentum",
+        "window": [
+          "2018-02-01",
+          "2026-10-01"
+        ],
+        "status": "estimated (daily closes, simulated)",
+        "sources": [
+          "b4/cross_asset.py",
+          "out/b4/cross_asset.json",
+          "b4/trials.log"
+        ],
+        "numbers": {
+          "n_asset_periods": 10,
+          "long_short_below_buy_hold": 9,
+          "long_only_below_buy_hold": 8,
+          "long_only_beats_buy_hold_ci": 0,
+          "p1_slopes_positive": 12,
+          "p1_slopes_total": 15,
+          "resid_max_abs_t": 0.9454,
+          "sharpe": {
+            "BTC-USD|P1": {
+              "buy_hold": 0.5032,
+              "fg_long": -0.0889,
+              "fg_long_short": -0.7404,
+              "mom_long": -0.0243,
+              "ma200": 0.5291
+            },
+            "BTC-USD|P2": {
+              "buy_hold": 1.1661,
+              "fg_long": 0.7818,
+              "fg_long_short": -0.2247,
+              "mom_long": 0.3012,
+              "ma200": 1.0857
+            },
+            "MSTR|P1": {
+              "buy_hold": 0.3753,
+              "fg_long": -0.0739,
+              "fg_long_short": -0.4525,
+              "mom_long": 0.024,
+              "ma200": 0.6073
+            },
+            "MSTR|P2": {
+              "buy_hold": 1.1724,
+              "fg_long": 0.8761,
+              "fg_long_short": -0.1905,
+              "mom_long": 0.1952,
+              "ma200": 1.111
+            },
+            "COIN|P1": {
+              "buy_hold": -0.9821,
+              "fg_long": -1.013,
+              "fg_long_short": -0.7889,
+              "mom_long": -1.0372
+            },
+            "COIN|P2": {
+              "buy_hold": 0.9479,
+              "fg_long": 0.6193,
+              "fg_long_short": -0.2813,
+              "mom_long": -0.0091,
+              "ma200": 0.34
+            },
+            "MARA|P1": {
+              "buy_hold": 0.4598,
+              "fg_long": -0.2238,
+              "fg_long_short": -0.951,
+              "mom_long": -0.3931,
+              "ma200": 0.7265
+            },
+            "MARA|P2": {
+              "buy_hold": 0.8067,
+              "fg_long": 0.9965,
+              "fg_long_short": 0.5281,
+              "mom_long": 0.3024,
+              "ma200": -0.0643
+            },
+            "RIOT|P1": {
+              "buy_hold": 0.35,
+              "fg_long": -0.1827,
+              "fg_long_short": -0.7326,
+              "mom_long": -0.2995,
+              "ma200": 0.8241
+            },
+            "RIOT|P2": {
+              "buy_hold": 0.9638,
+              "fg_long": 1.0958,
+              "fg_long_short": 0.5354,
+              "mom_long": 0.3108,
+              "ma200": 0.0337
+            }
+          },
+          "mstr_short_leg_by_year": {
+            "2018": 0.0,
+            "2019": 0.008,
+            "2020": -0.755,
+            "2021": -0.3273,
+            "2022": 0.016,
+            "2023": -0.2199,
+            "2024": -0.6606,
+            "2025": 0.1087,
+            "2026": -0.0192
+          },
+          "mstr_short_leg_2024": -0.6606,
+          "mstr_short_leg_2020": -0.755
+        },
+        "verdict": "not claimed: the long-only rule beats buy & hold with a CI excluding 0 in none of the asset-periods and the long/short rule is below buy & hold in nearly all; in 2018-22 most slopes of forward return on F&G are positive (greed was followed by higher returns), the opposite of the contrarian premise",
+        "facts": [
+          {
+            "label": "asset-periods where the long-only rule beats buy & hold (CI excl. 0)",
+            "value": 0,
+            "kind": "int"
+          },
+          {
+            "label": "asset-periods where long/short trails buy & hold",
+            "value": 9,
+            "kind": "int"
+          },
+          {
+            "label": "2018-22 slopes with greed followed by higher returns",
+            "value": "12 of 15",
+            "kind": "text"
+          },
+          {
+            "label": "MSTR short leg in greed, 2024",
+            "value": -0.6606,
+            "kind": "pct"
+          }
+        ]
+      },
+      "fg_mstr": {
+        "id": "fg_mstr",
+        "title": "Fear & greed on MSTR only, long-only, after its first bitcoin purchase",
+        "question": "Restricted to MSTR as a bitcoin holder (from 2020-08-11) and to the long side: hold more in fear, less in greed?",
+        "design": "w = clip((75 - F&G)/50, 0, 1): full at F&G <= 25, flat at >= 75; 13 bp per unit turnover; pass = Sharpe above buy & hold and above a constant weight with the same mean exposure, each with a 95% block-bootstrap CI excluding 0. Paper log: the same rule on Bitget's RMSTRUSDT rToken, 1h bars since its listing, hash-chained",
+        "window": [
+          "2020-08-12",
+          "2026-10-01"
+        ],
+        "status": "estimated (daily closes and rToken bars, simulated fills)",
+        "sources": [
+          "b4/backtest.py",
+          "b4/paper.py",
+          "out/b4/history.json",
+          "out/b4/paper/",
+          "b4/trials.log"
+        ],
+        "numbers": {
+          "history": {
+            "buy_hold": {
+              "total": 10.8986,
+              "cagr": 0.4989,
+              "sharpe": 0.8954,
+              "max_dd": -0.8927,
+              "mean_w": 1.0
+            },
+            "fg_long": {
+              "total": 0.3684,
+              "cagr": 0.0526,
+              "sharpe": 0.3919,
+              "max_dd": -0.754,
+              "mean_w": 0.5212
+            },
+            "constant_mean_w": {
+              "total": 5.9316,
+              "cagr": 0.3722,
+              "sharpe": 0.8954,
+              "max_dd": -0.6064,
+              "mean_w": 0.5212
+            },
+            "mom_twin": {
+              "total": -0.4316,
+              "cagr": -0.0882,
+              "sharpe": 0.1544,
+              "max_dd": -0.7886,
+              "mean_w": 0.497
+            },
+            "ma200": {
+              "total": 26.8977,
+              "cagr": 0.7228,
+              "sharpe": 1.1067,
+              "max_dd": -0.6846,
+              "mean_w": 0.631
+            }
+          },
+          "ci_vs_buy_hold": [
+            -1.0741,
+            0.0459
+          ],
+          "ci_vs_constant": [
+            -1.1113,
+            0.06
+          ],
+          "fwd20_le25": 0.0541,
+          "fwd20_gt75": 0.182,
+          "mean_w_2022": 0.9198,
+          "mstr_2022": -0.74,
+          "paper": {
+            "window": [
+              "2026-06-02T07:00:00+00:00",
+              "2026-10-02T08:00:00+00:00"
+            ],
+            "records": 118,
+            "trades": 43,
+            "ledger_ok": true,
+            "last_hash": "e959cfa44964a61f12ff0fc825752797fe7af8540f0696510d293c78da300065",
+            "return": -0.1975,
+            "max_dd": -0.4373,
+            "rtoken_return": 0.222,
+            "constant_return": 0.1404,
+            "mean_w": 0.6327,
+            "return_lag24h": -0.1519
+          }
+        },
+        "verdict": "not claimed: Sharpe 0.39 vs buy & hold 0.90 and a constant 52% weight 0.90; greed was followed by higher MSTR returns, not lower",
+        "facts": [
+          {
+            "label": "Sharpe, F&G rule (MSTR daily)",
+            "value": 0.3919,
+            "kind": "num"
+          },
+          {
+            "label": "Sharpe, buy & hold",
+            "value": 0.8954,
+            "kind": "num"
+          },
+          {
+            "label": "rToken paper log, rule",
+            "value": -0.1975,
+            "kind": "pct"
+          },
+          {
+            "label": "rToken over the same hours",
+            "value": 0.222,
+            "kind": "pct"
+          }
+        ]
+      },
+      "vol_managed": {
+        "id": "vol_managed",
+        "title": "No news: the ten names long, cut when volatility rises",
+        "question": "Drop news, ratings and insider filings; hold the ten names long and scale each by its volatility. Better than holding the same average exposure?",
+        "design": "cap_i = 0.10 x min(1, median vol_7d over the last 60 days / vol_7d); decisions every 4h; v1's simulator and costs; pass = Sharpe above a constant weight with the same mean exposure, CI excluding 0, in the test window AND on 11 months of perp bars AND on 2021-26 daily stock closes",
+        "window": [
+          "2021-01-04",
+          "2026-10-01"
+        ],
+        "status": "estimated (replay and daily closes, simulated fills)",
+        "sources": [
+          "b5/run.py",
+          "b5/compare.py",
+          "b5/daily_check.py",
+          "out/b5/summary.json",
+          "out/b5/daily_check.json",
+          "b5/trials.log"
+        ],
+        "numbers": {
+          "replay": {
+            "dev": {
+              "window": [
+                "2026-06-22",
+                "2026-08-10"
+              ],
+              "rule": {
+                "return": -0.0492,
+                "sharpe": -1.0019,
+                "max_dd": -0.1228,
+                "trades": 40,
+                "gross": 0.8622
+              },
+              "const": {
+                "return": -0.0404,
+                "sharpe": -0.8472,
+                "max_dd": -0.1185,
+                "trades": 11,
+                "gross": 0.8535
+              },
+              "buyhold": {
+                "return": -0.0472,
+                "sharpe": -0.8268,
+                "max_dd": -0.1369,
+                "trades": 12,
+                "gross": 0.9924
+              },
+              "ci_rule_minus_const": [
+                -0.6461,
+                0.268
+              ]
+            },
+            "test": {
+              "window": [
+                "2026-08-11",
+                "2026-09-22"
+              ],
+              "rule": {
+                "return": 0.2011,
+                "sharpe": 4.1665,
+                "max_dd": -0.0718,
+                "trades": 22,
+                "gross": 0.9165
+              },
+              "const": {
+                "return": 0.1925,
+                "sharpe": 3.9745,
+                "max_dd": -0.0753,
+                "trades": 12,
+                "gross": 0.8954
+              },
+              "buyhold": {
+                "return": 0.2105,
+                "sharpe": 3.9887,
+                "max_dd": -0.0812,
+                "trades": 12,
+                "gross": 0.9707
+              },
+              "ci_rule_minus_const": [
+                -0.1196,
+                0.4345
+              ]
+            },
+            "post": {
+              "window": [
+                "2026-09-23",
+                "2026-10-01"
+              ],
+              "rule": {
+                "return": -0.0462,
+                "sharpe": -13.8479,
+                "max_dd": -0.0602,
+                "trades": 12,
+                "gross": 0.9131
+              },
+              "const": {
+                "return": -0.0464,
+                "sharpe": -13.2309,
+                "max_dd": -0.0602,
+                "trades": 10,
+                "gross": 0.9086
+              },
+              "buyhold": {
+                "return": -0.0509,
+                "sharpe": -13.2329,
+                "max_dd": -0.0659,
+                "trades": 10,
+                "gross": 0.9978
+              },
+              "ci_rule_minus_const": null
+            },
+            "long": {
+              "window": [
+                "2025-11-01",
+                "2026-10-01"
+              ],
+              "rule": {
+                "return": -0.0867,
+                "sharpe": -0.1358,
+                "max_dd": -0.2762,
+                "trades": 184,
+                "gross": 0.858
+              },
+              "const": {
+                "return": -0.0323,
+                "sharpe": 0.0603,
+                "max_dd": -0.2602,
+                "trades": 42,
+                "gross": 0.8689
+              },
+              "buyhold": {
+                "return": -0.0467,
+                "sharpe": 0.0547,
+                "max_dd": -0.2964,
+                "trades": 42,
+                "gross": 0.979
+              },
+              "ci_rule_minus_const": [
+                -0.4356,
+                0.0236
+              ]
+            }
+          },
+          "daily": {
+            "window": [
+              "2021-01-04",
+              "2026-09-30"
+            ],
+            "mean_gross_rule": 0.8837,
+            "rule": {
+              "total": 2.6287,
+              "cagr": 0.2526,
+              "sharpe": 0.8183,
+              "max_dd": -0.5909
+            },
+            "const_exposure_matched": {
+              "total": 3.3567,
+              "cagr": 0.2933,
+              "sharpe": 0.9013,
+              "max_dd": -0.5908
+            },
+            "equal_weight": {
+              "total": 4.0116,
+              "cagr": 0.3253,
+              "sharpe": 0.9013,
+              "max_dd": -0.6431
+            },
+            "ci_rule_minus_const": [
+              -0.2059,
+              0.033
+            ]
+          }
+        },
+        "verdict": "not claimed: the rule's Sharpe is above constant exposure with a CI excluding 0 in no window (daily 2021-26 0.82 vs 0.90, same max drawdown -59%); the caps add turnover without lowering drawdown",
+        "facts": [
+          {
+            "label": "Sharpe, vol rule (daily 2021-26)",
+            "value": 0.8183,
+            "kind": "num"
+          },
+          {
+            "label": "Sharpe, same exposure without the rule",
+            "value": 0.9013,
+            "kind": "num"
+          },
+          {
+            "label": "max drawdown, both",
+            "value": -0.5909,
+            "kind": "pct"
+          },
+          {
+            "label": "trades in 11 months, rule vs constant",
+            "value": "184 vs 42",
+            "kind": "text"
+          }
+        ]
+      },
+      "crisis_derisk": {
+        "id": "crisis_derisk",
+        "title": "Crisis exit on BTC from free public data",
+        "question": "Exit BTC to zero when crash, volatility, stablecoin-depeg or crisis-chatter rules fire; back after a cooldown. Better than a 200-day moving average?",
+        "design": "v0: four rules fixed from the literature, 7-day cooldown; v1: 32 configurations chosen on 2019-08..2022-12, the chosen one run once on 2023-01..2026-09; pass = beat buy & hold and the 200-day MA on drawdown and Calmar, with false alarms costing less than the drawdown avoided",
+        "window": [
+          "2019-08-01",
+          "2026-09-26"
+        ],
+        "status": "estimated (Bitget BTCUSDT 1h bars, simulated fills)",
+        "sources": [
+          "b2/backtest.py",
+          "b2/v1.py",
+          "out/b2/metrics.json",
+          "out/b2/v1_holdout.json",
+          "out/b2/REPORT.md",
+          "b2/trials.log"
+        ],
+        "numbers": {
+          "v0": {
+            "buy_hold": {
+              "total_return": 7.3337,
+              "sharpe": 0.7901,
+              "max_dd": -0.7723,
+              "calmar": 0.4467
+            },
+            "ma200": {
+              "total_return": 6.2018,
+              "sharpe": 0.8195,
+              "max_dd": -0.6523,
+              "calmar": 0.4873
+            },
+            "voltarget": {
+              "total_return": 4.1592,
+              "sharpe": 0.7442,
+              "max_dd": -0.647,
+              "calmar": 0.3984
+            },
+            "module": {
+              "total_return": 0.376,
+              "sharpe": 0.2983,
+              "max_dd": -0.612,
+              "calmar": 0.0745
+            }
+          },
+          "v0_episodes": 90,
+          "v0_false_alarms": 55,
+          "v0_false_alarm_rate": 0.6111,
+          "v0_events_triggered": 9,
+          "v0_events_covered": 9,
+          "v1_holdout": {
+            "module": {
+              "total_return": 0.2723,
+              "sharpe": 0.3583,
+              "max_dd": -0.5941,
+              "calmar": 0.1121
+            },
+            "buy_hold": {
+              "total_return": 4.0784,
+              "sharpe": 1.1645,
+              "max_dd": -0.5375,
+              "calmar": 1.0142
+            },
+            "ma200": {
+              "total_return": 2.5692,
+              "sharpe": 1.0876,
+              "max_dd": -0.3402,
+              "calmar": 1.1931
+            },
+            "voltarget": {
+              "total_return": 3.2065,
+              "sharpe": 1.1628,
+              "max_dd": -0.5285,
+              "calmar": 0.8877
+            }
+          },
+          "v1_grid_size": 32
+        },
+        "verdict": "not claimed: v0 returned +38% against buy & hold +733% with 61% false alarms; no v1 configuration beat the 200-day MA in the design period and the chosen one returned +27% on the holdout against +408%",
+        "facts": [
+          {
+            "label": "false alarms (v0)",
+            "value": 0.6111,
+            "kind": "share"
+          },
+          {
+            "label": "holdout return, chosen v1",
+            "value": 0.2723,
+            "kind": "pct"
+          },
+          {
+            "label": "holdout return, 200-day MA",
+            "value": 2.5692,
+            "kind": "pct"
+          }
+        ]
+      },
+      "incident_exit": {
+        "id": "incident_exit",
+        "title": "Incident exit: leave a coin on a hack or a delisting",
+        "question": "After a hack or a Binance delisting notice, does the token keep falling, and does X (Twitter) know before the price does?",
+        "design": "event studies on Bitget 1-minute candles: hacks >= $20M from DefiLlama with a >= 5% 60-minute drop as the alert; Binance delisting announcements; then the first post of security and news accounts on X against the price alert",
+        "window": [
+          "2021-01-01",
+          "2026-09-26"
+        ],
+        "status": "observed (event studies on exchange candles; survivorship understates the falls)",
+        "sources": [
+          "b2/incident_pilot.py",
+          "b2/delist_pilot.py",
+          "b2/alert_timing.py",
+          "out/b2/incidents.json",
+          "out/b2/delistings.json",
+          "out/b2/alert_timing_summary.json"
+        ],
+        "numbers": {
+          "hacks_n": 14,
+          "hacks_median_24h": -0.0972,
+          "hacks_median_30d": -0.328,
+          "delist_n": 32,
+          "delist_median_1h": -0.04,
+          "delist_median_to_delist": -0.2577,
+          "x_hacks_with_post": 11,
+          "x_hacks_x_first": 2,
+          "x_hacks_median_lead_min": -72.2,
+          "x_delist_median_lead_min": -0.04
+        },
+        "verdict": "observed, not a strategy: tokens keep falling after both kinds of event, but X trailed the price alert in 9 of 11 hacks (median 72 minutes late), so the edge would be unattended execution, not foresight; not built further",
+        "facts": [
+          {
+            "label": "median token, 30 days after a hack alert",
+            "value": -0.328,
+            "kind": "pct"
+          },
+          {
+            "label": "median token, notice to delisting",
+            "value": -0.2577,
+            "kind": "pct"
+          },
+          {
+            "label": "hacks where X posted before the price alert",
+            "value": "2 of 11",
+            "kind": "text"
+          }
+        ]
+      }
+    },
+    "n_items": 5,
+    "n_claimed": 0
+  },
+  "references": [
+    {
+      "id": "baker2006",
+      "text": "Baker, M., Wurgler, J. (2006). Investor sentiment and the cross-section of stock returns. *Journal of Finance*, 61(4), 1645–1680. https://doi.org/10.1111/j.1540-6261.2006.00885.x"
+    },
+    {
+      "id": "cederburg2020",
+      "text": "Cederburg, S., O'Doherty, M. S., Wang, F., Yan, X. S. (2020). On the performance of volatility-managed portfolios. *Journal of Financial Economics*, 138(1), 95–117. https://doi.org/10.1016/j.jfineco.2020.04.015"
+    },
+    {
+      "id": "chan2003",
+      "text": "Chan, W. S. (2003). Stock price reaction to news and no-news: Drift and reversal after headlines. *Journal of Financial Economics*, 70(2), 223–260. https://doi.org/10.1016/S0304-405X(03)00146-6"
+    },
+    {
+      "id": "da2015",
+      "text": "Da, Z., Engelberg, J., Gao, P. (2015). The sum of all FEARS: Investor sentiment and asset prices. *Review of Financial Studies*, 28(1), 1–32. https://doi.org/10.1093/rfs/hhu072"
+    },
+    {
+      "id": "faber2007",
+      "text": "Faber, M. T. (2007). A quantitative approach to tactical asset allocation. *Journal of Wealth Management*, 9(4), 69–79. https://doi.org/10.3905/jwm.2007.674809"
+    },
+    {
+      "id": "glasserman2023",
+      "text": "Glasserman, P., Lin, C. (2023). Assessing look-ahead bias in stock return predictions generated by GPT sentiment analysis. *arXiv:2309.17322*. https://doi.org/10.48550/arXiv.2309.17322"
+    },
+    {
+      "id": "harvey2016",
+      "text": "Harvey, C. R., Liu, Y., Zhu, H. (2016). … and the cross-section of expected returns. *Review of Financial Studies*, 29(1), 5–68. https://doi.org/10.1093/rfs/hhv059"
+    },
+    {
+      "id": "lo2002",
+      "text": "Lo, A. W. (2002). The statistics of Sharpe ratios. *Financial Analysts Journal*, 58(4), 36–52. https://doi.org/10.2469/faj.v58.n4.2453"
+    },
+    {
+      "id": "lopezlira2023",
+      "text": "Lopez-Lira, A., Tang, Y. (2023). Can ChatGPT forecast stock price movements? Return predictability and large language models. *SSRN working paper 4412788*. https://doi.org/10.2139/ssrn.4412788"
+    },
+    {
+      "id": "moreira2017",
+      "text": "Moreira, A., Muir, T. (2017). Volatility-managed portfolios. *Journal of Finance*, 72(4), 1611–1644. https://doi.org/10.1111/jofi.12513"
+    },
+    {
+      "id": "newey1987",
+      "text": "Newey, W. K., West, K. D. (1987). A simple, positive semi-definite, heteroskedasticity and autocorrelation consistent covariance matrix. *Econometrica*, 55(3), 703–708. https://doi.org/10.2307/1913610"
+    },
+    {
+      "id": "politis1994",
+      "text": "Politis, D. N., Romano, J. P. (1994). The stationary bootstrap. *Journal of the American Statistical Association*, 89(428), 1303–1313. https://doi.org/10.1080/01621459.1994.10476870"
+    },
+    {
+      "id": "sarkar2024",
+      "text": "Sarkar, S. K., Vafa, K. (2024). Lookahead bias in pretrained language models. *SSRN working paper 4754678*. https://doi.org/10.2139/ssrn.4754678"
+    },
+    {
+      "id": "tetlock2007",
+      "text": "Tetlock, P. C. (2007). Giving content to investor sentiment: The role of media in the stock market. *Journal of Finance*, 62(3), 1139–1168. https://doi.org/10.1111/j.1540-6261.2007.01232.x"
+    },
+    {
+      "id": "tetlock2008",
+      "text": "Tetlock, P. C., Saar-Tsechansky, M., Macskassy, S. (2008). More than words: Quantifying language to measure firms' fundamentals. *Journal of Finance*, 63(3), 1437–1467. https://doi.org/10.1111/j.1540-6261.2008.01362.x"
+    }
+  ],
+  "limits": {
+    "headline_n_days": 43,
+    "headline_sharpe": -2.176826651071828,
+    "headline_sharpe_se": 2.9229217905759035,
+    "headline_sharpe_ci95": [
+      -7.905753360600599,
+      3.552100058456942
+    ],
+    "n_other_tests": 5
+  },
+  "summary": [
+    "Headline (pre-registered: llm_v1_2026-08-11_2026-09-22, 43 days, estimated (replay), reported whatever its sign): return −1.08%, Sharpe −2.18, Sortino −3.02, max DD −1.97%, win rate 44% (189 trips), costs −0.46% gross -> −1.08% net.",
+    "LLM vs baseline (test): Sharpe diff +5.41, 95% CI [−0.12, +10.77]; not claimed: the 95% CI includes 0.",
+    "Information use (test): not claimed (vs nonews: CI n/a; vs shuffled: CI includes 0): the agent's P&L is not attributable to the news it reads; 0 of 5 signal tests clear |t| > 2.6; realised beta to the EW basket llm +0.008, baseline +0.009, nonews +0.000, shuffled −0.002, blinded −0.022 (expected within ±0.03).",
+    "Dev window (in-sample, estimated): v0 LLM −6.07% (Sharpe −8.02, 50 days); v0 baseline −4.31% (Sharpe −6.30, 50 days); v1 LLM (first half) +0.56% (Sharpe +1.71, 24 days); v1 baseline (first half) −1.55% (Sharpe −7.97, 24 days). Lost over the full dev window: v0 LLM, v0 baseline. The first-half v1 runs (24 days) were a prompt/risk check; P&L was not a criterion.",
+    "No sentiment signal in dev: 0 of 5 pre-registered signal tests clear |t| > 2.6 (in-sample); DIAGNOSIS-dev.md finds no predictive rank IC in the baseline score, cards that mostly describe past moves and fresh news that does not beat costs; dev results do not predict test.",
+    "Prompt v1 FAILED its pre-declared explainability criteria (trials.log entry 5, dev first half 2026-06-22..2026-07-15 (144 decisions), cards pinned to the v0 dev run): cooldown rerequests 14 -> 10; off hours clips 60 -> 78; net cap clips 72 -> 0; beta neutral actions 0 -> 1346; frozen anyway, not tuned. Explainability is shown per decision instead.",
+    "Deviations and errata (5, dated; PREREG.md stays frozen, so they are listed in section 9b and trials.log): hand-written freeze and trials.log stamps are wrong (git commit times are authoritative); replay.py and metrics.py edited after the freeze, before the llm/nonews/shuffled test runs; signal test (c): direction only from cards known at the event's entry; signal tests: a forward window must end strictly before the window end; project split (075a0d4): config.py, evidence.py, llm.py and replay.py differ from the freeze in paths only; PREREG's Deviations section has entries added since the freeze. Test-run code: all 5 test runs used the freeze-commit 62286d9 replay code (git stamp, or a rerun from the freeze commit ending on the same log_last_hash).",
+    "Live paper log (estimated (shadow ledger: simulated fills at live-venue quotes)): 291 hourly marks, 75 records (risk v0: 1 records (prompt v0 1), 2026-09-23 12:00 → 2026-09-23 12:00 UTC; risk v1: 74 records (prompt v1 72), 2026-09-23 16:00 → 2026-10-05 12:00 UTC), 11 complete days, return −0.27%; too short for Sharpe or win rate; replay reconciliation: 15/73 decisions identical, orders 115/119 matched, fill gap estimated (shadow ledger: live-quote fill model vs the replay's fill model). Inputs, not code, explain the rest: the Store now yields cards at t that the live step did not see (items that reached the Store after the step) in 53 of 73 decisions, the live step saw cards the Store no longer yields at t in 45, and 32 of 75 live steps logged a data-source error (HTTP 503) and decided on stale inputs; every decision whose inputs match is reproduced exactly."
+  ]
+}

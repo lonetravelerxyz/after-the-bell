@@ -1,0 +1,13 @@
+window,llm_minus,n_days,sharpe_llm,sharpe_other,sharpe_diff,ci95_low,ci95_high,n_boot_used,reading
+test,baseline,43.0,-2.176827,-7.591126,5.4143,-0.123202,10.769219,2000.0,"llm − baseline Sharpe +5.41, 95% CI [−0.12, +10.77] (includes 0, 43 days, 2000 of 2000 bootstrap paths used): the LLM agent is not distinguishable from the fixed-rule baseline."
+test,nonews,43.0,-2.176827,,,,,0.0,"llm − nonews Sharpe n/a, 95% CI [n/a, n/a] (n/a, 43 days, 0 of 2000 bootstrap paths used): no finite bootstrap; not readable."
+test,shuffled,43.0,-2.176827,-0.15924,-2.017587,-10.489116,5.765671,2000.0,"llm − shuffled Sharpe −2.02, 95% CI [−10.49, +5.77] (includes 0, 43 days, 2000 of 2000 bootstrap paths used): stale (shuffled) news does as well: no evidence that news timing matters."
+test,blinded,43.0,-2.176827,-4.7266,2.549774,-0.371225,5.97995,2000.0,"llm − blinded Sharpe +2.55, 95% CI [−0.37, +5.98] (includes 0, 43 days, 2000 of 2000 bootstrap paths used): blinding names and dates makes no significant difference: no sign of reliance on name priors."
+dev,baseline,50.0,-8.015273,-6.301445,-1.713828,-8.037353,4.455221,2000.0,"llm − baseline Sharpe −1.71, 95% CI [−8.04, +4.46] (includes 0, 50 days, 2000 of 2000 bootstrap paths used): in-sample check outside the pre-registered test window; P&L not a criterion, no claim read."
+dev,nonews,,,,,,,,"not computed: nonews not run yet (only complete, current runs are compared)"
+dev,shuffled,,,,,,,,"not computed: shuffled not run yet (only complete, current runs are compared)"
+dev,blinded,,,,,,,,"not computed: blinded not run yet (only complete, current runs are compared)"
+dev_half,baseline,24.0,1.714724,-7.970492,9.685216,5.33535,15.718148,2000.0,"llm − baseline Sharpe +9.69, 95% CI [+5.34, +15.72] (above 0, 24 days, 2000 of 2000 bootstrap paths used): in-sample check outside the pre-registered test window; P&L not a criterion, no claim read."
+dev_half,nonews,,,,,,,,"not computed: nonews not run yet (only complete, current runs are compared)"
+dev_half,shuffled,,,,,,,,"not computed: shuffled not run yet (only complete, current runs are compared)"
+dev_half,blinded,,,,,,,,"not computed: blinded not run yet (only complete, current runs are compared)"

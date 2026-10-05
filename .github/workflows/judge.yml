@@ -1,0 +1,39 @@
+# Runs what a reader would: tests -> snapshot hashes -> hash chains -> every shipped replay offline (first 3 days,
+# record by record against the shipped log) -> report, then checks that the regenerated headline numbers equal the
+# committed ones. No API key: every LLM reply the runs used is in cache/llm/.
+name: judge
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# The shipped logs were written on macOS arm64. The gate runs there: every replay must match the shipped log bit
+# for bit. Linux x86_64 runs too, informational only: there the risk v1 runs differ from the first record, because
+# the 60-day beta (pandas mean/var/cov) rounds differently in its last bits and every later number follows it.
+jobs:
+  judge:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    continue-on-error: ${{ matrix.os == 'ubuntu-latest' }}
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10.2.0
+        with:
+          enable-cache: true
+      - name: ./judge_b.sh --quick
+        run: ./judge_b.sh --quick
+      - name: Regenerated numbers match the committed report
+        run: python3 .github/check_report.py
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: report-${{ matrix.os }}
+          path: report/

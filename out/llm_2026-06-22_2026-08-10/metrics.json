@@ -1,0 +1,36 @@
+{
+  "start": "2026-06-22 00:00:00+00:00",
+  "end": "2026-08-11 00:00:00+00:00",
+  "n_days": 50,
+  "start_equity": 10000.0,
+  "final_equity": 9392.899671668058,
+  "total_return": -0.060710032833194205,
+  "sharpe": -8.015273171031806,
+  "sortino": -8.380203556996435,
+  "max_dd": -0.06177314182547189,
+  "gross_sharpe": -7.158073029275509,
+  "win_rate": 0.2923076923076923,
+  "round_trips": 65,
+  "trades": 298,
+  "n_decisions": 300,
+  "n_invalid": 0,
+  "n_risk_exits": 19,
+  "turnover_ann": 81.50270428439349,
+  "costs": {
+    "fees": 64.91307367717953,
+    "spread": 3.0658543506442015,
+    "funding": 0.3388349496114505
+  },
+  "ladder": {
+    "gross": -0.05394602352537292,
+    "after_fees": -0.060437330893091,
+    "after_spread": -0.060743916328155345,
+    "after_funding": -0.060710032833194205
+  },
+  "run_id": "llm_2026-06-22_2026-08-10",
+  "variant": "llm",
+  "n_items": 473,
+  "n_cards": 830,
+  "log_last_hash": "2d1e55ed3ba5f31632e60dac303e856c0392e0bdba20c7b4498bf22b5c9a1f8f",
+  "log_verified": true
+}

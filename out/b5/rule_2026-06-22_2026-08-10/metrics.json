@@ -1,0 +1,43 @@
+{
+  "start": "2026-06-22 00:00:00+00:00",
+  "end": "2026-08-11 00:00:00+00:00",
+  "n_days": 50,
+  "partial_first_day_h": 0.0,
+  "partial_last_day_h": 0.0,
+  "partial_last_day_return": null,
+  "start_equity": 10000.0,
+  "final_equity": 9507.657169751066,
+  "total_return": -0.04923428302489341,
+  "sharpe": -1.0018772467319474,
+  "sortino": -1.3166036863752395,
+  "max_dd": -0.12281488734431589,
+  "gross_sharpe": -0.8593805136570394,
+  "win_rate": null,
+  "round_trips": 0,
+  "trades": 40,
+  "n_decisions": 300,
+  "n_invalid": 0,
+  "n_risk_exits": 0,
+  "turnover_ann": 12.865391857606888,
+  "costs": {
+    "fees": 10.115623350476968,
+    "spread": 0.5091327042920246,
+    "funding": -50.466945399546155
+  },
+  "ladder": {
+    "gross": -0.04312511287946186,
+    "after_fees": -0.04413667521450948,
+    "after_spread": -0.044187588484938756,
+    "after_funding": -0.04923428302489341
+  },
+  "run_id": "rule_2026-06-22_2026-08-10",
+  "variant": "rule",
+  "const_w": null,
+  "store": "snapshot",
+  "mean_target_gross": 0.9025519333333333,
+  "mean_gross_exposure": 0.8622382807839136,
+  "prompt_version": null,
+  "risk_version": "b5-v2",
+  "log_last_hash": "fcd32d01ab9f8263bbe9e71f01f007bd22f2ef1813b25abf716353f9b45d8810",
+  "log_verified": true
+}

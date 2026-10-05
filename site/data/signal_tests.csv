@@ -1,0 +1,11 @@
+window,id,what,estimate,estimate_unit,n,t,significant,status
+test,a_ic_4h,"(a) rank IC of the baseline score vs forward perp return, 4h, Newey-West t",-0.006573,,257,-0.296416,False,not significant
+test,a_ic_24h,"(a) rank IC of the baseline score vs forward perp return, 24h, Newey-West t",-0.032402,,252,-0.854537,False,not significant
+test,a_ic_72h,"(a) rank IC of the baseline score vs forward perp return, 72h, Newey-West t",-0.055123,,240,-0.958916,False,not significant
+test,b_rating_24h,"(b) signed 24h demeaned return after rating cards, one observation per event",3.797878,bp,29,0.06572,False,not significant
+test,c_news_new_24h,"(c) signed 24h demeaned return after news/new cards, one observation per ticker-day",-19.470929,bp,73,-0.549607,False,not significant
+dev,a_ic_4h,"(a) rank IC of the baseline score vs forward perp return, 4h, Newey-West t",-0.01922,,298,-0.949765,False,not significant
+dev,a_ic_24h,"(a) rank IC of the baseline score vs forward perp return, 24h, Newey-West t",-0.05902,,293,-1.566953,False,not significant
+dev,a_ic_72h,"(a) rank IC of the baseline score vs forward perp return, 72h, Newey-West t",-0.074184,,281,-1.057302,False,not significant
+dev,b_rating_24h,"(b) signed 24h demeaned return after rating cards, one observation per event",-54.354725,bp,65,-1.758625,False,not significant
+dev,c_news_new_24h,"(c) signed 24h demeaned return after news/new cards, one observation per ticker-day",29.858248,bp,94,1.147394,False,not significant

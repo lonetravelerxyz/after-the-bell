@@ -1,0 +1,294 @@
+{
+  "window": [
+    "2019-08-01 00:00:00+00:00",
+    "2026-09-26 08:00:00+00:00"
+  ],
+  "bars": 62721,
+  "bar_gaps_filled": 0,
+  "rules": {
+    "R24_CRASH": -0.1,
+    "VOL_MULT": 2.0,
+    "DEPEG": 0.03,
+    "SOCIAL_Q": 0.9,
+    "COOLDOWN_H": 168,
+    "REENTRY_R24": 0.0,
+    "TAKER": 0.0006,
+    "HALF_SPREAD": 0.0002,
+    "FUNDING_8H_sens": 0.0001,
+    "MA_DAYS": 200,
+    "VOL_TARGET": 0.4
+  },
+  "rule_hours_true": {
+    "C1": 364,
+    "C2": 2585,
+    "C3": 624,
+    "C4": 4189
+  },
+  "episodes": 90,
+  "episodes_first_rule": {
+    "C1": 8,
+    "C2": 39,
+    "C3": 5,
+    "C4": 38
+  },
+  "false_alarms": 55,
+  "false_alarm_rate": 0.6111111111111112,
+  "false_alarm_missed_mean": 0.07801761407571048,
+  "hit_missed_mean": -0.053027311270789544,
+  "events_covered": 9,
+  "events_triggered": 9,
+  "metrics": {
+    "buy_hold": {
+      "total_return": 7.3336610336275125,
+      "cagr": 0.34498098756284823,
+      "ann_vol": 0.6193292308926663,
+      "sharpe": 0.7901415236181889,
+      "max_dd": -0.7723232808507876,
+      "calmar": 0.4466795137689218,
+      "time_in_market": 1.0,
+      "position_changes": 0,
+      "cost_paid_frac": 0.0007999999999999999,
+      "years": 7.15400410677618
+    },
+    "ma200": {
+      "total_return": 6.201776379847268,
+      "cagr": 0.31781518196149183,
+      "ann_vol": 0.4658386659485175,
+      "sharpe": 0.8195360639462411,
+      "max_dd": -0.6522587520736939,
+      "calmar": 0.48725322726767223,
+      "time_in_market": 0.6177356866121395,
+      "position_changes": 56,
+      "cost_paid_frac": 0.045599999999999995,
+      "years": 7.15400410677618
+    },
+    "voltarget": {
+      "total_return": 4.159201498146743,
+      "cagr": 0.2577841157055183,
+      "ann_vol": 0.43656007430883037,
+      "sharpe": 0.7442144824983662,
+      "max_dd": -0.6470307673542848,
+      "calmar": 0.3984109082781335,
+      "time_in_market": 0.7634406769032474,
+      "position_changes": 1975,
+      "cost_paid_frac": 0.030640823133008636,
+      "years": 7.15400410677618
+    },
+    "module": {
+      "total_return": 0.37597669894573826,
+      "cagr": 0.045623449957475914,
+      "ann_vol": 0.3311494089522415,
+      "sharpe": 0.2982929144536101,
+      "max_dd": -0.612005591323327,
+      "calmar": 0.07454743976901465,
+      "time_in_market": 0.4039635847642735,
+      "position_changes": 181,
+      "cost_paid_frac": 0.1448,
+      "years": 7.15400410677618
+    },
+    "module_ma200": {
+      "total_return": 0.2864372658379857,
+      "cagr": 0.03583491010590922,
+      "ann_vol": 0.2703265204532914,
+      "sharpe": 0.26311755233966616,
+      "max_dd": -0.5515444714970693,
+      "calmar": 0.06497193237861987,
+      "time_in_market": 0.24867269335629216,
+      "position_changes": 135,
+      "cost_paid_frac": 0.108,
+      "years": 7.15400410677618
+    },
+    "module_funding_sens": {
+      "total_return": 0.0024648588533184856,
+      "cagr": 0.0003441778426800379,
+      "ann_vol": 0.3309236506811587,
+      "sharpe": 0.16469464004677103,
+      "max_dd": -0.6646148185224133,
+      "calmar": 0.0005178606210514865,
+      "time_in_market": 0.4039635847642735,
+      "position_changes": 181,
+      "cost_paid_frac": 0.1448,
+      "years": 7.15400410677618
+    },
+    "buy_hold_funding_sens": {
+      "total_return": 2.8049313892755308,
+      "cagr": 0.20537438808179576,
+      "ann_vol": 0.6191434588295239,
+      "sharpe": 0.6133097098338414,
+      "max_dd": -0.7972169774826681,
+      "calmar": 0.25761416763889816,
+      "time_in_market": 1.0,
+      "position_changes": 0,
+      "cost_paid_frac": 0.0007999999999999999,
+      "years": 7.15400410677618
+    }
+  },
+  "yearly": [
+    {
+      "year": 2019,
+      "buy_hold": -0.28605916079753935,
+      "ma200": -0.28605916079753935,
+      "voltarget": -0.20777928678705493,
+      "module": -0.09489855433548866,
+      "module_ma200": -0.09489855433548866
+    },
+    {
+      "year": 2020,
+      "buy_hold": 2.2387240252971212,
+      "ma200": 1.8831379305322153,
+      "voltarget": 1.137944906603713,
+      "module": 0.5173721380319187,
+      "module_ma200": 0.4014433565963358
+    },
+    {
+      "year": 2021,
+      "buy_hold": 0.986674391657006,
+      "ma200": -0.01858576639818954,
+      "voltarget": 0.5377997420779808,
+      "module": 0.06547812982386936,
+      "module_ma200": 0.005131176860597941
+    },
+    {
+      "year": 2022,
+      "buy_hold": -0.6423507765571768,
+      "ma200": 0.0,
+      "voltarget": -0.5290287461906327,
+      "module": -0.3013496451963483,
+      "module_ma200": 0.0
+    },
+    {
+      "year": 2023,
+      "buy_hold": 1.5558907090612428,
+      "ma200": 0.9435194924435752,
+      "voltarget": 1.2330818758487774,
+      "module": 0.3351468296916549,
+      "module_ma200": 0.05562737500755355
+    },
+    {
+      "year": 2024,
+      "buy_hold": 1.209595404418271,
+      "ma200": 0.8175368216728525,
+      "voltarget": 1.1067173454051282,
+      "module": 0.17680440482215154,
+      "module_ma200": 0.06112105848962068
+    },
+    {
+      "year": 2025,
+      "buy_hold": -0.06262544004205628,
+      "ma200": -0.16778430623811513,
+      "voltarget": -0.07252153277466178,
+      "module": -0.25815072236538783,
+      "module_ma200": -0.24741459789021858
+    },
+    {
+      "year": 2026,
+      "buy_hold": -0.040462473922801556,
+      "ma200": 0.21225589601439476,
+      "voltarget": -0.03553834670056111,
+      "module": 0.15758707504236003,
+      "module_ma200": 0.1977750775125513
+    }
+  ],
+  "ablation": [
+    {
+      "variant": "C1 only",
+      "total_return": 5.0379092523084505,
+      "max_dd": -0.6948800866164728,
+      "calmar": 0.41121029578340096,
+      "sharpe": 0.7332452980241317,
+      "time_in_market": 0.8933690470496325,
+      "episodes": 28,
+      "false_alarms": 16,
+      "events_hit": 7
+    },
+    {
+      "variant": "C2 only",
+      "total_return": 0.712593570528304,
+      "max_dd": -0.6715758818886538,
+      "calmar": 0.11629950376804278,
+      "sharpe": 0.38968479587006,
+      "time_in_market": 0.6606080897944867,
+      "episodes": 74,
+      "false_alarms": 53,
+      "events_hit": 9
+    },
+    {
+      "variant": "C3 only",
+      "total_return": 5.504252700771346,
+      "max_dd": -0.7617765687656818,
+      "calmar": 0.39274344116460747,
+      "sharpe": 0.7373658815121943,
+      "time_in_market": 0.9423638015975511,
+      "episodes": 16,
+      "false_alarms": 9,
+      "events_hit": 3
+    },
+    {
+      "variant": "C4 only",
+      "total_return": 4.881884126583542,
+      "max_dd": -0.6733116029924475,
+      "calmar": 0.41740728473903815,
+      "sharpe": 0.7747591046538839,
+      "time_in_market": 0.6069418536056504,
+      "episodes": 69,
+      "false_alarms": 38,
+      "events_hit": 7
+    },
+    {
+      "variant": "without C1",
+      "total_return": 0.4509047994619706,
+      "max_dd": -0.5806210699686039,
+      "calmar": 0.09197413571117082,
+      "sharpe": 0.3214005882228148,
+      "time_in_market": 0.4139602366033705,
+      "episodes": 88,
+      "false_alarms": 55,
+      "events_hit": 9
+    },
+    {
+      "variant": "without C2",
+      "total_return": 1.1658137390592485,
+      "max_dd": -0.7096218364628951,
+      "calmar": 0.1607521542793374,
+      "sharpe": 0.4626752822097656,
+      "time_in_market": 0.5268092026593963,
+      "episodes": 86,
+      "false_alarms": 52,
+      "events_hit": 9
+    },
+    {
+      "variant": "without C3",
+      "total_return": 0.5829305562729841,
+      "max_dd": -0.6227248613109462,
+      "calmar": 0.10647442964808247,
+      "sharpe": 0.3569637308538294,
+      "time_in_market": 0.4291385660305161,
+      "episodes": 89,
+      "false_alarms": 54,
+      "events_hit": 9
+    },
+    {
+      "variant": "without C4",
+      "total_return": 0.2594197321216667,
+      "max_dd": -0.6506956957628904,
+      "calmar": 0.0503556494014275,
+      "sharpe": 0.28506099630543197,
+      "time_in_market": 0.6090623555109134,
+      "episodes": 83,
+      "false_alarms": 56,
+      "events_hit": 9
+    },
+    {
+      "variant": "all (v0)",
+      "total_return": 0.37597669894573826,
+      "max_dd": -0.612005591323327,
+      "calmar": 0.07454743976901465,
+      "sharpe": 0.2982929144536101,
+      "time_in_market": 0.4039635847642735,
+      "episodes": 90,
+      "false_alarms": 55,
+      "events_hit": 9
+    }
+  ],
+  "label": "estimated (replay, simulated fills at next 1h open)"
+}

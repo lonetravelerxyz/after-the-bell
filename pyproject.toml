@@ -1,0 +1,29 @@
+[project]
+name = "bitget-s2-sentiment-agent"
+version = "1.0.0"
+description = "LLM market-sentiment agent on Bitget stock perps with a replayable, hash-chained paper log (Bitget AI Hackathon S2, Agentic Trading / Market Sentiment)"
+license = "MIT"
+requires-python = ">=3.12"
+# Exact pins: the replay's record hashes are floats in canonical JSON, so the versions that wrote the logged
+# hashes are the versions that reproduce them. Only what sentiment/ imports (the rest is the standard library).
+# This file and uv.lock ship unchanged in the exported public repo (scripts/export_public.sh).
+dependencies = [
+    "numpy==2.5.3",
+    "pandas==3.0.6",
+    "pyarrow==25.0.1",
+    "requests==2.34.2",
+    "matplotlib==3.11.2",
+]
+
+[dependency-groups]
+dev = [
+    "pytest==9.1.1",
+    "scipy==1.18.1",   # reference solver in one risk-layer test only
+]
+
+[tool.uv]
+package = false        # run from this directory: `uv run python -m sentiment.<module>`
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

@@ -1,0 +1,42 @@
+{
+  "start": "2026-06-22 00:00:00+00:00",
+  "end": "2026-07-16 00:00:00+00:00",
+  "n_days": 24,
+  "start_equity": 10000.0,
+  "final_equity": 10056.256621690649,
+  "total_return": 0.0056256621690649045,
+  "sharpe": 1.7147235010670212,
+  "sortino": 3.1757917745585083,
+  "max_dd": -0.007858162786452905,
+  "gross_sharpe": 2.8855964876319513,
+  "win_rate": 0.3763440860215054,
+  "round_trips": 93,
+  "trades": 309,
+  "n_decisions": 144,
+  "n_invalid": 0,
+  "n_risk_exits": 7,
+  "turnover_ann": 86.12252447591096,
+  "costs": {
+    "fees": 34.03873682584496,
+    "spread": 1.8995091680032037,
+    "funding": -2.8332639306476213
+  },
+  "ladder": {
+    "gross": 0.009502813161514245,
+    "after_fees": 0.006098939478929699,
+    "after_spread": 0.0059089885621295135,
+    "after_funding": 0.005625662169064682
+  },
+  "run_id": "llm_2026-06-22_2026-07-15",
+  "variant": "llm",
+  "n_items": 163,
+  "n_cards": 316,
+  "prompt_version": "v1",
+  "risk_version": "v1",
+  "n_decisions_beta_fallback": 0,
+  "n_decisions_beta_short": 0,
+  "cards_from": "sentiment/out/llm_2026-06-22_2026-08-10",
+  "n_items_dropped_by_pin": 0,
+  "log_last_hash": "d830d8e5915bd08141b8347e72cea35f7b4cbbf425f2bf6929cbd6dff3c3dce9",
+  "log_verified": true
+}

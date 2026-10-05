@@ -1,0 +1,11 @@
+run,window,variant,version,label,n_days,total_return,sharpe,sortino,max_dd,win_rate,trades,turnover_ann
+llm_v1_2026-08-11_2026-09-22,test,llm,v1,estimated (replay),43,-0.010826,-2.176827,-3.016809,-0.01972,0.439153,585,82.908201
+baseline_v1_2026-08-11_2026-09-22,test,baseline,v1,estimated (replay),43,-0.023715,-7.591126,-8.02501,-0.026389,0.461187,944,83.031873
+nonews_v1_2026-08-11_2026-09-22,test,nonews,v1,estimated (replay),43,0.0,,,0.0,,0,0.0
+shuffled_v1_2026-08-11_2026-09-22,test,shuffled,v1,estimated (replay),43,-0.000914,-0.15924,-0.234686,-0.018051,0.447917,591,79.415027
+blinded_v1_2026-08-11_2026-09-22,test,blinded,v1,estimated (replay),43,-0.024312,-4.7266,-5.810967,-0.024916,0.413502,588,79.432963
+llm_2026-06-22_2026-08-10,dev,llm,v0,estimated (replay),50,-0.06071,-8.015273,-8.380204,-0.061773,0.292308,298,81.502704
+baseline_2026-06-22_2026-08-10,dev,baseline,v0,estimated (replay),50,-0.043146,-6.301445,-7.062939,-0.045505,0.32381,1209,127.819033
+llm_v1_2026-06-22_2026-07-15,dev-half,llm,v1,estimated (replay),24,0.005626,1.714724,3.175792,-0.007858,0.376344,309,86.122524
+baseline_v1_2026-06-22_2026-07-15,dev-half,baseline,v1,estimated (replay),24,-0.015519,-7.970492,-8.310865,-0.016332,0.364407,534,94.097205
+live,live,llm,,estimated (shadow ledger: simulated fills at live-venue quotes),11,-0.002672,-4.161023,-5.724194,-0.009804,0.466667,136,70.025822

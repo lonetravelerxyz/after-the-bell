@@ -1,0 +1,1334 @@
+[
+ {
+  "name": "PlayDapp",
+  "date": "2024-02-09",
+  "amount": 290000000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "FixedFloat",
+  "date": "2024-02-18",
+  "amount": 26100000,
+  "symbol": "FLT",
+  "classification": "Frontend & Infrastructure",
+  "technique": "Key Leaked via Infrastructure",
+  "target": "DeFi Protocol",
+  "chain": [
+   "Ethereum",
+   "Bitcoin"
+  ],
+  "skip": "error 400"
+ },
+ {
+  "name": "CoinsPaid",
+  "date": "2023-07-22",
+  "amount": 37300000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "Uranium Finance",
+  "date": "2021-04-28",
+  "amount": 57200000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "MonoX",
+  "date": "2021-11-30",
+  "amount": 31400000,
+  "symbol": "MONO",
+  "classification": "Protocol Logic",
+  "technique": "Swap Logic Flaw",
+  "target": "DeFi Protocol",
+  "chain": [
+   "Ethereum",
+   "Polygon"
+  ],
+  "skip": "error 400"
+ },
+ {
+  "name": "Stake.com",
+  "date": "2023-09-04",
+  "amount": 41300000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "ThalaSwap",
+  "date": "2024-11-15",
+  "amount": 25500000,
+  "symbol": "THL",
+  "classification": "Input Validation",
+  "technique": "Missing Input Validation",
+  "target": "DeFi Protocol",
+  "chain": [
+   "Aptos"
+  ],
+  "skip": "error 400"
+ },
+ {
+  "name": "Munchables",
+  "date": "2024-03-26",
+  "amount": 62500000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "3Commas",
+  "date": "2022-12-11",
+  "amount": 20000000,
+  "symbol": "OMM",
+  "classification": "Frontend & Infrastructure",
+  "technique": "Database Breach",
+  "target": "CEX",
+  "chain": [
+   "Multi-Chain"
+  ],
+  "skip": "error 400"
+ },
+ {
+  "name": "COLDCARD",
+  "date": "2026-07-31",
+  "amount": 116000000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "MEV-Boost Relay",
+  "date": "2023-04-03",
+  "amount": 20000000,
+  "symbol": "RE",
+  "classification": "Frontend & Infrastructure",
+  "technique": "Key Leaked via Infrastructure",
+  "target": "Other",
+  "chain": [
+   "Ethereum"
+  ],
+  "skip": "no 1min data (0 rows)"
+ },
+ {
+  "name": "Ooki",
+  "date": "2021-11-05",
+  "amount": 55000000,
+  "symbol": "OOKI",
+  "classification": "Social Engineering",
+  "technique": "Phishing",
+  "target": "DeFi Protocol",
+  "chain": [
+   "Polygon",
+   "BSC"
+  ],
+  "skip": "error 400"
+ },
+ {
+  "name": "UwU Lend",
+  "date": "2024-06-10",
+  "amount": 20000000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "Lykke",
+  "date": "2024-06-04",
+  "amount": 22400000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "Mango Markets V3",
+  "date": "2022-10-11",
+  "amount": 115000000,
+  "symbol": "MNGO",
+  "classification": "Oracle Manipulation",
+  "technique": "Spot Price Manipulation",
+  "target": "DeFi Protocol",
+  "chain": [
+   "Solana"
+  ],
+  "skip": "error 400"
+ },
+ {
+  "name": "Liquid Network",
+  "date": "2026-09-06",
+  "amount": 320000000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "Poloniex",
+  "date": "2023-11-10",
+  "amount": 126000000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "Penpie",
+  "date": "2024-09-03",
+  "amount": 27000000,
+  "symbol": "PNP",
+  "classification": "Reentrancy",
+  "technique": "Reentrancy",
+  "target": "DeFi Protocol",
+  "chain": [
+   "Ethereum"
+  ],
+  "skip": "error 400"
+ },
+ {
+  "name": "GMX V1 Perps",
+  "date": "2025-07-09",
+  "amount": 42000000,
+  "symbol": "GMX",
+  "classification": "Reentrancy",
+  "technique": "Reentrancy",
+  "target": "DeFi Protocol",
+  "chain": [
+   "Arbitrum"
+  ],
+  "t_alert": "2025-07-09 13:17:00+00:00",
+  "unavoidable_day0_to_alert": -0.04347826086956519,
+  "pre_alert_60m": -0.05995864920744309,
+  "r_1h": -0.09677419354838712,
+  "adj_1h": -0.09393792136108825,
+  "r_6h": -0.14662756598240467,
+  "adj_6h": -0.14689847306063852,
+  "r_24h": -0.14956011730205288,
+  "adj_24h": -0.16109851571326628,
+  "r_72h": -0.05938416422287396,
+  "adj_72h": -0.1355425744929145,
+  "r_7d": -0.03372434017595316,
+  "adj_7d": -0.12086424002466545,
+  "r_30d": 0.07184750733137824,
+  "adj_30d": 0.0009443194488891749,
+  "min_30d": -0.21994134897360706,
+  "t_min_30d": "2025-07-09 15:00:00+00:00"
+ },
+ {
+  "name": "StakeHound / Fireblocks",
+  "date": "2021-06-21",
+  "amount": 72000000,
+  "symbol": "RE",
+  "classification": "Key Compromise",
+  "technique": "Key Brute Forced",
+  "target": "DeFi Protocol",
+  "chain": [
+   "Ethereum"
+  ],
+  "skip": "no 1min data (0 rows)"
+ },
+ {
+  "name": "Bitget",
+  "date": "2025-04-20",
+  "amount": 100000000,
+  "symbol": "BGB",
+  "classification": "Market Manipulation",
+  "technique": "Market Maker Bot Exploited",
+  "target": "CEX",
+  "chain": null,
+  "skip": "no 5%/60min drop on day0-1",
+  "day0_ret": -0.019845644983461974
+ },
+ {
+  "name": "Beanstalk",
+  "date": "2022-04-17",
+  "amount": 181000000,
+  "symbol": "BEAN",
+  "classification": "Governance",
+  "technique": "Flashloan Governance Attack",
+  "target": "DeFi Protocol",
+  "chain": [
+   "Ethereum"
+  ],
+  "skip": "error 400"
+ },
+ {
+  "name": "Balancer V2",
+  "date": "2025-11-03",
+  "amount": 128000000,
+  "symbol": "BAL",
+  "classification": "Token & Share Accounting",
+  "technique": "Rounding Error",
+  "target": "DeFi Protocol",
+  "chain": [
+   "Ethereum",
+   "Arbitrum",
+   "Base",
+   "Polygon",
+   "Sonic",
+   "Optimism"
+  ],
+  "t_alert": "2025-11-03 10:03:00+00:00",
+  "unavoidable_day0_to_alert": -0.07150101419878296,
+  "pre_alert_60m": -0.06724401426388182,
+  "r_1h": -0.022064445658110277,
+  "adj_1h": -0.022175213399565186,
+  "r_6h": -0.050354997269251855,
+  "adj_6h": -0.03453364050404217,
+  "r_24h": -0.09273620972146368,
+  "adj_24h": -0.0576813843435503,
+  "r_72h": -0.08017476788640088,
+  "adj_72h": -0.04415331743963813,
+  "r_7d": -0.0419442927362097,
+  "adj_7d": -0.03277843222019916,
+  "r_30d": -0.2611687602403058,
+  "adj_30d": -0.1299326057551372,
+  "min_30d": -0.3209175314036046,
+  "t_min_30d": "2025-12-01 15:00:00+00:00"
+ },
+ {
+  "name": "Qubit",
+  "date": "2022-01-28",
+  "amount": 80000000,
+  "symbol": "QBT",
+  "classification": "Input Validation",
+  "technique": "Missing Input Validation",
+  "target": "DeFi Protocol",
+  "chain": [
+   "BSC"
+  ],
+  "skip": "error 400"
+ },
+ {
+  "name": "Badger DAO",
+  "date": "2021-12-02",
+  "amount": 120000000,
+  "symbol": "BADGER",
+  "classification": "Frontend & Infrastructure",
+  "technique": "CDN Compromise",
+  "target": "DeFi Protocol",
+  "chain": [
+   "Ethereum"
+  ],
+  "skip": "error 400"
+ },
+ {
+  "name": "Paid Network",
+  "date": "2021-03-05",
+  "amount": 27000000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "Rari Capital",
+  "date": "2022-05-01",
+  "amount": 80000000,
+  "symbol": "RGT",
+  "classification": "Reentrancy",
+  "technique": "Reentrancy",
+  "target": "DeFi Protocol",
+  "chain": [
+   "Ethereum",
+   "Arbitrum"
+  ],
+  "skip": "error 400"
+ },
+ {
+  "name": "Resolv USR",
+  "date": "2026-03-21",
+  "amount": 24500000,
+  "symbol": "RESOLV",
+  "classification": "Frontend & Infrastructure",
+  "technique": "Key Leaked via Infrastructure",
+  "target": "DeFi Protocol",
+  "chain": [
+   "Ethereum"
+  ],
+  "t_alert": "2026-03-22 02:41:00+00:00",
+  "unavoidable_day0_to_alert": -0.09004115226337439,
+  "pre_alert_60m": -0.0539106623309944,
+  "r_1h": 0.0672937771345874,
+  "adj_1h": 0.06533840835477944,
+  "r_6h": -0.04739507959479028,
+  "adj_6h": -0.04040182012933957,
+  "r_24h": null,
+  "adj_24h": null,
+  "r_72h": -0.14218523878437062,
+  "adj_72h": -0.1602613395192548,
+  "r_7d": -0.31747467438494936,
+  "adj_7d": -0.28199446033638453,
+  "r_30d": null,
+  "adj_30d": null,
+  "min_30d": -0.4298118668596238,
+  "t_min_30d": "2026-04-19 17:00:00+00:00"
+ },
+ {
+  "name": "DMM Bitcoin",
+  "date": "2024-05-31",
+  "amount": 305000000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "BtcTurk",
+  "date": "2024-06-22",
+  "amount": 54000000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "BonkDAO",
+  "date": "2026-07-06",
+  "amount": 20000000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "Heco Bridge",
+  "date": "2023-11-22",
+  "amount": 86600000,
+  "symbol": "HT",
+  "classification": "Key Compromise",
+  "technique": "Hot Wallet Key Compromised",
+  "target": "DeFi Protocol",
+  "chain": [
+   "Ethereum"
+  ],
+  "skip": "error 400"
+ },
+ {
+  "name": "AlphaPo",
+  "date": "2023-07-26",
+  "amount": 60000000,
+  "symbol": "BTC",
+  "classification": "Key Compromise",
+  "technique": "Hot Wallet Key Compromised",
+  "target": "CEX",
+  "chain": [
+   "Ethereum",
+   "Tron"
+  ],
+  "skip": "no 5%/60min drop on day0-1",
+  "day0_ret": -0.00014199243094814573
+ },
+ {
+  "name": "Orbit Bridge",
+  "date": "2023-12-31",
+  "amount": 81700000,
+  "symbol": "ORC",
+  "classification": "Input Validation",
+  "technique": "Signature Verification Flaw",
+  "target": "DeFi Protocol",
+  "chain": [
+   "Ethereum"
+  ],
+  "skip": "error 400"
+ },
+ {
+  "name": "Mirror",
+  "date": "2021-10-08",
+  "amount": 90000000,
+  "symbol": "MIR",
+  "classification": "Access Control",
+  "technique": "Improper Access Control",
+  "target": "DeFi Protocol",
+  "chain": [
+   "Terra"
+  ],
+  "skip": "error 400"
+ },
+ {
+  "name": "Compound V2",
+  "date": "2021-09-29",
+  "amount": 147000000,
+  "symbol": "COMP",
+  "classification": "Token & Share Accounting",
+  "technique": "Arithmetic Error",
+  "target": "DeFi Protocol",
+  "chain": [
+   "Ethereum"
+  ],
+  "t_alert": "2021-09-29 23:13:00+00:00",
+  "unavoidable_day0_to_alert": -0.05597892558095785,
+  "pre_alert_60m": -0.05668891604775794,
+  "r_1h": -0.0104976413527339,
+  "adj_1h": -0.013450540293322155,
+  "r_6h": 0.010995947113148663,
+  "adj_6h": -0.0443418916559577,
+  "r_24h": 0.026310544149890536,
+  "adj_24h": -0.03002908468725196,
+  "r_72h": 0.12228423360574059,
+  "adj_72h": -0.025197697627231674,
+  "r_7d": 0.017706464686731982,
+  "adj_7d": -0.31435429703575246,
+  "r_30d": null,
+  "adj_30d": null,
+  "min_30d": -0.03870174739219978,
+  "t_min_30d": "2021-10-12 12:00:00+00:00"
+ },
+ {
+  "name": "Crypto.com",
+  "date": "2022-01-18",
+  "amount": 33700000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "Vulcan Forged",
+  "date": "2021-12-13",
+  "amount": 140000000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "Harmony Bridge",
+  "date": "2022-06-23",
+  "amount": 100000000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "Bybit",
+  "date": "2025-02-21",
+  "amount": 1400000000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "Bitget",
+  "date": "2026-09-24",
+  "amount": 387000000,
+  "symbol": "BGB",
+  "classification": "Key Compromise",
+  "technique": "Hot Wallet Key Compromised",
+  "target": "CEX",
+  "chain": [
+   "Ethereum",
+   "XRP",
+   "Tron",
+   "Zcash"
+  ],
+  "t_alert": "2026-09-24 20:51:00+00:00",
+  "unavoidable_day0_to_alert": -0.042377033117773744,
+  "pre_alert_60m": -0.050332798911723264,
+  "r_1h": 0.006343684452857268,
+  "adj_1h": 0.0068934679201116955,
+  "r_6h": 0.014784877474804281,
+  "adj_6h": 0.01694043600116668,
+  "r_24h": 0.018263672174758216,
+  "adj_24h": 0.023936873919240043,
+  "r_72h": null,
+  "adj_72h": null,
+  "r_7d": null,
+  "adj_7d": null,
+  "r_30d": null,
+  "adj_30d": null,
+  "min_30d": 0.0012278098941014282,
+  "t_min_30d": "2026-09-25 01:00:00+00:00"
+ },
+ {
+  "name": "Portal",
+  "date": "2022-02-02",
+  "amount": 326000000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "Grim Finance",
+  "date": "2021-12-18",
+  "amount": 30000000,
+  "symbol": "GRIM",
+  "classification": "Reentrancy",
+  "technique": "Reentrancy",
+  "target": "DeFi Protocol",
+  "chain": [
+   "Fantom"
+  ],
+  "skip": "error 400"
+ },
+ {
+  "name": "Atomic Wallet",
+  "date": "2023-06-03",
+  "amount": 100000000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "Meerkat Finance",
+  "date": "2021-03-04",
+  "amount": 31000000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "Hedgey",
+  "date": "2024-04-19",
+  "amount": 44700000,
+  "symbol": "HDG",
+  "classification": "Input Validation",
+  "technique": "Missing Input Validation",
+  "target": "DeFi Protocol",
+  "chain": [
+   "Arbitrum",
+   "Ethereum"
+  ],
+  "skip": "error 400"
+ },
+ {
+  "name": "AnubisDAO",
+  "date": "2021-10-29",
+  "amount": 60000000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "Liquid Global",
+  "date": "2021-08-19",
+  "amount": 91350000,
+  "symbol": "IQ",
+  "classification": "Key Compromise",
+  "technique": "Hot Wallet Key Compromised",
+  "target": "CEX",
+  "chain": [
+   "Ethereum"
+  ],
+  "skip": "no 1min data (0 rows)"
+ },
+ {
+  "name": "Multichain",
+  "date": "2023-07-07",
+  "amount": 126000000,
+  "symbol": "MULTI",
+  "classification": "Key Compromise",
+  "technique": "Validator Key Compromised",
+  "target": "DeFi Protocol",
+  "chain": [
+   "Moonriver",
+   "BSC",
+   "Fantom"
+  ],
+  "skip": "error 400"
+ },
+ {
+  "name": "Truebit",
+  "date": "2026-01-08",
+  "amount": 26400000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "BigONE",
+  "date": "2025-07-16",
+  "amount": 27000000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "Spartan",
+  "date": "2021-05-02",
+  "amount": 30500000,
+  "symbol": "SPARTA",
+  "classification": "Token & Share Accounting",
+  "technique": "Incorrect Share Accounting",
+  "target": "DeFi Protocol",
+  "chain": [
+   "BSC"
+  ],
+  "skip": "error 400"
+ },
+ {
+  "name": "Elrond",
+  "date": "2022-06-05",
+  "amount": 113000000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "US Government Crypto Wallet",
+  "date": "2024-10-24",
+  "amount": 20000000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "Binance Bridge",
+  "date": "2022-10-06",
+  "amount": 570000000,
+  "symbol": "BNB",
+  "classification": "Bridge & Cross-Chain",
+  "technique": "Proof Verifier Bug",
+  "target": "DeFi Protocol",
+  "chain": [
+   "BSC"
+  ],
+  "skip": "no 5%/60min drop on day0-1",
+  "day0_ret": -0.03993333106568253
+ },
+ {
+  "name": "Transit Swap",
+  "date": "2022-10-02",
+  "amount": 28900000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "Alpha Finance",
+  "date": "2021-02-13",
+  "amount": 37500000,
+  "symbol": "BTC",
+  "classification": "Protocol Logic",
+  "technique": "Borrow Logic Flaw",
+  "target": "DeFi Protocol",
+  "chain": [
+   "Ethereum"
+  ],
+  "skip": "no 5%/60min drop on day0-1",
+  "day0_ret": 0.025539961454851268
+ },
+ {
+  "name": "Cashio",
+  "date": "2022-03-23",
+  "amount": 52800000,
+  "symbol": "CASH",
+  "classification": "Input Validation",
+  "technique": "Missing Input Validation",
+  "target": "DeFi Protocol",
+  "chain": [
+   "Solana"
+  ],
+  "skip": "error 400"
+ },
+ {
+  "name": "Bitrue",
+  "date": "2023-04-14",
+  "amount": 23000000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "xToken",
+  "date": "2021-05-12",
+  "amount": 24000000,
+  "symbol": "XTK",
+  "classification": "Oracle Manipulation",
+  "technique": "Spot Price Manipulation",
+  "target": "DeFi Protocol",
+  "chain": [
+   "Ethereum"
+  ],
+  "skip": "error 400"
+ },
+ {
+  "name": "SwissBorg",
+  "date": "2025-09-09",
+  "amount": 41500000,
+  "symbol": "BORG",
+  "classification": "Frontend & Infrastructure",
+  "technique": "API Key Compromised",
+  "target": "CEX",
+  "chain": [
+   "Solana"
+  ],
+  "skip": "error 400"
+ },
+ {
+  "name": "EasyFi",
+  "date": "2021-04-19",
+  "amount": 59000000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "Wintermute",
+  "date": "2022-09-20",
+  "amount": 160000000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "Kronos Research",
+  "date": "2023-11-18",
+  "amount": 26000000,
+  "symbol": "RE",
+  "classification": "Frontend & Infrastructure",
+  "technique": "API Key Compromised",
+  "target": "Other",
+  "chain": [
+   "Ethereum"
+  ],
+  "skip": "no 1min data (0 rows)"
+ },
+ {
+  "name": "Elephant Money",
+  "date": "2022-04-12",
+  "amount": 22200000,
+  "symbol": "ELEPHANT",
+  "classification": "Oracle Manipulation",
+  "technique": "Spot Price Manipulation",
+  "target": "DeFi Protocol",
+  "chain": [
+   "BSC"
+  ],
+  "skip": "error 400"
+ },
+ {
+  "name": "Phemex",
+  "date": "2025-01-23",
+  "amount": 85000000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "Euler V1",
+  "date": "2023-03-13",
+  "amount": 197000000,
+  "symbol": "EUL",
+  "classification": "Token & Share Accounting",
+  "technique": "Donation Attack",
+  "target": "DeFi Protocol",
+  "chain": [
+   "Ethereum"
+  ],
+  "skip": "error 400"
+ },
+ {
+  "name": "Drift Trade",
+  "date": "2026-04-01",
+  "amount": 295000000,
+  "symbol": "DRIFT",
+  "classification": "Access Control",
+  "technique": "Proxy Upgrade Hijack",
+  "target": "DeFi Protocol",
+  "chain": [
+   "Solana"
+  ],
+  "t_alert": "2026-04-01 17:18:00+00:00",
+  "unavoidable_day0_to_alert": -0.01895043731778423,
+  "pre_alert_60m": -0.0574229691876752,
+  "r_1h": -0.07578008915304602,
+  "adj_1h": -0.06479579139206904,
+  "r_6h": -0.24368499257057952,
+  "adj_6h": -0.23472599286136175,
+  "r_24h": -0.31203566121842496,
+  "adj_24h": -0.2916793076272647,
+  "r_72h": -0.47696879643387813,
+  "adj_72h": -0.4633185256785318,
+  "r_7d": -0.3670133729569094,
+  "adj_7d": -0.42001216090814264,
+  "r_30d": -0.3684992570579494,
+  "adj_30d": -0.5191321328480004,
+  "min_30d": -0.6017830609212481,
+  "t_min_30d": "2026-04-10 02:00:00+00:00"
+ },
+ {
+  "name": "KyberSwap Elastic",
+  "date": "2023-11-22",
+  "amount": 48000000,
+  "symbol": "KNC",
+  "classification": "Token & Share Accounting",
+  "technique": "Rounding Error",
+  "target": "DeFi Protocol",
+  "chain": [
+   "Ethereum",
+   "Base",
+   "Polygon",
+   "Optimism",
+   "Arbitrum"
+  ],
+  "t_alert": "2023-11-22 23:08:00+00:00",
+  "unavoidable_day0_to_alert": 0.017020678013785373,
+  "pre_alert_60m": -0.0513056029392468,
+  "r_1h": 0.023651452282157592,
+  "adj_1h": 0.020532587139721725,
+  "r_6h": -0.0009681881051174512,
+  "adj_6h": -0.0015664036920491897,
+  "r_24h": 0.012724757952973675,
+  "adj_24h": 0.011657989270859037,
+  "r_72h": 0.012863070539419041,
+  "adj_72h": 0.002882676317322419,
+  "r_7d": -0.019778699861687343,
+  "adj_7d": -0.03171245403934342,
+  "r_30d": null,
+  "adj_30d": null,
+  "min_30d": -0.11424619640387279,
+  "t_min_30d": "2023-12-18 12:00:00+00:00"
+ },
+ {
+  "name": "BtcTurk",
+  "date": "2025-08-14",
+  "amount": 48000000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "Gala",
+  "date": "2024-05-20",
+  "amount": 22300000,
+  "symbol": "GALA",
+  "classification": "Token & Share Accounting",
+  "technique": "Infinite Mint",
+  "target": "DeFi Protocol",
+  "chain": [
+   "Ethereum"
+  ],
+  "t_alert": "2024-05-20 20:22:00+00:00",
+  "unavoidable_day0_to_alert": 0.030578838607815406,
+  "pre_alert_60m": -0.05625956795373355,
+  "r_1h": -0.09856711575722088,
+  "adj_1h": -0.08967795413931434,
+  "r_6h": -0.050714189158743816,
+  "adj_6h": -0.0702128608502669,
+  "r_24h": -0.025435948271977815,
+  "adj_24h": -0.026767418361540396,
+  "r_72h": -0.039426846302888285,
+  "adj_72h": -0.015022178014164833,
+  "r_7d": 0.02714819988284578,
+  "adj_7d": 0.024814688649918093,
+  "r_30d": -0.3652277745234984,
+  "adj_30d": -0.2987224885457036,
+  "min_30d": -0.41229216419591763,
+  "t_min_30d": "2024-06-18 13:00:00+00:00"
+ },
+ {
+  "name": "Poly Network",
+  "date": "2021-08-10",
+  "amount": 611000000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "Humanity",
+  "date": "2026-06-08",
+  "amount": 32000000,
+  "symbol": "H",
+  "classification": "Key Compromise",
+  "technique": "Private Key Compromised",
+  "target": "DeFi Protocol",
+  "chain": [
+   "Ethereum",
+   "BSC"
+  ],
+  "t_alert": "2026-06-08 08:04:00+00:00",
+  "unavoidable_day0_to_alert": -0.038996128131823626,
+  "pre_alert_60m": -0.05137986188951371,
+  "r_1h": 0.04890968578032551,
+  "adj_1h": 0.0471668908846683,
+  "r_6h": 0.015189939020641141,
+  "adj_6h": 0.007349579286488606,
+  "r_24h": -0.7903835263790043,
+  "adj_24h": -0.7894327813991215,
+  "r_72h": -0.7183628216232233,
+  "adj_72h": -0.7156050517134235,
+  "r_7d": -0.14372181395585792,
+  "adj_7d": -0.18378709437718055,
+  "r_30d": -0.9027397376593366,
+  "adj_30d": -0.8851357882667112,
+  "min_30d": -0.9259813472145849,
+  "t_min_30d": "2026-06-25 00:00:00+00:00"
+ },
+ {
+  "name": "CoinEx",
+  "date": "2023-09-12",
+  "amount": 55000000,
+  "symbol": "CET",
+  "classification": "Key Compromise",
+  "technique": "Hot Wallet Key Compromised",
+  "target": "CEX",
+  "chain": [
+   "Ethereum",
+   "BSC",
+   "Bitcoin",
+   "Tron",
+   "Kadena",
+   "Solana",
+   "Dagger",
+   "XRP",
+   "BitcoinCash",
+   "Polygon",
+   "Stellar",
+   "Arbitrum"
+  ],
+  "skip": "error 400"
+ },
+ {
+  "name": "Mixin Network",
+  "date": "2023-09-23",
+  "amount": 200000000,
+  "symbol": "XIN",
+  "classification": "Frontend & Infrastructure",
+  "technique": "Database Breach",
+  "target": "Other",
+  "chain": [
+   "Mixin"
+  ],
+  "skip": "error 400"
+ },
+ {
+  "name": "Ronin Bridge",
+  "date": "2022-03-23",
+  "amount": 624000000,
+  "symbol": "RON",
+  "classification": "Key Compromise",
+  "technique": "Validator Key Compromised",
+  "target": "DeFi Protocol",
+  "chain": [
+   "Ethereum"
+  ],
+  "skip": "no 1min data (0 rows)"
+ },
+ {
+  "name": "CREAM Lending",
+  "date": "2021-10-27",
+  "amount": 130000000,
+  "symbol": "CREAM",
+  "classification": "Oracle Manipulation",
+  "technique": "Spot Price Manipulation",
+  "target": "DeFi Protocol",
+  "chain": [
+   "Ethereum"
+  ],
+  "skip": "error 400"
+ },
+ {
+  "name": "Venus Protocol",
+  "date": "2021-05-18",
+  "amount": 100000000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "Ostium",
+  "date": "2026-07-15",
+  "amount": 23750000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "Step Finance",
+  "date": "2026-01-31",
+  "amount": 40000000,
+  "symbol": "STEP",
+  "classification": "Key Compromise",
+  "technique": "Private Key Compromised",
+  "target": "DeFi Protocol",
+  "chain": [
+   "Solana"
+  ],
+  "skip": "error 400"
+ },
+ {
+  "name": "Bald",
+  "date": "2023-08-02",
+  "amount": 23000000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "FTX",
+  "date": "2022-11-12",
+  "amount": 450000000,
+  "symbol": "FTT",
+  "classification": "Social Engineering",
+  "technique": "Phishing",
+  "target": "CEX",
+  "chain": [
+   "Ethereum",
+   "Solana"
+  ],
+  "t_alert": "2022-11-12 00:36:00+00:00",
+  "unavoidable_day0_to_alert": -0.06370656370656369,
+  "pre_alert_60m": -0.07088122605363989,
+  "r_1h": -0.028041237113401896,
+  "adj_1h": -0.020338529791527726,
+  "r_6h": -0.16948453608247427,
+  "adj_6h": -0.15853749794140215,
+  "r_24h": -0.1628865979381443,
+  "adj_24h": -0.15577735857901898,
+  "r_72h": -0.3839175257731958,
+  "adj_72h": -0.363897657373241,
+  "r_7d": -0.39463917525773196,
+  "adj_7d": -0.3805094176841619,
+  "r_30d": -0.38061855670103084,
+  "adj_30d": -0.3835869832219724,
+  "min_30d": -0.4919587628865979,
+  "t_min_30d": "2022-11-21 21:00:00+00:00"
+ },
+ {
+  "name": "IRA Financial / Gemini",
+  "date": "2022-02-12",
+  "amount": 36000000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "Nesa",
+  "date": "2026-08-24",
+  "amount": 50000000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "Pando Rings",
+  "date": "2022-11-06",
+  "amount": 22000000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "SBI Crypto",
+  "date": "2025-09-24",
+  "amount": 21000000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "Curve DEX",
+  "date": "2023-07-30",
+  "amount": 61700000,
+  "symbol": "CRV",
+  "classification": "Reentrancy",
+  "technique": "Vyper Compiler Bug",
+  "target": "DeFi Protocol",
+  "chain": [
+   "Ethereum"
+  ],
+  "t_alert": "2023-07-30 16:22:00+00:00",
+  "unavoidable_day0_to_alert": -0.05682126390018993,
+  "pre_alert_60m": -0.05025262870408298,
+  "r_1h": 0.0027318475916606744,
+  "adj_1h": 0.003084851443385439,
+  "r_6h": -0.09475197699496762,
+  "adj_6h": -0.08783453121782303,
+  "r_24h": -0.10970524802300508,
+  "adj_24h": -0.10496063116153953,
+  "r_72h": -0.16247304097771387,
+  "adj_72h": -0.15043899642571001,
+  "r_7d": -0.11143062544931703,
+  "adj_7d": -0.10150487878884518,
+  "r_30d": -0.29072609633357294,
+  "adj_30d": -0.24354229421540408,
+  "min_30d": -0.36506110711718187,
+  "t_min_30d": "2023-08-25 04:00:00+00:00"
+ },
+ {
+  "name": "Kelp",
+  "date": "2026-04-18",
+  "amount": 293000000,
+  "symbol": "KERNEL",
+  "classification": "Bridge & Cross-Chain",
+  "technique": "Cross-Chain Message Spoofing",
+  "target": "DeFi Protocol",
+  "chain": [
+   "Ethereum",
+   "Arbitrum"
+  ],
+  "t_alert": "2026-04-18 18:41:00+00:00",
+  "unavoidable_day0_to_alert": -0.07757575757575763,
+  "pre_alert_60m": -0.08423586040914555,
+  "r_1h": 0.04599211563731931,
+  "adj_1h": 0.04467121333865531,
+  "r_6h": 0.03416557161629452,
+  "adj_6h": 0.03284427193426742,
+  "r_24h": -0.09724047306176087,
+  "adj_24h": -0.08735821112916631,
+  "r_72h": -0.09198423127463873,
+  "adj_72h": -0.09143973082174761,
+  "r_7d": -0.12483574244415241,
+  "adj_7d": -0.14668278210134056,
+  "r_30d": -0.20499342969776613,
+  "adj_30d": -0.21300944401261568,
+  "min_30d": -0.21944809461235215,
+  "t_min_30d": "2026-05-18 06:00:00+00:00"
+ },
+ {
+  "name": "Bitmart",
+  "date": "2021-12-04",
+  "amount": 196000000,
+  "symbol": "BMX",
+  "classification": "Key Compromise",
+  "technique": "Hot Wallet Key Compromised",
+  "target": "CEX",
+  "chain": [
+   "Ethereum",
+   "BSC"
+  ],
+  "skip": "error 400"
+ },
+ {
+  "name": "Vee Finance",
+  "date": "2021-09-21",
+  "amount": 34000000,
+  "symbol": "VEE",
+  "classification": "Oracle Manipulation",
+  "technique": "Spot Price Manipulation",
+  "target": "DeFi Protocol",
+  "chain": [
+   "Avalanche"
+  ],
+  "skip": "error 400"
+ },
+ {
+  "name": "Upbit",
+  "date": "2025-11-26",
+  "amount": 36000000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "Nobitex",
+  "date": "2025-06-18",
+  "amount": 82000000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "Popsicle Finance",
+  "date": "2021-08-03",
+  "amount": 20700000,
+  "symbol": "ICE",
+  "classification": "Protocol Logic",
+  "technique": "Reward Logic Flaw",
+  "target": "DeFi Protocol",
+  "chain": [
+   "Ethereum"
+  ],
+  "skip": "error 400"
+ },
+ {
+  "name": "Tectonic",
+  "date": "2026-08-30",
+  "amount": 124470000,
+  "symbol": "TONIC",
+  "classification": "Token & Share Accounting",
+  "technique": "Donation Attack",
+  "target": "DeFi Protocol",
+  "chain": [
+   "Cronos"
+  ],
+  "skip": "error 400"
+ },
+ {
+  "name": "Nomad",
+  "date": "2022-08-01",
+  "amount": 190000000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "StableMagnet",
+  "date": "2021-06-23",
+  "amount": 27000000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "BXH",
+  "date": "2021-10-30",
+  "amount": 139000000,
+  "symbol": "BXH",
+  "classification": "Key Compromise",
+  "technique": "Private Key Compromised",
+  "target": "DeFi Protocol",
+  "chain": [
+   "BSC"
+  ],
+  "skip": "error 400"
+ },
+ {
+  "name": "Radiant V2",
+  "date": "2024-10-16",
+  "amount": 50000000,
+  "symbol": "RDNT",
+  "classification": "Social Engineering",
+  "technique": "Blind Signing",
+  "target": "DeFi Protocol",
+  "chain": [
+   "BSC",
+   "Arbitrum"
+  ],
+  "t_alert": "2024-10-16 17:49:00+00:00",
+  "unavoidable_day0_to_alert": -0.08113645676820103,
+  "pre_alert_60m": -0.0615234375,
+  "r_1h": 0.0035677122045489895,
+  "adj_1h": 0.0069264179192126685,
+  "r_6h": -0.0008919280511370253,
+  "adj_6h": 0.0052503434137506355,
+  "r_24h": -0.055299539170506895,
+  "adj_24h": -0.046362534189095306,
+  "r_72h": -0.12026163222833353,
+  "adj_72h": -0.1229004358450857,
+  "r_7d": -0.1436004162330905,
+  "adj_7d": -0.11146506667146583,
+  "r_30d": -0.2018730489073881,
+  "adj_30d": -0.5189788758691696,
+  "min_30d": -0.42069273078638325,
+  "t_min_30d": "2024-11-04 21:00:00+00:00"
+ },
+ {
+  "name": "Deribit",
+  "date": "2022-11-01",
+  "amount": 28000000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "CoinDCX",
+  "date": "2025-07-19",
+  "amount": 44200000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "Sonne Finance",
+  "date": "2024-05-15",
+  "amount": 20000000,
+  "symbol": "SONNE",
+  "classification": "Token & Share Accounting",
+  "technique": "Donation Attack",
+  "target": "DeFi Protocol",
+  "chain": [
+   "Optimism"
+  ],
+  "skip": "error 400"
+ },
+ {
+  "name": "Infini",
+  "date": "2025-02-24",
+  "amount": 49500000,
+  "symbol": null,
+  "skip": "no token"
+ },
+ {
+  "name": "Cetus CLMM",
+  "date": "2025-05-22",
+  "amount": 223000000,
+  "symbol": "CETUS",
+  "classification": "Token & Share Accounting",
+  "technique": "Arithmetic Error",
+  "target": "DeFi Protocol",
+  "chain": [
+   "Sui"
+  ],
+  "t_alert": "2025-05-22 10:41:00+00:00",
+  "unavoidable_day0_to_alert": 0.056299030918320225,
+  "pre_alert_60m": -0.06761710794297349,
+  "r_1h": -0.24901703800786368,
+  "adj_1h": -0.24664320622036207,
+  "r_6h": -0.23809523809523803,
+  "adj_6h": -0.2419230418525845,
+  "r_24h": -0.24901703800786368,
+  "adj_24h": -0.2499948907525481,
+  "r_72h": -0.37527304499781566,
+  "adj_72h": -0.340727674483852,
+  "r_7d": -0.2883355176933159,
+  "adj_7d": -0.2698759409681416,
+  "r_30d": -0.6033202271734381,
+  "adj_30d": -0.5402977660975387,
+  "min_30d": -0.6378331148973351,
+  "t_min_30d": "2025-06-21 21:00:00+00:00"
+ },
+ {
+  "name": "Bunny",
+  "date": "2021-05-19",
+  "amount": 45000000,
+  "symbol": "BUNNY",
+  "classification": "Oracle Manipulation",
+  "technique": "Spot Price Manipulation",
+  "target": "DeFi Protocol",
+  "chain": [
+   "BSC"
+  ],
+  "skip": "error 400"
+ }
+]

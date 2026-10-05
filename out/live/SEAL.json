@@ -1,0 +1,60 @@
+{
+ "sealed_at_utc": "2026-10-05T12:03:31+00:00",
+ "note": "live shadow loop stopped by hand on 2026-10-05 after the 12:00 UTC decision step (user decision, ahead of the 2026-10-08 deadline); nothing appended after this point. Records 1-31 were sealed on 2026-09-28 (segment 1); segment 2 started 2026-09-28T16:52:29Z on the same hash chain.",
+ "first_ts": "2026-09-23 12:00:00+00:00",
+ "last_ts": "2026-10-05 12:00:00+00:00",
+ "n_records": 75,
+ "last_hash": "e22a2e45ceaa506824c8a1faf60903affd5462bee1367b5bbdc9d4084a80a5d5",
+ "files": {
+  "log.jsonl": {
+   "sha256": "9bcf786f07e9a601c3f330ee1c34d98d9d885076d6f629f7fb5f95442ad15e3e",
+   "bytes": 1045367,
+   "lines": 75
+  },
+  "equity.csv": {
+   "sha256": "8e8335a7d18623c822d3c90873c0897a0a896eabd544f345bf2641f6350c5f7f",
+   "bytes": 49751,
+   "lines": 292
+  },
+  "orders.jsonl": {
+   "sha256": "ee1e206cc694471c07fd009fd57d925241b4b429db7b3032c5e693fea913aba0",
+   "bytes": 151657,
+   "lines": 554
+  }
+ },
+ "segments": [
+  {
+   "sealed_at_utc": "2026-09-28T15:57:07+00:00",
+   "note": "live shadow loop stopped by hand after the 2026-09-28 15:00 UTC hourly step; nothing appended after this point. Files listed are hashed as sealed. Segment 2: the loop was restarted after the deadline moved to 2026-10-08 (D20); new records append to the same hash chain after last_hash, so the seal still verifies records 1-31 and the file hashes above describe the files at that point.",
+   "first_ts": "2026-09-23 12:00:00+00:00",
+   "last_ts": "2026-09-28 12:00:00+00:00",
+   "n_records": 31,
+   "last_hash": "0ef7d7a121d1f63a3ca4f90e6c8e74e6c3caf3d8519f10682c6352b8e23e1353",
+   "files": {
+    "log.jsonl": {
+     "sha256": "24ecaa7a7171f671b8b69fbf9552e1385695c70547abb4bab6be832c392554d3",
+     "bytes": 424376,
+     "lines": 31
+    },
+    "equity.csv": {
+     "sha256": "472b3d7ab2450c7d6158ac9b295426abb0cd2069bfdca6b5a4f03addb06813c4",
+     "bytes": 21575,
+     "lines": 127
+    },
+    "orders.jsonl": {
+     "sha256": "e235bd1839b201e9885586cb161a46a1393ec67e3ab4aadf95f54c6fd6703a01",
+     "bytes": 66063,
+     "lines": 244
+    }
+   }
+  },
+  {
+   "sealed_at_utc": "2026-10-05T12:03:31+00:00",
+   "note": "live shadow loop stopped by hand on 2026-10-05 after the 12:00 UTC decision step (user decision, ahead of the 2026-10-08 deadline); nothing appended after this point. Records 1-31 were sealed on 2026-09-28 (segment 1); segment 2 started 2026-09-28T16:52:29Z on the same hash chain.",
+   "n_records": 44,
+   "last_hash": "e22a2e45ceaa506824c8a1faf60903affd5462bee1367b5bbdc9d4084a80a5d5",
+   "first_ts": "2026-09-28 16:00:00+00:00",
+   "last_ts": "2026-10-05 12:00:00+00:00"
+  }
+ ]
+}

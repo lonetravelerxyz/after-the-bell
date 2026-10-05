@@ -1,0 +1,36 @@
+{
+  "start": "2026-06-22 00:00:00+00:00",
+  "end": "2026-08-11 00:00:00+00:00",
+  "n_days": 50,
+  "start_equity": 10000.0,
+  "final_equity": 9568.537055921097,
+  "total_return": -0.04314629440789031,
+  "sharpe": -6.301444846612127,
+  "sortino": -7.062939287267584,
+  "max_dd": -0.045505135170512134,
+  "gross_sharpe": -4.79121036617275,
+  "win_rate": 0.3238095238095238,
+  "round_trips": 210,
+  "trades": 1209,
+  "n_decisions": 300,
+  "n_invalid": 0,
+  "n_risk_exits": 23,
+  "turnover_ann": 127.81903267550955,
+  "costs": {
+    "fees": 102.84473740226578,
+    "spread": 5.456328924147949,
+    "funding": 4.603626071361825
+  },
+  "ladder": {
+    "gross": -0.03277655038238536,
+    "after_fees": -0.043061024122611924,
+    "after_spread": -0.04360665701502675,
+    "after_funding": -0.04314629440789053
+  },
+  "run_id": "baseline_2026-06-22_2026-08-10",
+  "variant": "baseline",
+  "n_items": 473,
+  "n_cards": 830,
+  "log_last_hash": "5415d818fd6b90c3eb374b21ea122659e5d8a3e2be7d53e0670ce978a45a2a3e",
+  "log_verified": true
+}

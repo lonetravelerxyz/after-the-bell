@@ -1,0 +1,200 @@
+{
+ "dev": {
+  "window": [
+   "2026-06-22",
+   "2026-08-10"
+  ],
+  "variants": {
+   "rule": {
+    "total_return": -0.04923428302489341,
+    "sharpe": -1.0018772467319474,
+    "max_dd": -0.12281488734431589,
+    "trades": 40,
+    "turnover_ann": 12.865391857606888,
+    "mean_gross_exposure": 0.8622382807839136,
+    "const_w": null,
+    "n_invalid": 0,
+    "log_last_hash": "fcd32d01ab9f8263bbe9e71f01f007bd22f2ef1813b25abf716353f9b45d8810"
+   },
+   "const": {
+    "total_return": -0.040374151598347785,
+    "sharpe": -0.8472425921639484,
+    "max_dd": -0.1184756344736898,
+    "trades": 11,
+    "turnover_ann": 6.696013760010261,
+    "mean_gross_exposure": 0.8535291071867519,
+    "const_w": 0.08622,
+    "n_invalid": 0,
+    "log_last_hash": "68973f5a229b217d17b10a3c6cb8a6a30a882c714820f7960aefb5a920c50e2f"
+   },
+   "buyhold": {
+    "total_return": -0.04715868245905819,
+    "sharpe": -0.8268019525853008,
+    "max_dd": -0.13694159408011752,
+    "trades": 12,
+    "turnover_ann": 7.9914243335479345,
+    "mean_gross_exposure": 0.992445045342745,
+    "const_w": null,
+    "n_invalid": 0,
+    "log_last_hash": "5f347f4cd6c0c6390f84231962d69d584a29aac4d54bbe68b61da7169f10763d"
+   }
+  },
+  "ci": {
+   "rule-const": [
+    -0.6460682570314318,
+    0.26804206443167333
+   ],
+   "rule-buyhold": [
+    -0.6574498509894925,
+    0.24649139772275722
+   ]
+  }
+ },
+ "test": {
+  "window": [
+   "2026-08-11",
+   "2026-09-22"
+  ],
+  "variants": {
+   "rule": {
+    "total_return": 0.20114161369197503,
+    "sharpe": 4.166522397370626,
+    "max_dd": -0.07180933193322891,
+    "trades": 22,
+    "turnover_ann": 10.274323428179455,
+    "mean_gross_exposure": 0.9165487628351833,
+    "const_w": null,
+    "n_invalid": 0,
+    "log_last_hash": "ba7d027595da3f39020410e6c249670f7f3ace861f5104ab258a7b912b723fef"
+   },
+   "const": {
+    "total_return": 0.192453590544172,
+    "sharpe": 3.9744840254929485,
+    "max_dd": -0.07526979466592276,
+    "trades": 12,
+    "turnover_ann": 7.571630466812072,
+    "mean_gross_exposure": 0.8954441431657184,
+    "const_w": 0.09165,
+    "n_invalid": 0,
+    "log_last_hash": "4f6ee1abc64910084928a9da2fb90d8f4df6a8ff048fcdd44bdbcab4932c1a27"
+   },
+   "buyhold": {
+    "total_return": 0.21049295229875797,
+    "sharpe": 3.988670678995091,
+    "max_dd": -0.08122352210602879,
+    "trades": 12,
+    "turnover_ann": 8.194386703079552,
+    "mean_gross_exposure": 0.970702500627306,
+    "const_w": null,
+    "n_invalid": 0,
+    "log_last_hash": "97257a9f1733118b5bf81895607a0479ce86be154b80e276e7c6cabb807159c8"
+   }
+  },
+  "ci": {
+   "rule-const": [
+    -0.11957486259090479,
+    0.4345304957279708
+   ],
+   "rule-buyhold": [
+    -0.1272856176896841,
+    0.4203555092803123
+   ]
+  }
+ },
+ "post": {
+  "window": [
+   "2026-09-23",
+   "2026-10-01"
+  ],
+  "variants": {
+   "rule": {
+    "total_return": -0.046222433875844904,
+    "sharpe": -13.847872818376434,
+    "max_dd": -0.060153361772357306,
+    "trades": 12,
+    "turnover_ann": 40.3805737287714,
+    "mean_gross_exposure": 0.9130633467586606,
+    "const_w": null,
+    "n_invalid": 0,
+    "log_last_hash": "a3bd833c48e07e9dfe0f0287f55c211ac435ccd13a8f7ece8d65fec96984fa21"
+   },
+   "const": {
+    "total_return": -0.04644831846101605,
+    "sharpe": -13.23086697668821,
+    "max_dd": -0.0601908372540666,
+    "trades": 10,
+    "turnover_ann": 38.08609403893583,
+    "mean_gross_exposure": 0.9085658808500586,
+    "const_w": 0.09131,
+    "n_invalid": 0,
+    "log_last_hash": "eb8afcb458cacc88ef9f45511db1866f49dac91e956e55e5efe3121b73fcf865"
+   },
+   "buyhold": {
+    "total_return": -0.05086881881613847,
+    "sharpe": -13.232852392387796,
+    "max_dd": -0.06587441012213269,
+    "trades": 10,
+    "turnover_ann": 41.824005006899874,
+    "mean_gross_exposure": 0.997772149420169,
+    "const_w": null,
+    "n_invalid": 0,
+    "log_last_hash": "3b0378544a8e4687732d90ece3250874a836d571525eb95e1be4008db1344fb4"
+   }
+  },
+  "ci": {
+   "rule-const": null,
+   "rule-buyhold": null
+  }
+ },
+ "long": {
+  "window": [
+   "2025-11-01",
+   "2026-10-01"
+  ],
+  "variants": {
+   "rule": {
+    "total_return": -0.08668740153603649,
+    "sharpe": -0.13582447893393107,
+    "max_dd": -0.27618606826528425,
+    "trades": 184,
+    "turnover_ann": 5.542912358599239,
+    "mean_gross_exposure": 0.8580448674559951,
+    "const_w": null,
+    "n_invalid": 0,
+    "log_last_hash": "8e546fcc521274a94b2461df6146fd5aedcba29e7c5c6f26c66de0169d8fdaa6"
+   },
+   "const": {
+    "total_return": -0.0323439262226628,
+    "sharpe": 0.06034412316732765,
+    "max_dd": -0.26015307445814406,
+    "trades": 42,
+    "turnover_ann": 1.8334055994600533,
+    "mean_gross_exposure": 0.8689364392525886,
+    "const_w": 0.0858,
+    "n_invalid": 0,
+    "log_last_hash": "9e83adfec6d8427d8eda4c40b8c10885464bd244ace3ddbf721c8d2fb458c0a6"
+   },
+   "buyhold": {
+    "total_return": -0.04665181012123687,
+    "sharpe": 0.0546754726942543,
+    "max_dd": -0.2964375965973667,
+    "trades": 42,
+    "turnover_ann": 2.127783610463301,
+    "mean_gross_exposure": 0.978996011537926,
+    "const_w": null,
+    "n_invalid": 0,
+    "log_last_hash": "25a3db52abc6ce61962ed2fc7ebed4394da5d947491fd4fa728f3a8ff575358d"
+   }
+  },
+  "ci": {
+   "rule-const": [
+    -0.43564338619110815,
+    0.023580660551430984
+   ],
+   "rule-buyhold": [
+    -0.4561792613251685,
+    0.04136782127125625
+   ]
+  }
+ }
+}

@@ -1,0 +1,43 @@
+{
+  "start": "2026-09-23 00:00:00+00:00",
+  "end": "2026-10-02 00:00:00+00:00",
+  "n_days": 9,
+  "partial_first_day_h": 0.0,
+  "partial_last_day_h": 0.0,
+  "partial_last_day_return": null,
+  "start_equity": 10000.0,
+  "final_equity": 9491.311811838616,
+  "total_return": -0.05086881881613847,
+  "sharpe": -13.232852392387796,
+  "sortino": -11.423680444586605,
+  "max_dd": -0.06587441012213269,
+  "gross_sharpe": -12.350557222654572,
+  "win_rate": null,
+  "round_trips": 0,
+  "trades": 10,
+  "n_decisions": 54,
+  "n_invalid": 0,
+  "n_risk_exits": 0,
+  "turnover_ann": 41.824005006899874,
+  "costs": {
+    "fees": 6.000195894539727,
+    "spread": 0.3264908995472817,
+    "funding": -40.09072812527909
+  },
+  "ladder": {
+    "gross": -0.04622707732420206,
+    "after_fees": -0.04682709691365594,
+    "after_spread": -0.04685974600361076,
+    "after_funding": -0.050868818816138583
+  },
+  "run_id": "buyhold_2026-09-23_2026-10-01",
+  "variant": "buyhold",
+  "const_w": null,
+  "store": "raw",
+  "mean_target_gross": 1.0,
+  "mean_gross_exposure": 0.997772149420169,
+  "prompt_version": null,
+  "risk_version": "b5-v2",
+  "log_last_hash": "3b0378544a8e4687732d90ece3250874a836d571525eb95e1be4008db1344fb4",
+  "log_verified": true
+}

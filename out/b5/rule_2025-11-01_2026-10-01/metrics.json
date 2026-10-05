@@ -1,0 +1,43 @@
+{
+  "start": "2025-11-01 00:00:00+00:00",
+  "end": "2026-10-02 00:00:00+00:00",
+  "n_days": 335,
+  "partial_first_day_h": 0.0,
+  "partial_last_day_h": 0.0,
+  "partial_last_day_return": null,
+  "start_equity": 10000.0,
+  "final_equity": 9133.125984639635,
+  "total_return": -0.08668740153603649,
+  "sharpe": -0.13582447893393107,
+  "sortino": -0.1981531296028973,
+  "max_dd": -0.27618606826528425,
+  "gross_sharpe": -0.08255237419157674,
+  "win_rate": null,
+  "round_trips": 0,
+  "trades": 184,
+  "n_decisions": 2010,
+  "n_invalid": 0,
+  "n_risk_exits": 0,
+  "turnover_ann": 5.542912358599239,
+  "costs": {
+    "fees": 25.876086884042355,
+    "spread": 1.3667711490970973,
+    "funding": -125.31903133767212
+  },
+  "ladder": {
+    "gross": -0.07143121259895502,
+    "after_fees": -0.07401882128735926,
+    "after_spread": -0.0741554984022691,
+    "after_funding": -0.08668740153603627
+  },
+  "run_id": "rule_2025-11-01_2026-10-01",
+  "variant": "rule",
+  "const_w": null,
+  "store": "raw",
+  "mean_target_gross": 0.9016812378109453,
+  "mean_gross_exposure": 0.8580448674559951,
+  "prompt_version": null,
+  "risk_version": "b5-v2",
+  "log_last_hash": "8e546fcc521274a94b2461df6146fd5aedcba29e7c5c6f26c66de0169d8fdaa6",
+  "log_verified": true
+}

@@ -1,0 +1,29 @@
+{
+ "key": "805a92c59b026b1f9c3c7a494167843820c4e2e0575b11fde92e2bea881c3560",
+ "model": "qwen3.8-max",
+ "purpose": "decide:b5",
+ "request": {
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are the portfolio manager of a small long-only book that trades USDT perpetual futures on ten US stocks. Every 4 hours you receive the market state and the current book. You decide the target weight of every name.\n\nYou must base the decision only on the information in the message. Do not use outside knowledge of prices, events or anything that happened after the time shown. You cannot see the future; nobody can.\n\nUNIVERSE (the only tradable tickers):\nNVDA, AAPL, GOOGL, META, AMZN, TSLA, MSTR, COIN, HOOD, CRCL\n\nTHE VOLATILITY RULE (it sets your limits)\n- The full weight of every name is 0.10 of equity, so ten names at full weight are 100% long.\n- When a name is calm the book holds it at full weight; when its volatility rises the rule cuts it, and when the volatility falls back the rule adds it back. Concretely, each name's cap = 0.10 x min(1, vol_target / vol_7d), where vol_7d is its daily volatility over the last 7 days and vol_target is the median of its vol_7d over the last 60 days.\n- The default is to hold every name at its cap. You may hold a name BELOW its cap when the data shown gives a reason (for example a sharp move against the position, crowded funding, or a large rToken premium or discount). You can never go above the cap or short; a deterministic layer clips every weight to [0, cap] after you.\n\nHOW TO READ THE INPUT\n- Returns are in percent, measured to the last closed hourly bar. vol_7d and vol_target are daily volatilities in percent.\n- funding is the perp funding rate per settlement in basis points; positive means longs pay shorts.\n- premium is the tokenised-stock (rToken) spot price against the perp, in basis points.\n- book = the current weight; cap = the most the rule allows now.\n\nRULES\n- Every trade costs about 0.1% round trip in fees and spread. Small adjustments are not worth it; holding the current weight is free.\n- List every ticker in \"targets\". A ticker you leave out is closed.\n- Each weight below its cap needs a one-sentence reason that cites the numbers it relies on.\n\nOUTPUT\nReply with one JSON object and nothing else:\n{\"targets\": {\"TICKER\": 0.0, ...}, \"reasons\": {\"TICKER\": \"one sentence\"}, \"confidence\": 0.0}\nconfidence is 0..1: how confident you are that this book beats holding every name at its cap over the next 4-24 hours after costs.\n"
+   },
+   {
+    "role": "user",
+    "content": "NOW: 2026-06-22 00:00 UTC (Monday)\nUS regular session: closed\nMARKET: crypto fear&greed 23 (extreme_fear); SP500 perp 24h -0.57%; NDX100 perp 24h -0.76%\n\nNAMES (ret/vol in %, funding/premium in bp, cap/book = weight)\nticker ret_4h ret_24h ret_7d vol_7d vol_target cap funding funding_7d premium book\nNVDA -0.62 -0.59 -0.85 1.22 2.16 0.100 +0.00 +0.00 -50.9 0.000\nAAPL -0.47 -0.55 +0.52 1.06 1.27 0.100 +0.00 +0.00 +181.1 0.000\nGOOGL -0.79 -0.89 -1.44 1.57 1.79 0.100 +0.00 +0.00 +250.7 0.000\nMETA -1.08 -1.06 -1.08 2.03 1.83 0.090 +0.00 +0.00 +58.4 0.000\nAMZN -0.71 -0.83 +0.40 1.61 1.63 0.100 +0.00 +0.00 +294.4 0.000\nTSLA -0.88 -0.81 -3.08 1.76 2.13 0.100 +0.00 +0.00 +58.7 0.000\nMSTR -2.11 -3.64 -13.17 4.40 3.83 0.087 +0.00 +0.00 na 0.000\nCOIN -1.46 -1.74 -1.65 3.59 3.73 0.100 +0.00 +0.00 na 0.000\nHOOD -0.99 -1.20 +12.96 4.67 3.59 0.077 +0.00 +0.00 na 0.000\nCRCL -1.29 +0.30 -1.05 4.73 5.09 0.100 +0.00 +0.00 na 0.000\n\nCURRENT BOOK: flat\n\nReturn the JSON decision for every ticker."
+   }
+  ]
+ },
+ "response": "{\"targets\":{\"NVDA\":0.0,\"AAPL\":0.10,\"GOOGL\":0.10,\"META\":0.09,\"AMZN\":0.10,\"TSLA\":0.10,\"MSTR\":0.0,\"COIN\":0.0,\"HOOD\":0.077,\"CRCL\":0.0},\"reasons\":{\"NVDA\":\"rToken premium is -50.9bp, meaning spot trades at a discount to the perp, so buying the perp risks paying more than the underlying asset is worth.\",\"AAPL\":\"Held at cap 0.10 as vol_7d (1.06) is below vol_target (1.27) and the +181.1bp rToken premium confirms strong spot demand supporting the long.\",\"GOOGL\":\"Held at cap 0.10 as vol_7d (1.57) is below vol_target (1.79) and the +250.7bp rToken premium signals robust spot demand.\",\"META\":\"Held at its volatility-reduced cap of 0.09 since vol_7d (2.03) exceeds vol_target (1.83), with a moderate +58.4bp premium offering no reason to cut further.\",\"AMZN\":\"Held at cap 0.10 as vol_7d (1.61) is near vol_target (1.63) and the +294.4bp rToken premium indicates very strong spot demand.\",\"TSLA\":\"Held at cap 0.10 as vol_7d (1.76) is well below vol_target (2.13) and the +58.7bp premium shows healthy spot support despite recent weakness.\",\"MSTR\":\"Skipped because it is down -13.17% over 7 days in an extreme fear environment (F&G 23) with no rToken premium data to confirm spot support.\",\"COIN\":\"Skipped because it is down -1.74% over 24 hours in extreme crypto fear (F&G 23) with no rToken premium data to validate spot demand.\",\"HOOD\":\"Held at its volatility-reduced cap of 0.077 since vol_7d (4.67) exceeds vol_target (3.59), but the exceptional +12.96% 7-day return warrants maintaining exposure rather than cutting below cap.\",\"CRCL\":\"Skipped due to negative 4h (-1.29%) and 7d (-1.05%) returns combined with high vol_7d (4.73) and no rToken premium data to justify entry.\"},\"confidence\":0.6}",
+ "usage": {
+  "completion_tokens": 588,
+  "prompt_tokens": 1294,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "text_tokens": 1294
+  },
+  "total_tokens": 1882
+ },
+ "latency_s": 12.8,
+ "created_at": "2026-10-02T09:58:34Z"
+}
